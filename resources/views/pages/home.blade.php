@@ -167,9 +167,20 @@
                              width="800"
                              height="560">
                     </div>
-                    <div class="law-quote-box quote-box mt-4">
-                        <div class="small fw-bold text-gold-dark text-uppercase mb-1">Visi &amp; Komitmen Pelayanan</div>
-                        “Memberikan solusi tepat pada permasalahan dan kebutuhan hukum, serta menjaga komunikasi berkesinambungan demi kepentingan klien dengan mengutamakan kode Etik Profesi Advokat (Officium Nobile).”
+                    <div class="law-quote-box quote-box mt-4 position-relative overflow-hidden">
+                        <div class="law-quote-watermark" aria-hidden="true">
+                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                                 width="1855"
+                                 height="2048"
+                                 loading="lazy">
+                        </div>
+                        <div class="position-relative" style="z-index: 2;">
+                            <div class="small fw-bold text-gold-dark text-uppercase mb-1">
+                                <i class="fa-solid fa-scale-balanced me-1"></i>Visi &amp; Komitmen Pelayanan
+                            </div>
+                            “Memberikan solusi tepat pada permasalahan dan kebutuhan hukum, serta menjaga komunikasi berkesinambungan demi kepentingan klien dengan mengutamakan kode Etik Profesi Advokat (Officium Nobile).”
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -313,8 +324,16 @@
                         title="Komitmen Pelayanan Kami"
                         description="Bagaimana pendekatan kami memberikan kepastian dan ketenangan bagi klien dalam menghadapi persoalan hukum." />
 
-                    <div class="law-testimonial-box">
-                        <div>
+                    <div class="law-testimonial-box position-relative overflow-hidden">
+                        {{-- Subtle Justice Symbol Watermark --}}
+                        <div class="law-testimonial-watermark" aria-hidden="true">
+                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                                 width="1855"
+                                 height="2048"
+                                 loading="lazy">
+                        </div>
+                        <div class="position-relative" style="z-index: 2;">
                             <div class="law-quote-icon">
                                 <i class="fa-solid fa-quote-left"></i>
                             </div>
@@ -322,7 +341,7 @@
                                 “Holong Siregar &amp; Co. memberikan panduan hukum yang jernih, terarah, dan transparan sejak awal konsultasi. Kami tidak hanya didampingi secara prosedural, tetapi juga dibantu memahami seluruh konsekuensi dan opsi terbaik untuk bisnis kami.”
                             </p>
                         </div>
-                        <div class="law-testimonial-author">
+                        <div class="law-testimonial-author position-relative" style="z-index: 2;">
                             <div class="law-strip-icon me-2" style="width:40px;height:40px;font-size:1.1rem;">
                                 <i class="fa-solid fa-building"></i>
                             </div>

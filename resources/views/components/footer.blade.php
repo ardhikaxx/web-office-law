@@ -1,4 +1,13 @@
 <footer class="law-footer site-footer">
+    {{-- Dignified Justice Symbol Watermark --}}
+    <div class="law-footer-watermark" aria-hidden="true">
+        <img src="{{ asset('assets/images/simbol-justice.png') }}"
+             alt="Simbol Keadilan - Holong Siregar &amp; Co."
+             width="1855"
+             height="2048"
+             loading="lazy">
+    </div>
+
     <div class="law-footer-top">
         <div class="container">
             <div class="row g-4 g-lg-5">

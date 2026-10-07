@@ -59,8 +59,17 @@
                              class="rounded w-100"
                              loading="lazy">
                     </div>
-                    <div class="law-quote-box quote-box">
-                        “Kami memegang teguh ketelitian, kerahasiaan, dan kejujuran dalam berkomunikasi — agar setiap langkah hukum yang diambil benar-benar dipahami dan memberikan ketenangan bagi klien.”
+                    <div class="law-quote-box quote-box position-relative overflow-hidden">
+                        <div class="law-quote-watermark" aria-hidden="true">
+                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                                 width="1855"
+                                 height="2048"
+                                 loading="lazy">
+                        </div>
+                        <div class="position-relative" style="z-index: 2;">
+                            “Kami memegang teguh ketelitian, kerahasiaan, dan kejujuran dalam berkomunikasi — agar setiap langkah hukum yang diambil benar-benar dipahami dan memberikan ketenangan bagi klien.”
+                        </div>
                     </div>
                 </div>
             </div>
