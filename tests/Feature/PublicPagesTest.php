@@ -42,6 +42,7 @@ test('home page renders official justice symbol asset in hero', function () {
     $response->assertOk();
     $response->assertSee('simbol-justice.png');
     $response->assertSee('Holong Siregar');
+    $response->assertDontSee('Dedicated to Justice');
 });
 
 test('browser tab favicon, navbar, and footer render logo asset', function () {

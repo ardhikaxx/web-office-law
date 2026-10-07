@@ -48,13 +48,6 @@
                          width="1855"
                          height="2048"
                          loading="eager">
-                    <div class="law-hero-floating-card">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <div>
-                            <strong>Dedicated to Justice</strong>
-                            <small>Integritas &amp; Profesionalisme</small>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
