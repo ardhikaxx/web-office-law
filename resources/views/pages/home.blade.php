@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Holong Siregar & Co. Law Office | Kantor Hukum & Advokat Pengacara Bogor & Tangerang')
-@section('meta_description', 'Holong Siregar & Co. Law Office adalah kantor hukum dan advokat pengacara resmi di Kota Bogor dan Kota Tangerang. Layanan profesional litigasi & non-litigasi: perdata, pidana, kontrak bisnis, hukum keluarga, hukum perusahaan, dan konsultasi WhatsApp.')
-@section('meta_keywords', 'kantor hukum bogor, advokat bogor, pengacara bogor, kantor hukum tangerang, advokat tangerang, pengacara tangerang, holong siregar, holong siregar and co, jasa hukum bogor, konsultan hukum tangerang, pengacara perdata, pengacara pidana, hukum keluarga, perceraian, kontrak bisnis, recovery asset, legal corporate jabodetabek')
+@section('title', 'Pengacara di Tangerang & Bogor Terpercaya | Kantor Hukum & Advokat Holong Siregar & Co.')
+@section('meta_description', 'Mencari pengacara di Tangerang atau Bogor? Holong Siregar & Co. Law Office adalah kantor hukum advokat profesional untuk perkara perdata, pidana, perceraian, sengketa tanah, kontrak bisnis di Kota Tangerang, BSD, Tangsel & Bogor.')
+@section('meta_keywords', 'pengacara di tangerang, pengacara tangerang, advokat tangerang, kantor hukum tangerang, pengacara terbaik di tangerang, pengacara terbaik tangerang, jasa pengacara tangerang, kantor advokat tangerang, konsultan hukum tangerang, lawyer tangerang, law firm tangerang, pengacara bsd, pengacara serpong, pengacara gading serpong, pengacara alam sutera, pengacara karawaci, pengacara bintaro, pengacara tangerang selatan, pengacara tangsel, pengacara kota tangerang, pengacara kabupaten tangerang, pengacara periuk, pengacara cikokol, pengacara ciputat, pengacara pamulang, pengacara perceraian tangerang, pengacara perdata tangerang, pengacara pidana tangerang, pengacara sengketa tanah tangerang, pengacara perusahaan tangerang, corporate lawyer tangerang, pengacara hutang piutang tangerang, pengacara waris tangerang, konsultasi hukum tangerang, biaya pengacara tangerang, nomor telepon pengacara tangerang, cari pengacara di tangerang, pengacara pengadilan negeri tangerang, pengacara pengadilan agama tangerang, pengacara di bogor, pengacara bogor, kantor hukum bogor, advokat bogor, holong siregar, holong siregar and co, holong siregar law office')
 
 @section('content')
     {{-- 1. HERO SECTION (Inspired by image.png) --}}
@@ -17,14 +17,16 @@
                     <div class="col-lg-7">
                         <span class="law-hero-badge hero-label">
                             <i class="fa-solid fa-scale-balanced text-gold"></i>
-                            HOLONG SIREGAR &amp; CO. LAW OFFICE
+                            KANTOR HUKUM &amp; PENGACARA DI TANGERANG &amp; BOGOR
                         </span>
                         <h1 class="law-hero-title hero-title">
                             Solusi Hukum yang <span class="text-gold">Tegas, Terukur</span>, dan Terpercaya
                         </h1>
                         <p class="law-hero-text hero-text">
-                            Holong Siregar &amp; Co. memberikan pendampingan hukum profesional melalui analisis
-                            yang cermat, strategi yang relevan, komunikasi terbuka, serta pendekatan yang bertanggung jawab.
+                            Holong Siregar &amp; Co. Law Office adalah kantor hukum dan advokat pengacara berdedikasi
+                            melayani wilayah <strong>Kota Tangerang, BSD, Serpong, Tangerang Selatan</strong>, dan <strong>Bogor</strong>.
+                            Kami memberikan pendampingan hukum profesional melalui analisis cermat, strategi relevan,
+                            komunikasi terbuka, serta integritas penuh.
                         </p>
                         <div class="law-hero-actions hero-actions">
                             <a href="#consultation-section" class="btn btn-gold law-btn-primary">
@@ -344,6 +346,126 @@
                                 <strong>Klien Korporasi & Bisnis</strong>
                                 <small>Konsultasi Kontrak & Tata Kelola Usaha</small>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- 6.5 CAKUPAN WILAYAH LAYANAN HUKUM (Local SEO: Pengacara di Tangerang & Bogor) --}}
+    <section class="law-section law-section-soft section" id="wilayah-hukum">
+        <div class="container">
+            <x-section-heading
+                eyebrow="CAKUPAN WILAYAH PRAKTIK"
+                title="Kantor Pengacara di Tangerang &amp; Bogor"
+                description="Holong Siregar &amp; Co. Law Office hadir dengan dua basis operasional untuk mendampingi persoalan hukum perorangan, bisnis, dan korporasi di wilayah Tangerang Raya, Bogor, dan Jabodetabek." />
+
+            <div class="row g-4">
+                {{-- Card Tangerang --}}
+                <div class="col-lg-6">
+                    <div class="law-card p-4 p-md-5 h-100 bg-white border d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="law-strip-icon" style="width: 52px; height: 52px; font-size: 1.4rem;">
+                                <i class="fa-solid fa-scale-balanced text-gold"></i>
+                            </div>
+                            <div>
+                                <span class="badge bg-gold text-white px-2 py-1 small mb-1">Kantor Cabang Tangerang</span>
+                                <h3 class="h4 law-heading mb-0">Advokat &amp; Pengacara di Tangerang</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-muted mb-3">
+                            Melayani pendampingan perkara litigasi di <strong>Pengadilan Negeri Tangerang</strong>, <strong>Pengadilan Agama Tangerang</strong>,
+                            Polres Metro Tangerang Kota, serta konsultasi non-litigasi bagi masyarakat dan pelaku usaha di seluruh penjuru Tangerang:
+                        </p>
+
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small mb-0 d-flex flex-column gap-2 text-secondary">
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Kota Tangerang:</strong> Periuk, Karawaci, Cikokol, Cipondoh, Batuceper, Neglasari</li>
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Tangerang Selatan:</strong> BSD City, Serpong, Alam Sutera, Gading Serpong, Bintaro</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small mb-0 d-flex flex-column gap-2 text-secondary">
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Kab. Tangerang:</strong> Lippo Village, Cikupa, Balaraja, Pasar Kemis, Tigaraksa</li>
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Layanan Utama:</strong> Perdata, Pidana, Perceraian, Sengketa Tanah, Legal Bisnis</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-light rounded-3 mb-4 border mt-auto">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fa-solid fa-map-pin text-gold mt-1 flex-shrink-0"></i>
+                                <div class="small">
+                                    <strong class="text-navy d-block">Alamat Kantor Tangerang:</strong>
+                                    <span class="text-muted">Villa Grand Tomang, Periuk, Kota Tangerang, Banten</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-gold law-btn-primary btn-sm">
+                                <i class="fa-brands fa-whatsapp me-1"></i>Konsultasi Pengacara Tangerang
+                            </a>
+                            <a href="{{ route('contact') }}" class="btn btn-outline-navy law-btn-outline btn-sm">
+                                Detail Kantor Tangerang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Card Bogor --}}
+                <div class="col-lg-6">
+                    <div class="law-card p-4 p-md-5 h-100 bg-white border d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="law-strip-icon" style="width: 52px; height: 52px; font-size: 1.4rem;">
+                                <i class="fa-solid fa-landmark text-gold"></i>
+                            </div>
+                            <div>
+                                <span class="badge bg-secondary text-white px-2 py-1 small mb-1">Kantor Pusat Bogor</span>
+                                <h3 class="h4 law-heading mb-0">Advokat &amp; Pengacara di Bogor</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-muted mb-3">
+                            Melayani pendampingan perkara di <strong>Pengadilan Negeri Bogor</strong>, <strong>Pengadilan Negeri Cibinong</strong>,
+                            Pengadilan Agama Bogor, Polresta Bogor Kota, serta pendampingan korporasi dan hukum keluarga di:
+                        </p>
+
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small mb-0 d-flex flex-column gap-2 text-secondary">
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Kota Bogor:</strong> Bogor Tengah, Bogor Selatan, Bogor Barat, Bogor Timur, Tanah Sareal</li>
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Kabupaten Bogor:</strong> Cibinong, Sentul City, Bojonggede, Cileungsi, Gunung Putri</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small mb-0 d-flex flex-column gap-2 text-secondary">
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Wilayah Sekitar:</strong> Parung, Dramaga, Ciawi, Tajur, Sukaraja</li>
+                                    <li><i class="fa-solid fa-location-dot text-gold me-2"></i><strong>Layanan Utama:</strong> Gugatan Perdata, Pembelaan Pidana, Sengketa Waris &amp; Tanah</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-light rounded-3 mb-4 border mt-auto">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fa-solid fa-map-pin text-gold mt-1 flex-shrink-0"></i>
+                                <div class="small">
+                                    <strong class="text-navy d-block">Alamat Kantor Bogor:</strong>
+                                    <span class="text-muted">Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah, Kota Bogor, Jawa Barat</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-navy law-btn-navy btn-sm">
+                                <i class="fa-brands fa-whatsapp me-1"></i>Konsultasi Pengacara Bogor
+                            </a>
+                            <a href="{{ route('contact') }}" class="btn btn-outline-navy law-btn-outline btn-sm">
+                                Detail Kantor Bogor
+                            </a>
                         </div>
                     </div>
                 </div>

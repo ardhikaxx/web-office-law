@@ -118,6 +118,20 @@
                 </div>
             </div>
         </div>
+    {{-- Local SEO Keyword Coverage Strip --}}
+    <div class="border-top border-secondary border-opacity-25 py-3">
+        <div class="container">
+            <div class="row align-items-center g-2 text-white-50" style="font-size: 0.8125rem;">
+                <div class="col-12">
+                    <strong class="text-gold-light me-1"><i class="fa-solid fa-scale-balanced me-1"></i>Pengacara di Tangerang:</strong>
+                    <span class="opacity-90">Kantor Advokat &amp; Pengacara melayani Kota Tangerang, Tangerang Selatan (Tangsel), BSD City, Gading Serpong, Alam Sutera, Karawaci, Bintaro, Periuk, Cikokol, Ciputat, Pamulang, Tigaraksa, Kab. Tangerang.</span>
+                </div>
+                <div class="col-12">
+                    <strong class="text-gold-light me-1"><i class="fa-solid fa-landmark me-1"></i>Pengacara di Bogor:</strong>
+                    <span class="opacity-90">Kantor Advokat &amp; Pengacara melayani Kota Bogor, Kab. Bogor, Cibinong, Sentul City, Bojonggede, Parung, Cileungsi, dan seluruh Jabodetabek.</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     {{-- Bottom Bar --}}

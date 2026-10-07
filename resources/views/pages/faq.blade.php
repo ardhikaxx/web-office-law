@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Tanya Jawab Seputar Konsultasi & Layanan Hukum (FAQ) | Holong Siregar & Co.')
-@section('meta_description', 'Pertanyaan yang sering diajukan seputar prosedur konsultasi hukum, kerahasiaan data, penanganan perkara, dan biaya di kantor hukum Holong Siregar & Co.')
-@section('meta_keywords', 'faq konsultasi hukum, biaya sewa pengacara, cara konsultasi advokat, tanya hukum online, prosedur pendampingan hukum bogor tangerang')
+@section('title', 'Tanya Jawab Layanan Pengacara di Tangerang & Bogor (FAQ) | Holong Siregar & Co.')
+@section('meta_description', 'Pertanyaan umum seputar layanan pengacara di Tangerang & Bogor: proses konsultasi WhatsApp, penanganan perkara di Pengadilan Negeri Tangerang & Bogor, serta biaya advokat.')
+@section('meta_keywords', 'tanya jawab pengacara tangerang, faq pengacara di tangerang, biaya pengacara tangerang, prosedur konsultasi hukum tangerang, pengacara bogor, jasa advokat tangerang')
 
 @section('content')
     <section class="law-page-hero page-hero">

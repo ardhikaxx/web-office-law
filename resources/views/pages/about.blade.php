@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami | Kantor Hukum & Advokat Holong Siregar & Co.')
-@section('meta_description', 'Profil resmi Holong Siregar & Co. Law Office. Firma hukum berintegritas tinggi dengan komitmen Officium Nobile di Kota Bogor dan Kota Tangerang.')
-@section('meta_keywords', 'profil holong siregar, tentang holong siregar law office, kantor pengacara bogor, kantor hukum tangerang, advokat perdata pidana, officium nobile advokat')
+@section('title', 'Profil Kantor Pengacara di Tangerang & Bogor | Holong Siregar & Co. Law Office')
+@section('meta_description', 'Profil resmi kantor hukum & advokat pengacara Holong Siregar & Co. di Tangerang (Villa Grand Tomang) dan Bogor. Berpengalaman menangani perkara perdata, pidana, sengketa bisnis, dan hukum keluarga.')
+@section('meta_keywords', 'pengacara di tangerang, pengacara tangerang, kantor hukum tangerang, advokat tangerang, profil holong siregar, advokat bsd serpong tangerang, pengacara perdata tangerang, pengacara pidana tangerang, kantor pengacara bogor, advokat bogor')
 
 @section('content')
     {{-- Internal Page Hero --}}

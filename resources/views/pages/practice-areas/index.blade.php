@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Area Praktik Litigasi & Non-Litigasi | Holong Siregar & Co.')
-@section('meta_description', 'Pendampingan hukum komprehensif jalur Litigasi (penyelesaian sengketa di pengadilan) dan Non-Litigasi (mediasi, review kontrak, legal compliance) di Bogor & Tangerang.')
-@section('meta_keywords', 'pengacara litigasi bogor, advokat non litigasi tangerang, mediasi sengketa hukum, penanganan perkara pengadilan, konsultan hukum preventif')
+@section('title', 'Area Praktik Advokat Pengacara di Tangerang & Bogor | Holong Siregar & Co.')
+@section('meta_description', 'Area praktik hukum litigasi & non-litigasi oleh advokat pengacara di Tangerang & Bogor. Penanganan perkara persidangan di PN Tangerang, PA Tangerang, PN Bogor, serta mediasi non-litigasi.')
+@section('meta_keywords', 'area praktik advokat tangerang, pengacara litigasi tangerang, pengacara non litigasi tangerang, advokat pengadilan negeri tangerang, advokat pengadilan agama tangerang, pengacara bogor, jasa hukum tangerang')
 
 @section('content')
     <section class="law-page-hero page-hero">

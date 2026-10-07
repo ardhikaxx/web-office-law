@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Tim Advokat & Konsultan Hukum Profesional | Holong Siregar & Co.')
-@section('meta_description', 'Profil advokat dan tim legal profesional Holong Siregar & Co. Law Office yang berpengalaman dan berintegritas dalam penanganan berbagai perkara hukum.')
-@section('meta_keywords', 'tim advokat bogor, pengacara berpengalaman tangerang, holong siregar sh, advokat peradi, konsultan hukum berlisensi, kantor advokat profesional')
+@section('title', 'Tim Advokat & Pengacara di Tangerang & Bogor | Holong Siregar & Co.')
+@section('meta_description', 'Profil tim advokat dan pengacara profesional Holong Siregar & Co. Law Office yang berpengalaman dan berintegritas melayani wilayah Tangerang dan Bogor.')
+@section('meta_keywords', 'tim pengacara tangerang, advokat tangerang, pengacara di tangerang, advokat bogor, holong siregar sh, konsultan hukum tangerang, advokat peradi tangerang')
 
 @section('content')
     <section class="law-page-hero page-hero">

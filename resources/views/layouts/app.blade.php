@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'Holong Siregar & Co. Law Office | Kantor Hukum & Advokat Pengacara Bogor & Tangerang')</title>
-    <meta name="description" content="@yield('meta_description', 'Holong Siregar & Co. Law Office adalah kantor hukum dan advokat pengacara profesional di Bogor dan Tangerang. Menangani perdata, pidana, legal contract, hukum keluarga, sengketa bisnis, dan konsultasi hukum.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'kantor hukum bogor, advokat bogor, pengacara bogor, kantor hukum tangerang, advokat tangerang, pengacara tangerang, holong siregar, holong siregar and co, jasa hukum bogor, konsultan hukum tangerang, pengacara perdata, pengacara pidana, hukum keluarga, perceraian, kontrak bisnis, recovery asset, legal corporate jabodetabek')">
+    <title>@yield('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')</title>
+    <meta name="description" content="@yield('meta_description', 'Mencari pengacara di Tangerang & Bogor? Holong Siregar & Co. Law Office menyediakan jasa advokat profesional untuk perdata, pidana, perceraian, sengketa tanah, kontrak bisnis, dan hukum perusahaan di Kota Tangerang, BSD, Tangsel & Bogor.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'pengacara di tangerang, pengacara tangerang, advokat tangerang, kantor hukum tangerang, pengacara terbaik di tangerang, pengacara terbaik tangerang, jasa pengacara tangerang, kantor advokat tangerang, konsultan hukum tangerang, lawyer tangerang, law firm tangerang, pengacara bsd, pengacara serpong, pengacara gading serpong, pengacara alam sutera, pengacara karawaci, pengacara bintaro, pengacara tangerang selatan, pengacara tangsel, pengacara kota tangerang, pengacara kabupaten tangerang, pengacara periuk, pengacara cikokol, pengacara ciputat, pengacara pamulang, pengacara perceraian tangerang, pengacara perdata tangerang, pengacara pidana tangerang, pengacara sengketa tanah tangerang, pengacara perusahaan tangerang, corporate lawyer tangerang, pengacara hutang piutang tangerang, pengacara waris tangerang, konsultasi hukum tangerang, biaya pengacara tangerang, nomor telepon pengacara tangerang, cari pengacara di tangerang, pengacara pengadilan negeri tangerang, pengacara pengadilan agama tangerang, pengacara di bogor, pengacara bogor, kantor hukum bogor, advokat bogor, holong siregar, holong siregar and co, holong siregar law office')">
     <meta name="author" content="Holong Siregar & Co. Law Office">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-    {{-- Geo Meta Tags (Local SEO Bogor & Tangerang) --}}
-    <meta name="geo.region" content="ID-JB;ID-BT">
-    <meta name="geo.placename" content="Kota Bogor; Kota Tangerang">
-    <meta name="geo.position" content="-6.595038;106.790650">
-    <meta name="ICBM" content="-6.595038, 106.790650">
+    {{-- Geo Meta Tags (Local SEO Tangerang & Bogor) --}}
+    <meta name="geo.region" content="ID-BT;ID-JB">
+    <meta name="geo.placename" content="Kota Tangerang, Tangerang Selatan, BSD City, Kota Bogor, Banten, Jawa Barat, Indonesia">
+    <meta name="geo.position" content="-6.178306;106.631889">
+    <meta name="ICBM" content="-6.178306, 106.631889">
 
     <link rel="canonical" href="{{ url()->current() }}">
 
@@ -25,16 +25,16 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Holong Siregar & Co. Law Office">
-    <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Holong Siregar & Co. Law Office | Kantor Hukum Bogor & Tangerang')))">
-    <meta property="og:description" content="@yield('meta_description', 'Holong Siregar & Co. Law Office adalah kantor hukum dan advokat pengacara profesional di Bogor & Tangerang. Menangani perdata, pidana, kontrak, hukum keluarga, dan sengketa bisnis.')">
+    <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')))">
+    <meta property="og:description" content="@yield('meta_description', 'Kantor hukum dan advokat pengacara profesional di Tangerang & Bogor. Menangani perkara perdata, pidana, perceraian, sengketa bisnis, dan kontrak.')">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
-    <meta property="og:image:alt" content="Logo Resmi Holong Siregar & Co. Law Office">
+    <meta property="og:image:alt" content="Logo Resmi Holong Siregar & Co. Law Office - Pengacara Tangerang & Bogor">
 
     {{-- Twitter Cards --}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="@yield('title', 'Holong Siregar & Co. Law Office | Kantor Hukum Bogor & Tangerang')">
-    <meta name="twitter:description" content="@yield('meta_description', 'Kantor hukum dan advokat pengacara profesional di Bogor & Tangerang.')">
+    <meta name="twitter:title" content="@yield('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')">
+    <meta name="twitter:description" content="@yield('meta_description', 'Kantor hukum dan advokat pengacara profesional di Tangerang & Bogor.')">
     <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 
     {{-- Browser Favicon --}}
@@ -50,8 +50,14 @@
         {
           "@@type": ["LegalService", "Attorney"],
           "@@id": "{{ url('/') }}#organization",
-          "name": "Holong Siregar & Co. Law Office",
-          "alternateName": "Holong Siregar & Co.",
+          "name": "Holong Siregar & Co. Law Office - Pengacara di Tangerang & Bogor",
+          "alternateName": [
+            "Pengacara di Tangerang",
+            "Pengacara Tangerang",
+            "Kantor Hukum Tangerang",
+            "Advokat Tangerang",
+            "Holong Siregar & Co."
+          ],
           "url": "{{ url('/') }}",
           "logo": {
             "@@type": "ImageObject",
@@ -60,11 +66,23 @@
             "caption": "Holong Siregar & Co. Law Office"
           },
           "image": "{{ asset('assets/images/logo.png') }}",
-          "description": "Kantor hukum dan advokat pengacara profesional di Kota Bogor dan Kota Tangerang. Memberikan pendampingan litigasi dan non-litigasi untuk perdata, pidana, legal contract, hukum keluarga, hukum korporasi, dan recovery asset.",
+          "description": "Kantor hukum dan advokat pengacara profesional terpercaya di Kota Tangerang dan Kota Bogor. Memberikan layanan litigasi dan non-litigasi untuk perdata, pidana, sengketa tanah, perceraian, kontrak bisnis, hukum korporasi, dan recovery asset di wilayah Tangerang Raya (Kota Tangerang, BSD, Serpong, Karawaci, Alam Sutera, Tangsel) dan Bogor.",
           "telephone": "+6285771633860",
           "email": "lawofficeholongsiregar@gmail.com",
           "priceRange": "$$",
           "currenciesAccepted": "IDR",
+          "keywords": "pengacara di tangerang, pengacara tangerang, advokat tangerang, kantor hukum tangerang, pengacara terbaik tangerang, pengacara bsd, pengacara serpong, pengacara tangerang selatan, pengacara perdata tangerang, pengacara pidana tangerang, pengacara perceraian tangerang, pengacara bogor",
+          "knowsAbout": [
+            "Hukum Perdata",
+            "Hukum Pidana",
+            "Pengacara di Tangerang",
+            "Advokat Tangerang",
+            "Sengketa Tanah dan Properti",
+            "Perceraian dan Hukum Keluarga",
+            "Penyusunan Kontrak Bisnis",
+            "Hukum Perusahaan dan Korporasi",
+            "Litigasi Pengadilan Negeri Tangerang"
+          ],
           "openingHoursSpecification": [
             {
               "@@type": "OpeningHoursSpecification",
@@ -76,22 +94,44 @@
           "address": [
             {
               "@@type": "PostalAddress",
-              "streetAddress": "Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah",
-              "addressLocality": "Kota Bogor",
-              "addressRegion": "Jawa Barat",
+              "streetAddress": "Villa Grand Tomang, Periuk",
+              "addressLocality": "Kota Tangerang",
+              "addressRegion": "Banten",
+              "postalCode": "15131",
               "addressCountry": "ID"
             },
             {
               "@@type": "PostalAddress",
-              "streetAddress": "Villa Grand Tomang, Periuk",
-              "addressLocality": "Kota Tangerang",
-              "addressRegion": "Banten",
+              "streetAddress": "Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah",
+              "addressLocality": "Kota Bogor",
+              "addressRegion": "Jawa Barat",
+              "postalCode": "16125",
               "addressCountry": "ID"
             }
           ],
+          "geo": [
+            {
+              "@@type": "GeoCoordinates",
+              "latitude": -6.178306,
+              "longitude": 106.631889
+            },
+            {
+              "@@type": "GeoCoordinates",
+              "latitude": -6.595038,
+              "longitude": 106.790650
+            }
+          ],
           "areaServed": [
-            { "@@type": "City", "name": "Kota Bogor" },
             { "@@type": "City", "name": "Kota Tangerang" },
+            { "@@type": "City", "name": "Kota Tangerang Selatan" },
+            { "@@type": "AdministrativeArea", "name": "BSD City" },
+            { "@@type": "AdministrativeArea", "name": "Gading Serpong" },
+            { "@@type": "AdministrativeArea", "name": "Alam Sutera" },
+            { "@@type": "AdministrativeArea", "name": "Lippo Karawaci" },
+            { "@@type": "AdministrativeArea", "name": "Periuk" },
+            { "@@type": "AdministrativeArea", "name": "Kabupaten Tangerang" },
+            { "@@type": "City", "name": "Kota Bogor" },
+            { "@@type": "AdministrativeArea", "name": "Kabupaten Bogor" },
             { "@@type": "AdministrativeArea", "name": "Jabodetabek" },
             { "@@type": "Country", "name": "Indonesia" }
           ],
@@ -103,53 +143,53 @@
           },
           "hasOfferCatalog": {
             "@@type": "OfferCatalog",
-            "name": "Layanan Hukum Holong Siregar & Co.",
+            "name": "Layanan Pengacara Tangerang & Bogor",
             "itemListElement": [
               {
                 "@@type": "Offer",
                 "itemOffered": {
                   "@@type": "Service",
-                  "name": "Perdata Umum & Khusus",
-                  "description": "Pendampingan dan penyelesaian sengketa perdata, wanprestasi, ganti rugi, dan perbuatan melawan hukum."
+                  "name": "Pengacara Perdata Tangerang & Bogor",
+                  "description": "Pendampingan sengketa perdata, wanprestasi kontrak bisnis, ganti rugi, dan perbuatan melawan hukum."
                 }
               },
               {
                 "@@type": "Offer",
                 "itemOffered": {
                   "@@type": "Service",
-                  "name": "Pidana Umum & Khusus",
-                  "description": "Pendampingan proses penyelidikan, penyidikan kepolisian, kejaksaan, dan persidangan perkara pidana."
+                  "name": "Pengacara Pidana Tangerang & Bogor",
+                  "description": "Pendampingan penyelidikan kepolisian (Polres Metro Tangerang Kota / Polresta Bogor), kejaksaan, dan persidangan perkara pidana."
                 }
               },
               {
                 "@@type": "Offer",
                 "itemOffered": {
                   "@@type": "Service",
-                  "name": "Legal Contract & Review Contract",
-                  "description": "Penyusunan, telaah, dan mitigasi risiko klausul kontrak bisnis dan kerja sama komersial."
+                  "name": "Legal Contract & Review Kontrak",
+                  "description": "Penyusunan, telaah, dan mitigasi risiko klausul kontrak bisnis dan kerja sama komersial perusahaan."
                 }
               },
               {
                 "@@type": "Offer",
                 "itemOffered": {
                   "@@type": "Service",
-                  "name": "Hukum Keluarga & Perceraian",
-                  "description": "Penanganan sengketa waris, perkawinan, perceraian, hak asuh anak, dan pembagian harta bersama."
+                  "name": "Pengacara Perceraian & Hukum Keluarga",
+                  "description": "Penanganan sengketa waris, perkawinan, gugatan perceraian di PA Tangerang/Bogor, hak asuh anak, dan harta bersama."
                 }
               },
               {
                 "@@type": "Offer",
                 "itemOffered": {
                   "@@type": "Service",
-                  "name": "Hukum Perusahaan",
-                  "description": "Konsultasi kepatuhan korporasi, legalitas usaha, ketenagakerjaan, merger, dan sengketa kepemilikan saham."
+                  "name": "Pengacara Perusahaan & Korporasi",
+                  "description": "Konsultasi kepatuhan korporasi, legalitas usaha, ketenagakerjaan, merger, dan sengketa kepemilikan saham di Tangerang & Bogor."
                 }
               },
               {
                 "@@type": "Offer",
                 "itemOffered": {
                   "@@type": "Service",
-                  "name": "Legal Konsultasi",
+                  "name": "Konsultasi Hukum Online & Langsung",
                   "description": "Konsultasi hukum komprehensif, opini hukum (legal opinion), dan analisis risiko sebelum langkah hukum diambil."
                 }
               },
@@ -157,7 +197,7 @@
                 "@@type": "Offer",
                 "itemOffered": {
                   "@@type": "Service",
-                  "name": "Recovery Asset",
+                  "name": "Recovery Asset & Sengketa Properti",
                   "description": "Upaya penelusuran, pengamanan, dan pemulihan aset hak klien melalui jalur hukum yang sah."
                 }
               }
@@ -169,7 +209,7 @@
           "@@id": "{{ url('/') }}#website",
           "url": "{{ url('/') }}",
           "name": "Holong Siregar & Co. Law Office",
-          "description": "Kantor Hukum & Advokat Pengacara Profesional di Bogor dan Tangerang",
+          "description": "Kantor Hukum & Pengacara di Tangerang dan Bogor Terpercaya",
           "publisher": { "@@id": "{{ url('/') }}#organization" },
           "inLanguage": "id-ID"
         }

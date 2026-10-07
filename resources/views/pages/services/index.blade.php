@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Layanan Hukum Terpadu | Holong Siregar & Co. Law Office (Bogor & Tangerang)')
-@section('meta_description', 'Katalog lengkap layanan hukum profesional Holong Siregar & Co.: perdata, pidana, legal contract review, hukum keluarga & perceraian, hukum perusahaan, dan recovery asset.')
-@section('meta_keywords', 'layanan hukum bogor, jasa pengacara bogor, layanan hukum tangerang, advokat perdata tangerang, pengacara pidana bogor, konsultan hukum perusahaan, review kontrak bisnis, pengacara perceraian bogor tangerang')
+@section('title', 'Layanan Pengacara di Tangerang & Bogor | Perdata, Pidana, Korporasi & Bisnis')
+@section('meta_description', 'Daftar layanan jasa pengacara di Tangerang & Bogor oleh Holong Siregar & Co.: sengketa perdata, pidana, drafting kontrak, perceraian, sengketa tanah, dan hukum perusahaan.')
+@section('meta_keywords', 'layanan pengacara di tangerang, jasa pengacara tangerang, pengacara perdata tangerang, pengacara pidana tangerang, pengacara perceraian tangerang, pengacara kontrak bsd tangerang, corporate lawyer tangerang, pengacara bogor, advokat tangerang')
 
 @section('content')
     <section class="law-page-hero page-hero">

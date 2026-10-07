@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $service['title'] . ' | Layanan Advokat & Pengacara Holong Siregar & Co.')
-@section('meta_description', $service['short_description'] . ' Pendampingan hukum terpercaya oleh kantor advokat Holong Siregar & Co. di Bogor & Tangerang.')
-@section('meta_keywords', strtolower($service['title']) . ', pengacara ' . strtolower($service['title']) . ', jasa hukum ' . strtolower($service['title']) . ', kantor hukum bogor, advokat tangerang, holong siregar')
+@section('title', $service['title'] . ' | Pengacara di Tangerang & Bogor - Holong Siregar & Co.')
+@section('meta_description', $service['short_description'] . ' Layanan pengacara profesional di wilayah Tangerang (BSD, Serpong) dan Bogor oleh kantor hukum Holong Siregar & Co.')
+@section('meta_keywords', strtolower($service['title']) . ', pengacara ' . strtolower($service['title']) . ' tangerang, pengacara ' . strtolower($service['title']) . ' bogor, jasa pengacara di tangerang, kantor advokat tangerang, holong siregar')
 
 @section('content')
     <section class="law-page-hero page-hero">
