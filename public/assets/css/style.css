@@ -879,38 +879,99 @@ img {
 .service-card {
   background-color: var(--law-white);
   border: 1px solid var(--law-line);
-  border-radius: 10px;
-  padding: 2.2rem 2rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: all 0.25s ease;
+  border-radius: 12px;
+  padding: 2.3rem 2rem;
+  box-shadow: 0 2px 6px rgba(12, 31, 56, 0.04);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              background 0.35s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
+}
+
+/* Elegant Golden Top Accent Line on Hover */
+.law-service-card::before,
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--law-gold) 0%, var(--law-gold-light) 50%, var(--law-gold-dark) 100%);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 12px 12px 0 0;
+  z-index: 2;
+}
+
+/* Corner Ambient Radiance Glow on Hover */
+.law-service-card::after,
+.service-card::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.12) 0%, rgba(197, 155, 39, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
 }
 
 .law-service-card:hover,
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -6px rgba(12, 31, 56, 0.08), 0 4px 8px -4px rgba(12, 31, 56, 0.04);
+  transform: translateY(-6px);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 60%, #f8fafc 100%);
+  box-shadow: 0 20px 40px -10px rgba(12, 31, 56, 0.12),
+              0 0 0 1px rgba(197, 155, 39, 0.35),
+              0 6px 16px -4px rgba(197, 155, 39, 0.08);
   border-color: rgba(197, 155, 39, 0.45);
+}
+
+.law-service-card:hover::before,
+.service-card:hover::before {
+  width: 100%;
+}
+
+.law-service-card:hover::after,
+.service-card:hover::after {
+  opacity: 1;
+  transform: scale(1.3);
 }
 
 .law-service-icon,
 .service-icon {
-  font-size: 1.75rem;
-  color: var(--law-gold);
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background-color: rgba(197, 155, 39, 0.08);
+  border: 1px solid rgba(197, 155, 39, 0.22);
+  color: var(--law-gold-dark);
+  font-size: 1.45rem;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 1.25rem;
-  transition: transform 0.25s ease, color 0.25s ease;
+  justify-content: center;
+  margin-bottom: 1.35rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 2;
 }
 
 .law-service-card:hover .law-service-icon,
 .service-card:hover .service-icon {
-  transform: scale(1.08);
-  color: var(--law-gold-dark);
+  background: linear-gradient(135deg, var(--law-gold) 0%, var(--law-gold-dark) 100%);
+  color: #ffffff;
+  border-color: var(--law-gold);
+  box-shadow: 0 8px 20px rgba(197, 155, 39, 0.35);
+  transform: translateY(-3px) scale(1.06);
 }
 
 .law-service-title,
@@ -921,6 +982,14 @@ img {
   margin-bottom: 0.75rem;
   font-weight: 700;
   line-height: 1.35;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.law-service-card:hover .law-service-title,
+.service-card:hover .service-title {
+  color: var(--law-gold-dark);
 }
 
 .law-service-text,
@@ -930,6 +999,8 @@ img {
   line-height: 1.62;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .law-service-text-wide {
@@ -943,26 +1014,39 @@ img {
   font-size: 0.9375rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
   margin-top: auto;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 2;
 }
 
 .law-service-link-arrow {
-  font-size: 1.15rem;
-  line-height: 1;
-  transition: transform 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(12, 31, 56, 0.06);
+  font-size: 0.75rem;
+  color: var(--law-navy);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.law-service-link:hover,
-.card-link:hover {
+.law-service-card:hover .law-service-link,
+.service-card:hover .card-link {
   color: var(--law-gold-dark);
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
-.law-service-link:hover .law-service-link-arrow {
+.law-service-card:hover .law-service-link-arrow,
+.service-card:hover .law-service-link-arrow {
+  background: linear-gradient(135deg, var(--law-gold) 0%, var(--law-gold-dark) 100%);
+  color: #ffffff;
   transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(197, 155, 39, 0.35);
 }
 
 /* ==========================================================================

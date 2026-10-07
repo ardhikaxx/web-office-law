@@ -6,8 +6,10 @@
     </div>
     <h3 class="law-service-title service-title">{{ $service['title'] }}</h3>
     <p class="law-service-text service-text {{ $isWide ? 'law-service-text-wide' : '' }}">{{ $service['short_description'] }}</p>
-    <a class="law-service-link card-link" href="{{ route('services.show', $service['slug']) }}">
+    <a class="law-service-link card-link stretched-link" href="{{ route('services.show', $service['slug']) }}">
         <span>Lihat detail layanan</span>
-        <span class="law-service-link-arrow" aria-hidden="true">&rarr;</span>
+        <span class="law-service-link-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+        </span>
     </a>
 </article>
