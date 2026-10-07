@@ -67,4 +67,67 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, 6000);
     });
+
+    // 5. Floating WhatsApp Tooltip 5-Second Interval Cycle
+    const waTooltip = document.getElementById('waTooltip');
+    const waContainer = document.getElementById('waFloatContainer');
+    const waClose = document.getElementById('waTooltipClose');
+    if (waTooltip) {
+        let isHovered = false;
+        let isDismissed = false;
+        let isVisible = false;
+
+        const showTip = function () {
+            if (isDismissed) return;
+            waTooltip.classList.add('is-visible');
+            waTooltip.setAttribute('aria-hidden', 'false');
+            isVisible = true;
+        };
+
+        const hideTip = function () {
+            if (isHovered) return;
+            waTooltip.classList.remove('is-visible');
+            waTooltip.setAttribute('aria-hidden', 'true');
+            isVisible = false;
+        };
+
+        // Muncul pertama kali setelah 1.5 detik
+        setTimeout(showTip, 1500);
+
+        // Siklus muncul setiap 5 detik
+        setInterval(function () {
+            if (isDismissed || isHovered) return;
+            if (isVisible) {
+                hideTip();
+            } else {
+                showTip();
+            }
+        }, 5000);
+
+        // Tetap tampil saat kursor diarahkan ke tooltip atau tombol WA
+        const waFloatBtn = waContainer ? waContainer.querySelector('.wa-float') : null;
+        [waTooltip, waFloatBtn].forEach(function (el) {
+            if (!el) return;
+            el.addEventListener('mouseenter', function () {
+                isHovered = true;
+                showTip();
+            });
+            el.addEventListener('mouseleave', function () {
+                isHovered = false;
+            });
+        });
+
+        // Tombol tutup tooltip
+        if (waClose) {
+            waClose.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                hideTip();
+                isDismissed = true;
+                setTimeout(function () {
+                    isDismissed = false;
+                }, 30000);
+            });
+        }
+    }
 });
