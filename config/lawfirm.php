@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 | Seluruh konten bersifat hard-coded (tanpa database) agar website dapat
 | langsung berjalan. Untuk mengganti info kantor cukup edit bagian 'site'.
-| Data layanan, tim, artikel, dll cukup edit array di bawah.
+| Data layanan, tim, dll cukup edit array di bawah.
 */
 
 return [
@@ -167,69 +167,6 @@ return [
             'education' => ['Sarjana Hukum — [Universitas]'],
             'experience' => ['Pendampingan hukum keluarga', 'Pemeriksaan legalitas pertanahan'],
             'organizations' => ['Perhimpunan Advokat Indonesia (PERADI)'],
-        ],
-    ],
-
-    'articles' => [
-        [
-            'title' => 'Memahami Wanprestasi: Hak Anda Saat Kontrak Dilanggar',
-            'slug' => 'memahami-wanprestasi-hak-anda-saat-kontrak-dilanggar',
-            'category' => 'Hukum Perdata',
-            'author' => 'Holong Siregar & Co.',
-            'date' => '2026-09-20',
-            'excerpt' => 'Wanprestasi terjadi ketika salah satu pihak tidak memenuhi kewajiban dalam perjanjian. Pahami bentuk, akibat hukum, dan langkah awal yang dapat ditempuh.',
-            'content' => "Wanprestasi adalah kondisi ketika salah satu pihak dalam perjanjian tidak melaksanakan kewajiban sebagaimana disepakati.\n\nBentuknya dapat berupa tidak melaksanakan sama sekali, melaksanakan tetapi terlambat, melaksanakan tetapi tidak sesuai, atau melakukan sesuatu yang dilarang dalam perjanjian.\n\nLangkah awal yang umumnya ditempuh adalah meninjau kembali isi perjanjian, mengumpulkan bukti komunikasi dan pelaksanaan, menyampaikan somasi secara tertulis, serta membuka ruang musyawarah sebelum menempuh jalur hukum.\n\nSetiap perkara memiliki konteks berbeda sehingga analisis dokumen secara cermat menjadi kunci sebelum menentukan strategi.",
-            'image' => 'images/articles/artikel-1.svg',
-        ],
-        [
-            'title' => 'Pentingnya Review Kontrak Sebelum Tanda Tangan',
-            'slug' => 'pentingnya-review-kontrak-sebelum-tanda-tangan',
-            'category' => 'Kontrak & Bisnis',
-            'author' => 'Holong Siregar & Co.',
-            'date' => '2026-09-10',
-            'excerpt' => 'Banyak sengketa bisnis bermula dari klausul yang tidak dibaca teliti. Ini checklist sederhana sebelum Anda menandatangani kontrak.',
-            'content' => "Kontrak yang baik harus memuat identitas para pihak, ruang lingkup pekerjaan, hak dan kewajiban, jangka waktu, pembayaran, keadaan memaksa (force majeure), penyelesaian sengketa, dan klausul pengakhiran.\n\nPerhatikan juga denda, batasan tanggung jawab, serta mekanisme perubahan kontrak.\n\nReview kontrak bukan sekadar membaca, melainkan menilai risiko dan memastikan bahasa kontrak melindungi kepentingan Anda dalam jangka panjang.",
-            'image' => 'images/articles/artikel-2.svg',
-        ],
-        [
-            'title' => 'Pendampingan Hukum pada Tahap Awal Perkara Pidana',
-            'slug' => 'pendampingan-hukum-tahap-awal-perkara-pidana',
-            'category' => 'Hukum Pidana',
-            'author' => 'Holong Siregar & Co.',
-            'date' => '2026-08-28',
-            'excerpt' => 'Tahap penyelidikan dan penyidikan menentukan arah perkara. Ketahui hak-hak dasar dan pentingnya pendampingan sejak awal.',
-            'content' => "Pada tahap penyelidikan dan penyidikan, setiap keterangan dan dokumen memiliki bobot penting bagi jalannya perkara.\n\nKlien berhak didampingi penasihat hukum, memahami sangkaan yang dikenakan, serta menyampaikan keterangan secara bebas tanpa tekanan.\n\nPendampingan sejak awal membantu memastikan prosedur berjalan sesuai hukum acara dan fakta terdokumentasi dengan baik.",
-            'image' => 'images/articles/artikel-3.svg',
-        ],
-        [
-            'title' => 'Sengketa Tanah: Mengapa Legalitas Alas Hak Sangat Menentukan',
-            'slug' => 'sengketa-tanah-legalitas-alas-hak',
-            'category' => 'Pertanahan',
-            'author' => 'Holong Siregar & Co.',
-            'date' => '2026-08-15',
-            'excerpt' => 'Riwayat peralihan hak, keaslian sertifikat, dan kesesuaian data fisik-yuridis kerap menjadi penentu dalam sengketa tanah.',
-            'content' => "Sengketa pertanahan umumnya berakar pada ketidakjelasan alas hak, tumpang tindih klaim, atau ketidaksesuaian data.\n\nPemeriksaan legalitas meliputi pengecekan sertifikat, riwayat peralihan, kesesuaian data fisik dan yuridis, serta status pembebanan.\n\nKetelitian pada tahap awal transaksi jauh lebih murah dibanding biaya sengketa di kemudian hari.",
-            'image' => 'images/articles/artikel-4.svg',
-        ],
-        [
-            'title' => 'PHK dan Hak Pekerja: Alur Penyelesaian yang Perlu Diketahui',
-            'slug' => 'phk-dan-hak-pekerja-alur-penyelesaian',
-            'category' => 'Ketenagakerjaan',
-            'author' => 'Holong Siregar & Co.',
-            'date' => '2026-07-30',
-            'excerpt' => 'Perselisihan hubungan industrial memiliki tahapan perundingan yang wajib dilalui sebelum ke pengadilan.',
-            'content' => "Perselisihan hubungan industrial umumnya diselesaikan melalui perundingan bipartit, kemudian mediasi atau konsiliasi pada dinas ketenagakerjaan, sebelum berlanjut ke Pengadilan Hubungan Industrial bila tidak tercapai kesepakatan.\n\nBaik pekerja maupun pengusaha perlu memahami hak, kewajiban, dan tenggat setiap tahapan agar penyelesaian berjalan tertib.",
-            'image' => 'images/articles/artikel-5.svg',
-        ],
-        [
-            'title' => 'Litigasi vs Non-Litigasi: Memilih Jalur yang Tepat',
-            'slug' => 'litigasi-vs-non-litigasi-memilih-jalur-tepat',
-            'category' => 'Insight',
-            'author' => 'Holong Siregar & Co.',
-            'date' => '2026-07-12',
-            'excerpt' => 'Tidak semua persoalan hukum harus ke pengadilan. Pahami pertimbangan biaya, waktu, relasi, dan kepastian hukum.',
-            'content' => "Litigasi memberikan putusan yang mengikat, namun memakan waktu dan biaya serta berpotensi merenggangkan relasi bisnis.\n\nJalur non-litigasi seperti negosiasi dan mediasi menawarkan fleksibilitas dan kerahasiaan, cocok ketika relasi jangka panjang perlu dijaga.\n\nPemilihan jalur sebaiknya didasarkan pada analisis posisi hukum, tujuan klien, dan risiko masing-masing opsi.",
-            'image' => 'images/articles/artikel-6.svg',
         ],
     ],
 

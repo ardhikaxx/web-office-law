@@ -7,7 +7,6 @@
         ['label' => 'Layanan', 'route' => 'services.index'],
         ['label' => 'Area Praktik', 'route' => 'practice-areas.index'],
         ['label' => 'Tim Kami', 'route' => 'lawyers.index'],
-        ['label' => 'Artikel', 'route' => 'articles.index'],
         ['label' => 'Kontak', 'route' => 'contact'],
     ];
 
@@ -23,9 +22,6 @@
         }
         if ($route === 'lawyers.index') {
             return request()->routeIs('lawyers.*');
-        }
-        if ($route === 'articles.index') {
-            return request()->routeIs('articles.*');
         }
         if ($route === 'contact') {
             return request()->routeIs('contact*');

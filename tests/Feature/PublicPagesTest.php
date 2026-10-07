@@ -11,8 +11,6 @@ test('public pages render without error', function () {
         '/area-praktik/non-litigasi',
         '/tim',
         '/tim/holong-siregar',
-        '/artikel',
-        '/artikel/memahami-wanprestasi-hak-anda-saat-kontrak-dilanggar',
         '/kontak',
         '/faq',
         '/disclaimer',
@@ -33,8 +31,8 @@ test('unknown slugs return 404 with law firm branding', function () {
     $response->assertSee('Holong Siregar');
 
     $this->get('/tim/tidak-ada')->assertNotFound();
-    $this->get('/artikel/tidak-ada')->assertNotFound();
     $this->get('/area-praktik/tidak-ada')->assertNotFound();
+    $this->get('/artikel')->assertNotFound();
 });
 
 test('home page renders official justice symbol asset in hero', function () {
@@ -51,6 +49,14 @@ test('browser tab favicon, navbar, and footer render logo asset', function () {
     $response->assertSee('rel="icon" type="image/png"', false);
     $response->assertSee('rounded-circle');
     $response->assertSee('rounded-full');
+});
+
+test('article page and article menus are completely removed', function () {
+    $response = $this->get('/');
+    $response->assertOk();
+    $response->assertDontSee('Legal Insights &amp; Wawasan', false);
+    $response->assertDontSee('LATEST FROM OUR BLOG');
+    $response->assertDontSee('/artikel');
 });
 
 test('services section renders all 7 services with real text from image reference', function () {

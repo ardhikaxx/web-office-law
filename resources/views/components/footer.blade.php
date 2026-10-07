@@ -48,7 +48,6 @@
                         <li><a href="{{ route('services.index') }}">Layanan Hukum</a></li>
                         <li><a href="{{ route('practice-areas.index') }}">Area Praktik</a></li>
                         <li><a href="{{ route('lawyers.index') }}">Tim Kami</a></li>
-                        <li><a href="{{ route('articles.index') }}">Artikel &amp; Insight</a></li>
                         <li><a href="{{ route('contact') }}">Kontak Kami</a></li>
                         <li><a href="{{ route('faq') }}">FAQ</a></li>
                     </ul>

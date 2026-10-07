@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LawyerController;
@@ -23,9 +22,6 @@ Route::get('/area-praktik/{slug}', [PracticeAreaController::class, 'show'])->nam
 
 Route::get('/tim', [LawyerController::class, 'index'])->name('lawyers.index');
 Route::get('/tim/{slug}', [LawyerController::class, 'show'])->name('lawyers.show');
-
-Route::get('/artikel', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/artikel/{slug}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::get('/kontak', [ContactController::class, 'index'])->name('contact');
 Route::post('/kontak', [ContactController::class, 'store'])

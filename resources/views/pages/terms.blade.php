@@ -24,7 +24,7 @@
                     <p>Website ini dikelola sebagai media informasi resmi profil firma, cakupan layanan hukum, dan sarana awal kontak Holong Siregar &amp; Co. Law Office. Pengunjung diharapkan mengakses informasi dengan itikad baik dan tidak menyalahgunakan sarana formulir yang disediakan.</p>
 
                     <h3 class="h5 law-heading mt-4 mb-2">2. Bukan Nasihat Hukum Formal</h3>
-                    <p>Seluruh materi publikasi, termasuk artikel dan ringkasan layanan, merupakan penjelasan umum dan tidak dapat dipersamakan dengan advis hukum formal. Keputusan hukum harus senantiasa didasarkan pada konsultasi komprehensif terhadap dokumen dan fakta perkara yang utuh.</p>
+                    <p>Seluruh materi publikasi dan ringkasan layanan merupakan penjelasan umum dan tidak dapat dipersamakan dengan advis hukum formal. Keputusan hukum harus senantiasa didasarkan pada konsultasi komprehensif terhadap dokumen dan fakta perkara yang utuh.</p>
 
                     <h3 class="h5 law-heading mt-4 mb-2">3. Penanganan Permintaan Konsultasi</h3>
                     <p>Penyampaian formulir merupakan permintaan awal untuk ditinjau. Kantor berhak meminta penjelasan pendukung atau menyatakan tidak dapat menerima penanganan suatu perkara apabila terdapat potensi benturan kepentingan (conflict of interest) atau kendala kapasitas penanganan sesuai kode etik advokat.</p>

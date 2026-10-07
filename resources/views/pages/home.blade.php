@@ -498,62 +498,13 @@
         </div>
     </section>
 
-    {{-- 8. LEGAL INSIGHTS & FAQ (Side-by-side like image.png) --}}
+    {{-- 8. FAQ SECTION --}}
     <section class="law-section section">
         <div class="container">
-            <div class="row g-5">
-                {{-- Left Column: Latest Legal Insights --}}
-                <div class="col-lg-6">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
                     <x-section-heading
-                        align="start"
-                        eyebrow="LATEST FROM OUR BLOG"
-                        title="Legal Insights &amp; Wawasan"
-                        description="Artikel dan ulasan hukum informatif seputar dinamika regulasi dan solusi praktis atas persoalan hukum sehari-hari." />
-
-                    @if (count($articles))
-                        <div class="d-flex flex-column gap-4">
-                            @foreach ($articles as $article)
-                                <div class="row g-3 align-items-center bg-white p-3 border rounded shadow-sm">
-                                    <div class="col-4 col-sm-3">
-                                        <div class="ratio ratio-1x1 rounded overflow-hidden">
-                                            <img src="{{ \App\Support\LawFirm::assetOrFallback($article['image'] ?? null) }}"
-                                                 alt="{{ $article['title'] }}"
-                                                 class="object-fit-cover"
-                                                 loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="col-8 col-sm-9">
-                                        <div class="small text-muted mb-1">
-                                            <span class="badge bg-navy text-gold-light me-1">{{ $article['category'] }}</span>
-                                            <span>{{ \Carbon\Carbon::parse($article['date'])->translatedFormat('d M Y') }}</span>
-                                        </div>
-                                        <h4 class="h6 mb-2">
-                                            <a href="{{ route('articles.show', $article['slug']) }}" class="text-navy fw-bold text-decoration-none">
-                                                {{ $article['title'] }}
-                                            </a>
-                                        </h4>
-                                        <a href="{{ route('articles.show', $article['slug']) }}" class="law-service-link text-gold-dark" style="font-size:0.8125rem;">
-                                            <span>Baca Selengkapnya</span>
-                                            <i class="fa-solid fa-arrow-right ms-1"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-
-                        <div class="mt-4 pt-2">
-                            <a href="{{ route('articles.index') }}" class="btn btn-navy law-btn-navy">
-                                <span>Lihat Semua Artikel</span>
-                                <i class="fa-solid fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    @endif
-                </div>
-
-                {{-- Right Column: FAQ Accordion --}}
-                <div class="col-lg-6">
-                    <x-section-heading
-                        align="start"
+                        align="center"
                         eyebrow="FAQ"
                         title="Frequently Asked Questions"
                         description="Jawaban ringkas atas pertanyaan yang sering diajukan klien sebelum memulai pendampingan hukum bersama kami." />
@@ -587,7 +538,7 @@
                         @endforeach
                     </div>
 
-                    <div class="mt-4 pt-2">
+                    <div class="text-center mt-4 pt-2">
                         <a href="{{ route('faq') }}" class="btn btn-outline-navy law-btn-outline">
                             <span>Lihat Semua Pertanyaan (FAQ)</span>
                             <i class="fa-solid fa-arrow-right ms-2"></i>

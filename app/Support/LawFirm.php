@@ -72,34 +72,6 @@ class LawFirm
         return null;
     }
 
-    public static function articles(): array
-    {
-        return collect(config('lawfirm.articles', []))
-            ->sortByDesc('date')
-            ->values()
-            ->all();
-    }
-
-    public static function findArticle(string $slug): ?array
-    {
-        foreach (self::articles() as $article) {
-            if ($article['slug'] === $slug) {
-                return $article;
-            }
-        }
-
-        return null;
-    }
-
-    public static function relatedArticles(string $slug, int $limit = 3): array
-    {
-        return collect(self::articles())
-            ->where('slug', '!=', $slug)
-            ->take($limit)
-            ->values()
-            ->all();
-    }
-
     public static function whatsappUrl(?string $message = null): string
     {
         $number = preg_replace('/[^0-9]/', '', (string) self::site('whatsapp', ''));

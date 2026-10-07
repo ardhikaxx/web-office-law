@@ -15,7 +15,6 @@ class SitemapController extends Controller
             ['loc' => route('services.index'), 'priority' => '0.9'],
             ['loc' => route('practice-areas.index'), 'priority' => '0.9'],
             ['loc' => route('lawyers.index'), 'priority' => '0.8'],
-            ['loc' => route('articles.index'), 'priority' => '0.8'],
             ['loc' => route('contact'), 'priority' => '0.9'],
             ['loc' => route('faq'), 'priority' => '0.5'],
             ['loc' => route('disclaimer'), 'priority' => '0.3'],
@@ -33,10 +32,6 @@ class SitemapController extends Controller
 
         foreach (LawFirm::lawyers() as $lawyer) {
             $urls[] = ['loc' => route('lawyers.show', $lawyer['slug']), 'priority' => '0.6'];
-        }
-
-        foreach (LawFirm::articles() as $article) {
-            $urls[] = ['loc' => route('articles.show', $article['slug']), 'priority' => '0.6'];
         }
 
         return response()
