@@ -282,13 +282,21 @@ img {
 
 .law-navbar-toggler {
   border: 1px solid var(--law-line);
-  padding: 0.45rem 0.65rem;
+  padding: 0.45rem 0.75rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--law-radius-sm);
   color: var(--law-navy);
+  font-size: 1.15rem;
+  transition: all 0.2s ease;
 }
 
 .law-navbar-toggler:focus {
   box-shadow: 0 0 0 3px var(--law-gold-glow);
+  outline: none;
 }
 
 /* Compatibility aliases for navbar */
@@ -2373,25 +2381,80 @@ img {
 
   .law-navbar-collapse {
     background-color: var(--law-white);
-    padding: 1.2rem;
-    border-radius: var(--law-radius-sm);
-    box-shadow: var(--law-shadow-md);
+    padding: 0.85rem 1.15rem 1.15rem;
+    border-radius: var(--law-radius);
+    box-shadow: 0 14px 35px rgba(7, 20, 36, 0.14);
     margin-top: 0.8rem;
     border: 1px solid var(--law-line);
   }
 
-  .law-navbar .nav-link.active::after {
+  .law-navbar-collapse .navbar-nav .nav-item {
+    border-bottom: 1px solid rgba(226, 232, 240, 0.75);
+  }
+
+  .law-navbar-collapse .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+    padding-top: 0.5rem;
+  }
+
+  .law-navbar-collapse .nav-link {
+    color: var(--law-ink) !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.75rem 0.5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .law-navbar-collapse .nav-link:hover,
+  .law-navbar-collapse .nav-link:focus {
+    color: var(--law-gold-dark) !important;
+    background-color: rgba(197, 155, 39, 0.05);
+  }
+
+  .law-navbar-collapse .nav-link.active {
+    color: var(--law-gold-dark) !important;
+    font-weight: 700;
+    background-color: rgba(197, 155, 39, 0.09);
+    padding-left: 0.75rem !important;
+  }
+
+  .law-navbar-collapse .nav-link.active::after {
     display: none;
   }
 
-  .law-navbar .nav-link.active {
-    color: var(--law-gold-dark);
+  .law-navbar-collapse .law-btn-primary,
+  .law-navbar-collapse .btn-gold {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .law-page-hero,
+  .page-hero {
+    padding: 3.25rem 0 2.25rem;
+  }
+
+  .law-page-hero h1,
+  .page-hero h1 {
+    font-size: clamp(1.85rem, 5vw, 2.25rem);
+  }
+
+  .law-page-hero p,
+  .page-hero p {
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 }
 
 @media (max-width: 575.98px) {
   .law-hero {
-    padding: 3.5rem 0 0;
+    padding: 3rem 0 0;
   }
 
   .law-hero-badge {
@@ -2400,15 +2463,41 @@ img {
     padding: 0.28rem 0.75rem;
     gap: 0.35rem;
     margin-bottom: 1rem;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
   }
 
   .law-hero-title {
-    font-size: 1.85rem;
+    font-size: clamp(1.75rem, 6.5vw, 2.05rem);
+    line-height: 1.22;
+    margin-bottom: 1.15rem;
+  }
+
+  .law-hero-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.65rem;
+  }
+
+  .law-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .law-hero-actions .law-btn-primary,
+  .law-hero-actions .btn-outline-light {
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    min-height: 48px;
+    font-size: 0.9375rem;
   }
 
   .law-hero-visual {
-    height: 380px;
-    margin-top: 1.25rem;
+    height: 360px;
+    margin-top: 1rem;
     bottom: -1.5rem;
   }
 
@@ -2416,42 +2505,15 @@ img {
     max-width: 100%;
   }
 
-  .law-hero-floating-card {
-    top: auto;
-    bottom: 1rem;
-    left: 0.5rem;
-    padding: 0.6rem 0.85rem;
-    gap: 0.65rem;
-    max-width: none;
+  .law-hero-strip {
+    padding: 1rem 0;
   }
 
-  .law-hero-floating-card i {
-    width: 34px;
-    height: 34px;
-    font-size: 1rem;
-    border-radius: 8px;
-  }
-
-  .law-hero-floating-card strong {
-    font-size: 0.78rem;
-  }
-
-  .law-hero-floating-card small {
-    font-size: 0.67rem;
-    display: block;
-    white-space: nowrap;
-    line-height: 1.3;
-  }
-
-  .law-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .law-hero-actions .law-btn-primary,
-  .law-hero-actions .btn-outline-light {
-    width: 100%;
-    text-align: center;
+  .law-strip-item {
+    padding: 0.6rem 0.75rem;
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: var(--law-radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .law-brand-name {
@@ -2465,14 +2527,142 @@ img {
 
   .law-section,
   .section {
-    padding: 3.2rem 0;
+    padding: 3rem 0;
+  }
+
+  .law-section-heading,
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .law-section-title,
+  .section-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+
+  .law-section-desc,
+  .section-desc {
+    font-size: 0.9375rem;
+  }
+
+  .law-divider-gold {
+    margin: 0.8rem 0 1.2rem;
   }
 
   .law-consultation-section {
-    padding: 3.5rem 0;
+    padding: 3.25rem 0;
   }
 
   .law-consultation-form-card {
-    padding: 1.5rem 1.2rem;
+    padding: 1.4rem 1.15rem;
+  }
+
+  /* Cards Padding & Typography on Mobile */
+  .law-service-card,
+  .service-card,
+  .law-practice-card,
+  .practice-card,
+  .law-step-card,
+  .step-card,
+  .contact-info-card,
+  .law-card.p-4.p-md-5 {
+    padding: 1.35rem 1.15rem !important;
+  }
+
+  .law-quote-box,
+  .quote-box {
+    padding: 1.25rem 1.15rem;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* Mobile CTA Banner */
+  .law-cta-band,
+  .cta-band {
+    padding: 3.25rem 0;
+  }
+
+  .law-cta-title,
+  .cta-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+  }
+
+  .law-cta-text,
+  .cta-text {
+    font-size: 0.95rem;
+  }
+
+  .law-cta-band .d-flex.flex-wrap {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .law-cta-band .d-flex.flex-wrap .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Mobile Form Inputs (16px base prevents iOS auto-zoom) */
+  .law-form-dark .form-control,
+  .law-form-dark .form-select,
+  .law-consultation-form .form-control,
+  .law-consultation-form .form-select {
+    font-size: 1rem;
+    min-height: 46px;
+  }
+
+  /* Homepage Wilayah Hukum Action Buttons */
+  #wilayah-hukum .d-flex.gap-2.flex-wrap .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Accordion padding for comfortable touch */
+  .law-accordion .accordion-button {
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+  }
+  .law-accordion .accordion-body {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .law-hero-title {
+    font-size: 1.625rem;
+  }
+
+  .law-hero-visual {
+    height: 300px;
+    bottom: -1.25rem;
+  }
+
+  .law-brand-name {
+    font-size: 0.9rem;
+  }
+
+  .law-brand-sub {
+    font-size: 0.56rem;
+    letter-spacing: 0.16em;
+  }
+
+  .law-navbar-toggler {
+    padding: 0.35rem 0.55rem;
+  }
+
+  .wa-tooltip {
+    max-width: 200px;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .wa-tooltip-text {
+    font-size: 0.78rem;
   }
 }

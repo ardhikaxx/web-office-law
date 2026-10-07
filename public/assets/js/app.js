@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 2. Auto-collapse mobile navbar on link click
-    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link:not(.dropdown-toggle)');
+    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link:not(.dropdown-toggle), .navbar-collapse .btn');
     const navbarCollapse = document.querySelector('.navbar-collapse');
     if (navbarCollapse) {
         navLinks.forEach(function (link) {
