@@ -537,7 +537,8 @@ img {
   background-image: url("../images/hero-office.svg");
   background-size: cover;
   background-position: center top;
-  opacity: 0.88;
+  opacity: 0.65;
+  filter: brightness(0.85);
   transform: scale(1.01);
 }
 
@@ -546,10 +547,10 @@ img {
   inset: 0;
   background: linear-gradient(
     115deg,
-    rgba(5, 14, 26, 0.84) 0%,
-    rgba(7, 19, 34, 0.72) 42%,
-    rgba(10, 26, 46, 0.45) 75%,
-    rgba(12, 31, 56, 0.32) 100%
+    rgba(4, 11, 20, 0.92) 0%,
+    rgba(6, 17, 30, 0.84) 42%,
+    rgba(8, 22, 40, 0.68) 75%,
+    rgba(10, 26, 46, 0.55) 100%
   );
 }
 

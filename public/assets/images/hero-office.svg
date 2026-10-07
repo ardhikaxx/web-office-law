@@ -449,6 +449,9 @@
   <circle cx="960" cy="380" r="500" fill="url(#sunGlow)"/>
 
   <!-- Warm Diagonal Sunlight Beams Casting Through Grand Colonnade -->
-  <polygon points="1080,0 1350,0 1750,1080 1300,1080" fill="url(#rayLight)"/>
-  <polygon points="500,0 720,0 1050,1080 750,1080" fill="url(#rayLight)" opacity="0.6"/>
+  <polygon points="1080,0 1350,0 1750,1080 1300,1080" fill="url(#rayLight)" opacity="0.75"/>
+  <polygon points="500,0 720,0 1050,1080 750,1080" fill="url(#rayLight)" opacity="0.45"/>
+
+  <!-- Subtly Darkened Deep Tone Overlay Layer -->
+  <rect x="0" y="0" width="1920" height="1080" fill="#040d18" opacity="0.18"/>
 </svg>
