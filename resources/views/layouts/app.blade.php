@@ -62,14 +62,32 @@
     @if (session('consultation_success'))
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Permintaan Konsultasi Diterima',
-                    text: @json(session('consultation_success')),
-                    confirmButtonText: 'Baik, Terima Kasih',
-                    confirmButtonColor: '#0c1f38',
-                    iconColor: '#c59b27'
-                });
+                @if (session('consultation_wa_url'))
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Permintaan Konsultasi Diterima',
+                        text: @json(session('consultation_success')),
+                        showCancelButton: true,
+                        confirmButtonText: '<i class="fa-brands fa-whatsapp me-1"></i> Teruskan ke WhatsApp',
+                        cancelButtonText: 'Tutup',
+                        confirmButtonColor: '#25D366',
+                        cancelButtonColor: '#0c1f38',
+                        iconColor: '#c59b27'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.open(@json(session('consultation_wa_url')), '_blank');
+                        }
+                    });
+                @else
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Permintaan Konsultasi Diterima',
+                        text: @json(session('consultation_success')),
+                        confirmButtonText: 'Baik, Terima Kasih',
+                        confirmButtonColor: '#0c1f38',
+                        iconColor: '#c59b27'
+                    });
+                @endif
             });
         </script>
     @endif

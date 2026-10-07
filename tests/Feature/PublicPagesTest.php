@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
+
 test('public pages render without error', function () {
     $urls = [
         '/',
@@ -100,7 +102,11 @@ test('consultation form validates and succeeds', function () {
         'agreement' => '1',
     ];
 
-    $this->post('/kontak', $payload)->assertRedirect(route('contact'));
+    $this->post('/kontak', $payload)
+        ->assertRedirect(route('contact'))
+        ->assertSessionHas('consultation_success')
+        ->assertSessionHas('consultation_wa_url');
+
     $this->post('/kontak', [])->assertSessionHasErrors(['name', 'phone', 'email', 'message', 'agreement']);
 });
 
@@ -111,4 +117,29 @@ test('about page renders authentic vision and mission', function () {
     $response->assertSee('Misi Kami');
     $response->assertSee('Memberikan solusi tepat pada permasalahan hukum');
     $response->assertSee('OFFICIUM NOBILE');
+});
+
+test('application operates purely hardcoded without any database queries', function () {
+    DB::enableQueryLog();
+
+    $this->get('/')->assertOk();
+    $this->get('/tentang-kami')->assertOk();
+    $this->get('/layanan')->assertOk();
+    $this->get('/area-praktik')->assertOk();
+    $this->get('/tim')->assertOk();
+    $this->get('/kontak')->assertOk();
+    $this->get('/faq')->assertOk();
+
+    $payload = [
+        'name' => 'Budi Hardcode',
+        'phone' => '081234567890',
+        'email' => 'budi@example.com',
+        'legal_need' => 'Perdata Umum & Khusus',
+        'subject' => 'Konsultasi Perdata',
+        'message' => 'Uji konsultasi tanpa koneksi atau query database.',
+        'agreement' => '1',
+    ];
+    $this->post('/kontak', $payload)->assertRedirect(route('contact'));
+
+    expect(DB::getQueryLog())->toBeEmpty();
 });
