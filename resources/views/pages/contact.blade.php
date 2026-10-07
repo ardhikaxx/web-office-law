@@ -1,147 +1,238 @@
 @extends('layouts.app')
 
-@section('title', 'Kontak Kami | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Hubungi Holong Siregar & Co. Law Office untuk permintaan konsultasi awal: alamat, email, WhatsApp, jam operasional, dan formulir konsultasi.')
+@section('title', 'Kontak & Konsultasi | Holong Siregar & Co. Law Office')
+@section('meta_description', 'Hubungi Holong Siregar & Co. Law Office untuk permintaan konsultasi awal: alamat kantor, email resmi, WhatsApp, jam operasional, dan formulir konsultasi.')
 
 @section('content')
-    <section class="page-hero">
+    <section class="law-page-hero page-hero">
         <div class="container">
             <x-breadcrumb :items="[
                 ['label' => 'Beranda', 'url' => route('home')],
                 ['label' => 'Kontak Kami'],
             ]" />
-            <p class="eyebrow">KONTAK KAMI</p>
-            <h1>Kontak Kami</h1>
-            <p>Sampaikan ringkasan kebutuhan Anda. Kami akan menerima permintaan konsultasi untuk ditinjau lebih lanjut.</p>
+            <span class="law-section-eyebrow eyebrow text-gold-light">KONTAK KAMI</span>
+            <h1 class="law-heading">Hubungi Tim Advokat Kami</h1>
+            <p>Sampaikan ringkasan kebutuhan atau permasalahan hukum Anda. Kami siap meninjau dan memberikan tanggapan awal yang tepat.</p>
         </div>
     </section>
 
-    <section class="section">
+    <section class="law-section section">
         <div class="container">
+            {{-- Contact Cards Row --}}
             <div class="row g-4 mb-5">
                 <div class="col-md-6 col-lg-3">
                     <div class="contact-info-card">
-                        <p><i class="fa-solid fa-location-dot me-2"></i><strong>Alamat</strong></p>
-                        <p class="text-muted mb-0">{{ $site['address'] }}, {{ $site['city'] }}</p>
+                        <div class="law-service-icon mb-3">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h2 class="h5 law-heading">Alamat Kantor</h2>
+                        <p class="text-muted mb-0">{{ $site['address'] ?? '[Alamat Kantor]' }}, {{ $site['city'] ?? '' }}</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="contact-info-card">
-                        <p><i class="fa-solid fa-envelope me-2"></i><strong>Email</strong></p>
-                        <p class="text-muted mb-0">{{ $site['email'] }}</p>
+                        <div class="law-service-icon mb-3">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h2 class="h5 law-heading">Email Resmi</h2>
+                        <p class="text-muted mb-0">
+                            <a href="mailto:{{ $site['email'] ?? 'info@holongsiregar.com' }}" class="text-navy text-decoration-none">
+                                {{ $site['email'] ?? '[Email Resmi]' }}
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="contact-info-card">
-                        <p><i class="fa-brands fa-whatsapp me-2"></i><strong>WhatsApp</strong></p>
-                        <p class="text-muted mb-2">{{ $site['whatsapp_display'] }}</p>
-                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-navy btn-sm">Chat Sekarang</a>
+                        <div class="law-service-icon mb-3">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h2 class="h5 law-heading">WhatsApp Konsultasi</h2>
+                        <p class="text-muted mb-3">{{ $site['whatsapp_display'] ?? '' }}</p>
+                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-navy law-btn-outline btn-sm">
+                            <i class="fa-brands fa-whatsapp text-success me-1"></i>Chat WhatsApp
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="contact-info-card">
-                        <p><i class="fa-regular fa-clock me-2"></i><strong>Jam Operasional</strong></p>
-                        <p class="text-muted mb-0">{{ $site['hours'] }}</p>
+                        <div class="law-service-icon mb-3">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <h2 class="h5 law-heading">Jam Operasional</h2>
+                        <p class="text-muted mb-0">{{ $site['hours'] ?? 'Senin – Jumat, 09.00 – 17.00 WIB' }}</p>
                     </div>
                 </div>
             </div>
 
+            {{-- Form & Guidance Section --}}
             <div class="row g-5">
                 <div class="col-lg-7">
-                    <h2 class="h4 mb-1">Formulir Permintaan Konsultasi</h2>
-                    <p class="text-muted">Lengkapi data berikut. Tanda <span class="text-danger">*</span> wajib diisi.</p>
-
-                    @if ($errors->any())
-                        <div class="alert alert-danger" role="alert">
-                            <strong>Mohon periksa kembali:</strong>
-                            <ul class="mb-0 mt-2">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
+                    <div class="law-card p-4 p-md-5 bg-white border">
+                        <div class="mb-4">
+                            <span class="law-section-eyebrow">FORMULIR KONSULTASI</span>
+                            <h2 class="h3 law-heading mb-2">Permintaan Konsultasi Hukum</h2>
+                            <p class="text-muted small">Lengkapi informasi di bawah ini. Bidang bertanda bintang (<span class="text-danger">*</span>) wajib diisi.</p>
                         </div>
-                    @endif
 
-                    <form id="consultationForm" method="POST" action="{{ route('contact.store') }}" novalidate>
-                        @csrf
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label" for="name">Nama Lengkap *</label>
-                                <input class="form-control @error('name') is-invalid @enderror" type="text" id="name" name="name"
-                                    value="{{ old('name') }}" placeholder="Nama lengkap Anda" required maxlength="100">
-                                @error('name')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="phone">Nomor WhatsApp/Telepon *</label>
-                                <input class="form-control @error('phone') is-invalid @enderror" type="tel" id="phone" name="phone"
-                                    value="{{ old('phone') }}" placeholder="cth. 0812xxxxxxx" required maxlength="20">
-                                @error('phone')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="email">Email *</label>
-                                <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" name="email"
-                                    value="{{ old('email') }}" placeholder="nama@email.com" required maxlength="150">
-                                @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="legal_need">Jenis Kebutuhan Hukum *</label>
-                                <select class="form-select @error('legal_need') is-invalid @enderror" id="legal_need" name="legal_need" required>
-                                    <option value="">— Pilih kebutuhan —</option>
-                                    @foreach ($services as $service)
-                                        <option value="{{ $service['title'] }}" @selected(old('legal_need') === $service['title'])>{{ $service['title'] }}</option>
+                        @if ($errors->any())
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong><i class="fa-solid fa-circle-exclamation me-2"></i>Mohon periksa kembali isian formulir:</strong>
+                                <ul class="mb-0 mt-2 ps-3">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
                                     @endforeach
-                                    <option value="Lainnya" @selected(old('legal_need') === 'Lainnya')>Lainnya</option>
-                                </select>
-                                @error('legal_need')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                                </ul>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                            <div class="col-12">
-                                <label class="form-label" for="subject">Subjek *</label>
-                                <input class="form-control @error('subject') is-invalid @enderror" type="text" id="subject" name="subject"
-                                    value="{{ old('subject') }}" placeholder="Ringkasan singkat keperluan Anda" required maxlength="150">
-                                @error('subject')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label" for="message">Ringkasan Permasalahan *</label>
-                                <textarea class="form-control @error('message') is-invalid @enderror" id="message" name="message" rows="5"
-                                    placeholder="Tuliskan kronologi singkat tanpa menyertakan data sangat sensitif" required maxlength="3000">{{ old('message') }}</textarea>
-                                @error('message')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                            </div>
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input class="form-check-input @error('agreement') is-invalid @enderror" type="checkbox" id="agreement" name="agreement" value="1" @checked(old('agreement')) required>
-                                    <label class="form-check-label small" for="agreement">
-                                        Saya memahami bahwa informasi yang saya kirimkan bersifat permintaan awal dan <strong>bukan otomatis membentuk hubungan advokat–klien</strong> sampai dikonfirmasi oleh kantor. *
-                                    </label>
-                                    @error('agreement')<div class="invalid-feedback d-block">{{ $message }}</div>@enderror
+                        @endif
+
+                        <form id="consultationForm" class="law-consultation-form" method="POST" action="{{ route('contact.store') }}" novalidate>
+                            @csrf
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="name">Nama Lengkap *</label>
+                                    <input class="form-control @error('name') is-invalid @enderror"
+                                           type="text"
+                                           id="name"
+                                           name="name"
+                                           value="{{ old('name') }}"
+                                           placeholder="Nama lengkap Anda"
+                                           required
+                                           maxlength="100">
+                                    @error('name')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="phone">Nomor WhatsApp / Telepon *</label>
+                                    <input class="form-control @error('phone') is-invalid @enderror"
+                                           type="tel"
+                                           id="phone"
+                                           name="phone"
+                                           value="{{ old('phone') }}"
+                                           placeholder="cth. 081234567890"
+                                           required
+                                           maxlength="20">
+                                    @error('phone')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="email">Alamat Email *</label>
+                                    <input class="form-control @error('email') is-invalid @enderror"
+                                           type="email"
+                                           id="email"
+                                           name="email"
+                                           value="{{ old('email') }}"
+                                           placeholder="nama@email.com"
+                                           required
+                                           maxlength="150">
+                                    @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="legal_need">Jenis Kebutuhan Hukum *</label>
+                                    <select class="form-select @error('legal_need') is-invalid @enderror"
+                                            id="legal_need"
+                                            name="legal_need"
+                                            required>
+                                        <option value="">— Pilih Kebutuhan —</option>
+                                        @foreach ($services as $service)
+                                            <option value="{{ $service['title'] }}" @selected(old('legal_need') === $service['title'])>
+                                                {{ $service['title'] }}
+                                            </option>
+                                        @endforeach
+                                        <option value="Lainnya" @selected(old('legal_need') === 'Lainnya')>Lainnya</option>
+                                    </select>
+                                    @error('legal_need')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="subject">Subjek Permasalahan *</label>
+                                    <input class="form-control @error('subject') is-invalid @enderror"
+                                           type="text"
+                                           id="subject"
+                                           name="subject"
+                                           value="{{ old('subject') }}"
+                                           placeholder="Ringkasan singkat subjek konsultasi"
+                                           required
+                                           maxlength="150">
+                                    @error('subject')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="message">Ringkasan Permasalahan *</label>
+                                    <textarea class="form-control @error('message') is-invalid @enderror"
+                                              id="message"
+                                              name="message"
+                                              rows="5"
+                                              placeholder="Tuliskan kronologi dan inti persoalan secara jelas tanpa menyertakan dokumen sangat rahasia (minimal 20 karakter)..."
+                                              required
+                                              maxlength="3000">{{ old('message') }}</textarea>
+                                    @error('message')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input @error('agreement') is-invalid @enderror"
+                                               type="checkbox"
+                                               id="agreement"
+                                               name="agreement"
+                                               value="1"
+                                               @checked(old('agreement'))
+                                               required>
+                                        <label class="form-check-label small" for="agreement">
+                                            Saya memahami bahwa informasi yang saya kirimkan bersifat permintaan awal dan <strong>bukan otomatis membentuk hubungan advokat–klien</strong> sebelum konfirmasi resmi dari kantor. *
+                                        </label>
+                                        @error('agreement')<div class="invalid-feedback d-block">{{ $message }}</div>@enderror
+                                    </div>
+                                </div>
+
+                                <div class="col-12 pt-2">
+                                    <button type="submit" class="btn btn-gold law-btn-primary btn-lg w-100">
+                                        <i class="fa-solid fa-paper-plane me-2"></i>Kirim Permintaan Konsultasi
+                                    </button>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-gold btn-lg">
-                                    <i class="fa-solid fa-paper-plane me-2"></i>Kirim Permintaan Konsultasi
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="col-lg-5">
-                    <div class="info-card">
-                        <h2 class="h5">Sebelum Menghubungi</h2>
-                        <ul class="check-list">
-                            <li><i class="fa-solid fa-circle-check"></i>Siapkan kronologi singkat dan dokumen pendukung</li>
-                            <li><i class="fa-solid fa-circle-check"></i>Hindari mengirim data sangat sensitif via formulir</li>
-                            <li><i class="fa-solid fa-circle-check"></i>Kami meninjau setiap permintaan lalu menghubungi Anda</li>
-                            <li><i class="fa-solid fa-circle-check"></i>Untuk keadaan mendesak, hubungi WhatsApp langsung</li>
+                    <div class="law-card p-4 p-md-5 bg-white border h-100">
+                        <h2 class="h4 law-heading mb-3">Panduan Sebelum Konsultasi</h2>
+                        <ul class="law-check-list check-list">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span><strong>Siapkan kronologi singkat:</strong> Catat urutan kejadian dan para pihak yang terlibat secara sistematis.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span><strong>Dokumen pendukung:</strong> Inventarisasi bukti tertulis, perjanjian, atau korespondensi yang relevan.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span><strong>Kerahasiaan terjamin:</strong> Setiap pesan dan dokumen ditangani dengan standar kerahasiaan profesi.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span><strong>Keadaan mendesak:</strong> Untuk kebutuhan yang membutuhkan penanganan cepat, hubungi kami via WhatsApp.</span>
+                            </li>
                         </ul>
-                        <hr>
-                        <h3 class="h6">Pertanyaan Umum</h3>
-                        <p class="text-muted small">Lihat halaman <a href="{{ route('faq') }}">FAQ</a>, <a href="{{ route('disclaimer') }}">Disclaimer</a>, dan <a href="{{ route('privacy') }}">Kebijakan Privasi</a> sebelum mengirim formulir.</p>
-                        @if ($site['maps_embed'])
-                            <div class="ratio ratio-16x9 rounded overflow-hidden border">
-                                <iframe title="Lokasi kantor" src="{{ $site['maps_embed'] }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+
+                        <hr class="my-4">
+
+                        <h3 class="h6 law-heading">Informasi Terkait</h3>
+                        <p class="text-muted small mb-3">
+                            Pelajari ketentuan dan kebijakan kantor kami melalui halaman
+                            <a href="{{ route('faq') }}" class="text-gold-dark fw-bold">FAQ</a>,
+                            <a href="{{ route('disclaimer') }}" class="text-gold-dark fw-bold">Disclaimer</a>, dan
+                            <a href="{{ route('privacy') }}" class="text-gold-dark fw-bold">Kebijakan Privasi</a>.
+                        </p>
+
+                        @if ($site['maps_embed'] ?? false)
+                            <div class="ratio ratio-16x9 rounded overflow-hidden border mt-3">
+                                {!! $site['maps_embed'] !!}
                             </div>
-                        @else
-                            <div class="empty-state small">Peta lokasi akan ditampilkan setelah alamat resmi tersedia.</div>
                         @endif
                     </div>
                 </div>

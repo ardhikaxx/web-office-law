@@ -4,19 +4,19 @@
 @section('meta_description', 'Katalog layanan hukum Holong Siregar & Co.: perdata, pidana, kontrak, korporasi, ketenagakerjaan, keluarga, pertanahan, dan penyelesaian sengketa.')
 
 @section('content')
-    <section class="page-hero">
+    <section class="law-page-hero page-hero">
         <div class="container">
             <x-breadcrumb :items="[
                 ['label' => 'Beranda', 'url' => route('home')],
                 ['label' => 'Layanan Hukum'],
             ]" />
-            <p class="eyebrow">LAYANAN HUKUM</p>
-            <h1>Layanan Hukum</h1>
-            <p>Katalog layanan pendampingan hukum untuk perorangan, keluarga, dan perusahaan — masing-masing dengan ruang lingkup yang jelas.</p>
+            <span class="law-section-eyebrow eyebrow text-gold-light">LAYANAN HUKUM</span>
+            <h1 class="law-heading">Ruang Lingkup Layanan Kami</h1>
+            <p>Katalog pendampingan hukum komprehensif bagi perorangan maupun entitas bisnis — dirancang dengan kepastian hukum dan ruang lingkup yang jelas.</p>
         </div>
     </section>
 
-    <section class="section">
+    <section class="law-section section">
         <div class="container">
             @if (count($services))
                 <div class="row g-4">

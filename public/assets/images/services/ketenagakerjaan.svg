@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="#eef1f5"/><rect x="20" y="20" width="560" height="360" rx="12" fill="#ffffff" stroke="#e4e8ee" stroke-width="2"/><circle cx="300" cy="160" r="52" fill="#0f2a44"/><circle cx="300" cy="145" r="20" fill="#c9a227"/><path d="M260 200c8-24 72-24 80 0v10H260z" fill="#c9a227"/><rect x="230" y="240" width="140" height="14" rx="7" fill="#0f2a44"/><rect x="200" y="264" width="200" height="10" rx="5" fill="#c9a227"/><rect x="220" y="284" width="160" height="10" rx="5" fill="#dbe1e9"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="gKetenaga" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a2b"/>
+      <stop offset="100%" stop-color="#12273e"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a67e1a"/>
+      <stop offset="50%" stop-color="#e0be6c"/>
+      <stop offset="100%" stop-color="#a67e1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="12" fill="url(#gKetenaga)"/>
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="none" stroke="url(#goldG)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Briefcase & Employment Protection Shield -->
+  <g transform="translate(300, 200) scale(1.3)">
+    <!-- Briefcase -->
+    <rect x="-70" y="-30" width="140" height="100" rx="8" fill="#1b3956" stroke="url(#goldG)" stroke-width="3"/>
+    <!-- Handle -->
+    <path d="M -30,-30 V -55 C -30,-65 30,-65 30,-55 V -30" fill="none" stroke="url(#goldG)" stroke-width="4"/>
+    <!-- Center Strap / Lock -->
+    <rect x="-12" y="10" width="24" height="20" rx="3" fill="url(#goldG)"/>
+    <line x1="-70" y1="20" x2="70" y2="20" stroke="url(#goldG)" stroke-width="2"/>
+    <!-- Scale icon in center -->
+    <path d="M 0,-15 L 0,5 M -15,-5 L 15,-5" stroke="#f8fafc" stroke-width="2"/>
+  </g>
+</svg>

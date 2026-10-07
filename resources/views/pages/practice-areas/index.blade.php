@@ -4,19 +4,19 @@
 @section('meta_description', 'Area praktik Holong Siregar & Co.: Litigasi (pendampingan perkara dan sengketa) dan Non-Litigasi (konsultasi, kontrak, legal opinion, dan mitigasi risiko).')
 
 @section('content')
-    <section class="page-hero">
+    <section class="law-page-hero page-hero">
         <div class="container">
             <x-breadcrumb :items="[
                 ['label' => 'Beranda', 'url' => route('home')],
                 ['label' => 'Area Praktik'],
             ]" />
-            <p class="eyebrow">AREA PRAKTIK</p>
-            <h1>Area Praktik</h1>
-            <p>Dua pendekatan utama kami: Litigasi untuk penyelesaian melalui jalur hukum, dan Non-Litigasi untuk pendampingan preventif dan transaksional.</p>
+            <span class="law-section-eyebrow eyebrow text-gold-light">AREA PRAKTIK</span>
+            <h1 class="law-heading">Area Praktik Utama</h1>
+            <p>Dua pilar pendekatan utama: Litigasi untuk penanganan sengketa peradilan, dan Non-Litigasi untuk pendampingan preventif dan konsultatif.</p>
         </div>
     </section>
 
-    <section class="section">
+    <section class="law-section section">
         <div class="container">
             <div class="row g-4">
                 @foreach ($areas as $area)

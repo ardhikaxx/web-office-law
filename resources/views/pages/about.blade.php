@@ -4,52 +4,108 @@
 @section('meta_description', 'Profil Holong Siregar & Co. Law Office: kantor hukum yang berkomitmen memberikan pendampingan profesional, strategis, dan berintegritas.')
 
 @section('content')
-    <section class="page-hero">
+    {{-- Internal Page Hero --}}
+    <section class="law-page-hero page-hero">
         <div class="container">
             <x-breadcrumb :items="[
                 ['label' => 'Beranda', 'url' => route('home')],
                 ['label' => 'Tentang Kami'],
             ]" />
-            <p class="eyebrow">TENTANG KAMI</p>
-            <h1>Tentang Kami</h1>
-            <p>Holong Siregar &amp; Co. adalah kantor hukum yang berkomitmen memberikan pendampingan dan solusi hukum yang profesional, strategis, dan berintegritas — dengan ketelitian, kerahasiaan, dan komunikasi yang terbuka.</p>
+            <span class="law-section-eyebrow eyebrow text-gold-light">TENTANG KAMI</span>
+            <h1 class="law-heading">Tentang Holong Siregar &amp; Co.</h1>
+            <p>
+                Kantor hukum profesional yang berpegang teguh pada integritas, ketelitian analitis,
+                dan komunikasi yang bertanggung jawab demi memberikan kepastian hukum bagi setiap klien.
+            </p>
         </div>
     </section>
 
-    <section class="section">
+    {{-- Editorial Firm Profile --}}
+    <section class="law-section section">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
-                    <x-section-heading align="start" eyebrow="Profil Kantor" title="Pendampingan yang Profesional &amp; Bertanggung Jawab"
-                        description="Kami memahami bahwa setiap persoalan hukum menyangkut kepercayaan. Karena itu setiap mandat ditangani dengan pemahaman mendalam terhadap kebutuhan klien, analisis yang cermat, dan pendekatan yang berorientasi pada solusi — bukan sekadar prosedur." />
-                    <p class="text-muted">Holong Siregar &amp; Co. mendampingi perorangan, keluarga, dan perusahaan dalam persoalan perdata, pidana, kontrak, korporasi, ketenagakerjaan, keluarga, hingga pertanahan — melalui jalur litigasi maupun non-litigasi sesuai kebutuhan.</p>
+                    <x-section-heading
+                        align="start"
+                        eyebrow="PROFIL KANTOR"
+                        title="Pendampingan Hukum yang Profesional &amp; Bertanggung Jawab"
+                        description="Kami memahami bahwa setiap persoalan hukum menyangkut kepercayaan dan kelangsungan hak klien. Karena itu, setiap mandat ditangani dengan pemahaman mendalam, analisis cermat, dan strategi terukur — bukan sekadar rutinitas prosedur." />
+
+                    <p>
+                        Holong Siregar &amp; Co. mendampingi perorangan, keluarga, dan korporasi dalam persoalan perdata,
+                        pidana, kontrak, tata kelola korporasi, ketenagakerjaan, hingga pertanahan melalui jalur litigasi
+                        maupun non-litigasi yang proporsional.
+                    </p>
+
+                    <ul class="law-check-list check-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Analisis komprehensif atas dokumen dan regulasi sebelum menentukan strategi</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Kerahasiaan data dan perlindungan informasi klien sebagai prioritas utama</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Komunikasi terbuka dan pelaporan perkembangan perkara secara berkala</span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-6">
-                    <div class="quote-box">
-                        “Kami memegang teguh ketelitian, kerahasiaan, dan kejujuran dalam berkomunikasi — agar setiap langkah hukum yang diambil benar-benar dipahami dan disetujui klien.”
+                    <div class="about-img law-card p-2 mb-4">
+                        <img src="{{ asset('assets/images/office-team.svg') }}"
+                             alt="Suasana kantor Holong Siregar &amp; Co."
+                             class="rounded w-100"
+                             loading="lazy">
+                    </div>
+                    <div class="law-quote-box quote-box">
+                        “Kami memegang teguh ketelitian, kerahasiaan, dan kejujuran dalam berkomunikasi — agar setiap langkah hukum yang diambil benar-benar dipahami dan memberikan ketenangan bagi klien.”
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-soft">
+    {{-- Visi & Misi --}}
+    <section class="law-section section-soft bg-off-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="info-card h-100">
-                        <h2 class="h4">Visi</h2>
-                        <p class="text-muted mb-0">Menjadi kantor hukum yang dipercaya karena integritas, ketelitian, dan kualitas pendampingan — memberikan kepastian dan ketenangan bagi setiap klien dalam menghadapi persoalan hukum.</p>
+                    <div class="law-card bg-white p-4 p-md-5 h-100">
+                        <div class="law-service-icon mb-3">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h2 class="h3 law-heading mb-3">Visi Kami</h2>
+                        <p class="law-section-desc mb-0">
+                            Menjadi kantor hukum terdepan yang dipercaya karena integritas tinggi, ketelitian analisis,
+                            dan mutu pendampingan berstandar prima — menghadirkan kepastian dan perlindungan hukum sejati bagi setiap klien.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="info-card h-100">
-                        <h2 class="h4">Misi</h2>
-                        <ul class="check-list mt-2 mb-0">
-                            <li><i class="fa-solid fa-circle-check"></i>Memberikan analisis hukum yang cermat dan jujur</li>
-                            <li><i class="fa-solid fa-circle-check"></i>Menyusun strategi yang relevan dengan kebutuhan klien</li>
-                            <li><i class="fa-solid fa-circle-check"></i>Menjaga kerahasiaan dan etika profesi</li>
-                            <li><i class="fa-solid fa-circle-check"></i>Mengomunikasikan setiap perkembangan secara terbuka</li>
+                    <div class="law-card bg-white p-4 p-md-5 h-100">
+                        <div class="law-service-icon mb-3">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h2 class="h3 law-heading mb-3">Misi Kami</h2>
+                        <ul class="law-check-list check-list mb-0">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Memberikan telaah dan analisis hukum yang objektif, cermat, dan bertanggung jawab</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Menyusun strategi hukum yang relevan dengan tujuan dan kepentingan jangka panjang klien</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Menegakkan standar etika profesi advokat dan menjaga kerahasiaan tanpa kompromi</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Menyediakan komunikasi yang jelas, transparan, dan dapat diakses setiap saat</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -57,13 +113,18 @@
         </div>
     </section>
 
-    <section class="section">
+    {{-- Nilai-Nilai Kami --}}
+    <section class="law-section section">
         <div class="container">
-            <x-section-heading eyebrow="Nilai-Nilai Kami" title="Prinsip yang Kami Pegang" />
+            <x-section-heading
+                eyebrow="NILAI-NILAI UTAMA"
+                title="Prinsip yang Menjadi Fondasi Kami"
+                description="Standar profesionalitas dan etika yang membimbing setiap langkah kerja advokat kami." />
+
             <div class="row g-4">
                 @foreach ($values as $value)
                     <div class="col-md-6 col-lg-4">
-                        <div class="value-card h-100">
+                        <div class="law-value-card value-card">
                             <i class="{{ $value['icon'] }}" aria-hidden="true"></i>
                             <h3>{{ $value['title'] }}</h3>
                             <p>{{ $value['text'] }}</p>
@@ -74,24 +135,29 @@
         </div>
     </section>
 
-    <section class="section section-soft">
+    {{-- Alur Pendampingan --}}
+    <section class="law-section section-soft bg-off-white">
         <div class="container">
-            <x-section-heading eyebrow="Pendekatan" title="Alur Pendampingan Kami"
-                description="Proses yang terstruktur agar klien memahami setiap tahapan — tanpa menjanjikan hasil perkara." />
+            <x-section-heading
+                eyebrow="METODOLOGI KERJA"
+                title="Alur Pendampingan Terstruktur"
+                description="Proses kerja transparan agar klien memahami setiap tahapan dan perkembangan penanganan perkara." />
+
+            @php
+                $steps = [
+                    ['t' => 'Memahami Kebutuhan', 'd' => 'Mendengarkan kronologi, identifikasi tujuan klien, dan inventarisasi berkas pendukung awal.'],
+                    ['t' => 'Menganalisis Persoalan', 'd' => 'Menelaah fakta hukum, dokumen, dan regulasi terkait secara komprehensif.'],
+                    ['t' => 'Menyusun Strategi', 'd' => 'Merumuskan opsi tindakan hukum beserta analisis risiko dan estimasi sumber daya.'],
+                    ['t' => 'Pelaksanaan Pendampingan', 'd' => 'Menjalankan langkah hukum yang disepakati dengan pelaporan berkala yang tertib.'],
+                    ['t' => 'Evaluasi & Solusi Lanjutan', 'd' => 'Meninjau capaian bersama klien dan memastikan kepastian hukum jangka panjang.'],
+                ];
+            @endphp
+
             <div class="row g-4">
-                @php
-                    $steps = [
-                        ['t' => 'Memahami Kebutuhan', 'd' => 'Mendengarkan kronologi dan tujuan klien, serta mengumpulkan dokumen awal.'],
-                        ['t' => 'Menganalisis Persoalan', 'd' => 'Menelaah fakta, dokumen, dan regulasi yang relevan secara cermat.'],
-                        ['t' => 'Menyusun Strategi', 'd' => 'Merumuskan opsi langkah hukum beserta risiko dan estimasinya.'],
-                        ['t' => 'Melakukan Pendampingan', 'd' => 'Menjalankan strategi yang disepakati dengan dokumentasi tertib.'],
-                        ['t' => 'Mengevaluasi Hasil', 'd' => 'Meninjau capaian bersama klien dan menentukan langkah lanjutan.'],
-                    ];
-                @endphp
                 @foreach ($steps as $i => $step)
                     <div class="col-md-6 col-lg-4">
-                        <div class="step-card">
-                            <span class="step-num">{{ $i + 1 }}</span>
+                        <div class="law-step-card step-card">
+                            <span class="law-step-num step-num">{{ $i + 1 }}</span>
                             <h3>{{ $step['t'] }}</h3>
                             <p class="text-muted mb-0">{{ $step['d'] }}</p>
                         </div>
@@ -101,9 +167,14 @@
         </div>
     </section>
 
-    <section class="section">
+    {{-- Tim Kami --}}
+    <section class="law-section section">
         <div class="container">
-            <x-section-heading eyebrow="Tim Kami" title="Advokat &amp; Profesional" />
+            <x-section-heading
+                eyebrow="TIM ADVOKAT"
+                title="Advokat &amp; Konsultan Hukum Kami"
+                description="Profesional berdedikasi yang siap memberikan solusi hukum terbaik untuk Anda." />
+
             <div class="row g-4">
                 @foreach ($lawyers as $lawyer)
                     <div class="col-sm-6 col-lg-3">

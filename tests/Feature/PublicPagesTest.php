@@ -27,11 +27,21 @@ test('public pages render without error', function () {
     }
 });
 
-test('unknown slugs return 404', function () {
-    $this->get('/layanan/tidak-ada')->assertNotFound();
+test('unknown slugs return 404 with law firm branding', function () {
+    $response = $this->get('/layanan/tidak-ada');
+    $response->assertNotFound();
+    $response->assertSee('Holong Siregar');
+
     $this->get('/tim/tidak-ada')->assertNotFound();
     $this->get('/artikel/tidak-ada')->assertNotFound();
     $this->get('/area-praktik/tidak-ada')->assertNotFound();
+});
+
+test('home page renders official justice symbol asset', function () {
+    $response = $this->get('/');
+    $response->assertOk();
+    $response->assertSee('simbol-justice.png');
+    $response->assertSee('Holong Siregar');
 });
 
 test('consultation form validates and succeeds', function () {

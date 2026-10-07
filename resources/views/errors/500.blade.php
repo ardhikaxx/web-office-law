@@ -1,18 +1,26 @@
 @extends('layouts.app')
 
-@section('title', 'Terjadi Gangguan (500) | Holong Siregar & Co.')
-@section('meta_description', 'Terjadi gangguan pada server. Silakan coba beberapa saat lagi.')
+@section('title', 'Gangguan Server (500) | Holong Siregar & Co.')
+@section('meta_description', 'Terjadi kendala sesaat pada sistem server kami.')
 
 @section('content')
-    <section class="section text-center">
-        <div class="container" style="max-width: 640px;">
-            <p class="section-eyebrow">500 — GANGGUAN SERVER</p>
-            <h1 class="display-5">Mohon maaf, terjadi gangguan</h1>
-            <p class="text-muted">Sistem kami mengalami kendala sesaat. Silakan muat ulang halaman atau hubungi kami melalui WhatsApp bila bersifat mendesak.</p>
-            <div class="d-flex gap-2 justify-content-center flex-wrap mt-3">
-                <a href="{{ route('home') }}" class="btn btn-navy">Kembali ke Beranda</a>
-                <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-navy">
-                    <i class="fa-brands fa-whatsapp me-2"></i>WhatsApp
+    <section class="law-section section text-center py-5 my-5">
+        <div class="container" style="max-width: 680px;">
+            <div class="law-service-icon mx-auto mb-3" style="width:72px;height:72px;font-size:2rem;">
+                <i class="fa-solid fa-triangle-exclamation text-gold"></i>
+            </div>
+            <span class="law-section-eyebrow">500 — GANGGUAN SISTEM SESAAT</span>
+            <h1 class="law-heading display-6 mb-3">Mohon Maaf, Terjadi Kendala Sesaat</h1>
+            <p class="text-muted mb-4 leading-relaxed">
+                Server kami sedang mengalami kendala teknis sesaat. Silakan coba muat ulang halaman beberapa saat lagi
+                atau hubungi tim kami langsung melalui WhatsApp untuk keperluan yang mendesak.
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="{{ route('home') }}" class="btn btn-navy law-btn-navy">
+                    <i class="fa-solid fa-house me-2"></i>Kembali ke Beranda
+                </a>
+                <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-gold law-btn-primary">
+                    <i class="fa-brands fa-whatsapp me-2"></i>Hubungi via WhatsApp
                 </a>
             </div>
         </div>

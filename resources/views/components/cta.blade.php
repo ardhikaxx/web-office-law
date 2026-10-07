@@ -1,21 +1,27 @@
 @props([
-    'title' => 'Butuh pendampingan hukum yang dapat dipercaya?',
-    'description' => 'Sampaikan ringkasan kebutuhan Anda. Kami akan menerima permintaan konsultasi untuk ditinjau lebih lanjut.',
+    'title' => 'Butuh Pendampingan Hukum yang Tegas & Terpercaya?',
+    'description' => 'Sampaikan ringkasan kebutuhan hukum Anda. Tim advokat kami siap melakukan telaah awal secara profesional dan menjaga kerahasiaan penuh.',
 ])
 
-<section class="cta-band">
+<section class="law-cta-band cta-band">
     <div class="container">
         <div class="row align-items-center g-4">
             <div class="col-lg-8">
-                <p class="cta-eyebrow">KONSULTASI AWAL</p>
-                <h2 class="cta-title">{{ $title }}</h2>
-                <p class="cta-text">{{ $description }}</p>
+                <p class="law-cta-eyebrow cta-eyebrow">
+                    <i class="fa-solid fa-shield-halved text-gold me-2"></i>KONSULTASI AWAL TERARAH
+                </p>
+                <h2 class="law-cta-title cta-title">{{ $title }}</h2>
+                <p class="law-cta-text cta-text">{{ $description }}</p>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a href="{{ route('contact') }}" class="btn btn-gold btn-lg me-2 mb-2">Hubungi Kami</a>
-                <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg mb-2">
-                    <i class="fa-brands fa-whatsapp me-2"></i>WhatsApp
-                </a>
+                <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                    <a href="{{ route('contact') }}" class="btn btn-gold law-btn-primary btn-lg">
+                        <i class="fa-solid fa-calendar-check me-1"></i> Jadwalkan Konsultasi
+                    </a>
+                    <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">
+                        <i class="fa-brands fa-whatsapp text-success me-1"></i> WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </div>

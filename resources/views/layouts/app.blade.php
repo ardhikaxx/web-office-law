@@ -23,16 +23,16 @@
 
     <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/favicon.svg') }}">
 
-    {{-- Fonts --}}
+    {{-- Fonts: Playfair Display (Headings) + Plus Jakarta Sans (Body) --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     {{-- Bootstrap 5.3 CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     {{-- Font Awesome 6 --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer">
-    {{-- Custom --}}
+    {{-- Custom Design System --}}
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     @stack('styles')
@@ -61,16 +61,17 @@
             document.addEventListener('DOMContentLoaded', function () {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Permintaan Terkirim',
+                    title: 'Permintaan Konsultasi Diterima',
                     text: @json(session('consultation_success')),
-                    confirmButtonText: 'Tutup',
-                    confirmButtonColor: '#0f2a44'
+                    confirmButtonText: 'Baik, Terima Kasih',
+                    confirmButtonColor: '#0c1f38',
+                    iconColor: '#c59b27'
                 });
             });
         </script>
     @endif
 
-    @if ($errors->any() && request()->routeIs('contact*'))
+    @if ($errors->any())
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 Swal.fire({
@@ -78,7 +79,7 @@
                     title: 'Formulir Belum Lengkap',
                     text: 'Mohon periksa kembali isian formulir konsultasi Anda.',
                     confirmButtonText: 'Periksa Kembali',
-                    confirmButtonColor: '#0f2a44'
+                    confirmButtonColor: '#0c1f38'
                 });
             });
         </script>

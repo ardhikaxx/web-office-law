@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="#eef1f5"/><rect x="20" y="20" width="560" height="360" rx="12" fill="#ffffff" stroke="#e4e8ee" stroke-width="2"/><circle cx="300" cy="160" r="52" fill="#0f2a44"/><circle cx="300" cy="145" r="20" fill="#c9a227"/><path d="M260 200c8-24 72-24 80 0v10H260z" fill="#c9a227"/><rect x="230" y="240" width="140" height="14" rx="7" fill="#0f2a44"/><rect x="200" y="264" width="200" height="10" rx="5" fill="#c9a227"/><rect x="220" y="284" width="160" height="10" rx="5" fill="#dbe1e9"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="gProp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a2b"/>
+      <stop offset="100%" stop-color="#142c48"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a67e1a"/>
+      <stop offset="50%" stop-color="#e0be6c"/>
+      <stop offset="100%" stop-color="#a67e1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="12" fill="url(#gProp)"/>
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="none" stroke="url(#goldG)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Property & Land Deed Emblem -->
+  <g transform="translate(300, 200) scale(1.3)">
+    <!-- House / Property Structure -->
+    <polygon points="0,-75 65,-25 65,65 -65,65 -65,-25" fill="none" stroke="url(#goldG)" stroke-width="3.5"/>
+    <polygon points="0,-60 50,-20 50,55 -50,55 -50,-20" fill="#0f2238"/>
+    <!-- Chimney -->
+    <rect x="30" y="-60" width="12" height="25" fill="url(#goldG)"/>
+    <!-- Door -->
+    <rect x="-15" y="10" width="30" height="45" rx="3" fill="url(#goldG)"/>
+    <!-- Key / Deed Motif -->
+    <circle cx="0" cy="-20" r="10" fill="#f8fafc"/>
+  </g>
+</svg>

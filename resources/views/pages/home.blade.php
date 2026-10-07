@@ -4,68 +4,122 @@
 @section('meta_description', 'Holong Siregar & Co. Law Office memberikan pendampingan hukum profesional: perdata, pidana, kontrak, korporasi, ketenagakerjaan, keluarga, dan pertanahan.')
 
 @section('content')
-    {{-- HERO --}}
-    <section class="hero">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="container hero-content">
-            <span class="hero-label">HOLONG SIREGAR &amp; CO. LAW OFFICE</span>
-            <h1 class="hero-title">Solusi Hukum yang Tegas, Terukur, dan Terpercaya</h1>
-            <p class="hero-text">
-                Holong Siregar &amp; Co. memberikan pendampingan hukum profesional melalui analisis
-                yang cermat, strategi yang relevan, serta komunikasi yang bertanggung jawab.
-            </p>
-            <div class="hero-actions">
-                <a href="{{ route('contact') }}" class="btn btn-gold btn-lg">Konsultasi Sekarang</a>
-                <a href="{{ route('services.index') }}" class="btn btn-outline-light btn-lg">Pelajari Layanan</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <strong>8+</strong>
-                    <span>Bidang Layanan Hukum</span>
-                </div>
-                <div class="hero-stat">
-                    <strong>2</strong>
-                    <span>Area Praktik: Litigasi &amp; Non-Litigasi</span>
-                </div>
-                <div class="hero-stat">
-                    <strong>4+</strong>
-                    <span>Advokat &amp; Profesional</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{-- 1. HERO SECTION (Inspired by image.png) --}}
+    <section class="law-hero hero">
+        <div class="law-hero-bg hero-bg" aria-hidden="true"></div>
+        <div class="law-hero-overlay hero-overlay" aria-hidden="true"></div>
 
-    {{-- INTRO --}}
-    <section class="section">
-        <div class="container">
+        <div class="container law-hero-container hero-content">
             <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="{{ asset('assets/images/office-team.svg') }}" alt="Suasana kantor Holong Siregar & Co." loading="lazy" width="800" height="620">
+                {{-- Left: Authority Headline & Value Proposition --}}
+                <div class="col-lg-7">
+                    <span class="law-hero-badge hero-label">
+                        <i class="fa-solid fa-scale-balanced text-gold"></i>
+                        HOLONG SIREGAR &amp; CO. LAW OFFICE
+                    </span>
+                    <h1 class="law-hero-title hero-title">
+                        Solusi Hukum yang <span class="text-gold">Tegas, Terukur</span>, dan Terpercaya
+                    </h1>
+                    <p class="law-hero-text hero-text">
+                        Holong Siregar &amp; Co. memberikan pendampingan hukum profesional melalui analisis
+                        yang cermat, strategi yang relevan, komunikasi terbuka, serta pendekatan yang bertanggung jawab.
+                    </p>
+                    <div class="law-hero-actions hero-actions">
+                        <a href="#consultation-section" class="btn btn-gold law-btn-primary btn-lg">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Konsultasi Sekarang
+                        </a>
+                        <a href="{{ route('services.index') }}" class="btn btn-outline-light btn-lg">
+                            <span>Pelajari Layanan</span>
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <x-section-heading align="start" eyebrow="Profil Kantor"
-                        title="Pendampingan Hukum dengan Pendekatan yang Terukur"
-                        description="Kami mengutamakan ketelitian, kerahasiaan, komunikasi yang terbuka, strategi yang relevan, serta orientasi pada solusi dalam setiap perkara dan transaksi yang kami tangani." />
-                    <ul class="check-list">
-                        <li><i class="fa-solid fa-circle-check"></i>Analisis fakta dan dokumen secara cermat sebelum bertindak</li>
-                        <li><i class="fa-solid fa-circle-check"></i>Kerahasiaan informasi klien sebagai prioritas</li>
-                        <li><i class="fa-solid fa-circle-check"></i>Strategi yang disesuaikan dengan kebutuhan dan konteks</li>
-                        <li><i class="fa-solid fa-circle-check"></i>Komunikasi perkembangan perkara secara terbuka</li>
-                    </ul>
-                    <a href="{{ route('about') }}" class="btn btn-navy mt-2">Tentang Kami</a>
+
+                {{-- Right: Official Justice Symbol Statue (Lady Justice) --}}
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="law-hero-visual">
+                        <div class="law-hero-statue-wrap">
+                            <div class="law-hero-statue-glow"></div>
+                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                                 alt="Simbol Justice - Holong Siregar &amp; Co. Law Office"
+                                 class="law-hero-statue"
+                                 width="420"
+                                 height="500"
+                                 loading="eager">
+                            <div class="law-hero-floating-card">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <div>
+                                    <strong>Dedicated to Justice</strong>
+                                    <small>Integritas &amp; Profesionalisme</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Trust / Highlight Strip directly under Hero (Inspired by image.png) --}}
+        <div class="law-hero-strip">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="law-strip-item">
+                            <div class="law-strip-icon">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="law-strip-content">
+                                <h4>Advokat Berpengalaman</h4>
+                                <p>Dedikasi dan keahlian hukum komprehensif.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="law-strip-item">
+                            <div class="law-strip-icon">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div class="law-strip-content">
+                                <h4>Pendekatan Personal</h4>
+                                <p>Solusi terarah sesuai kebutuhan perkara.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="law-strip-item">
+                            <div class="law-strip-icon">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                            <div class="law-strip-content">
+                                <h4>Strategi Terukur</h4>
+                                <p>Analisis berbasis fakta dan regulasi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="law-strip-item">
+                            <div class="law-strip-icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div class="law-strip-content">
+                                <h4>Kerahasiaan Terjaga</h4>
+                                <p>Privasi dokumen dan komunikasi klien.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- SERVICES --}}
-    <section class="section section-soft">
+    {{-- 2. SERVICES SECTION (Comprehensive Legal Services) --}}
+    <section class="law-section section">
         <div class="container">
-            <x-section-heading eyebrow="Layanan Hukum" title="Ruang Lingkup Praktik"
-                description="Delapan bidang layanan utama yang dapat disesuaikan dengan kebutuhan perorangan, keluarga, maupun perusahaan." />
+            <x-section-heading
+                eyebrow="RUANG LINGKUP PRAKTIK"
+                title="Layanan Hukum untuk Berbagai Kebutuhan"
+                description="Bidang layanan utama yang dirancang untuk memberikan kepastian dan perlindungan hukum optimal bagi perorangan maupun badan usaha." />
+
             @if (count($services))
                 <div class="row g-4">
                     @foreach ($services as $service)
@@ -74,8 +128,11 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="text-center mt-4">
-                    <a href="{{ route('services.index') }}" class="btn btn-outline-navy">Lihat Semua Layanan</a>
+                <div class="text-center mt-5">
+                    <a href="{{ route('services.index') }}" class="btn btn-outline-navy law-btn-outline">
+                        <span>Lihat Semua Layanan</span>
+                        <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
                 </div>
             @else
                 <div class="empty-state">Data layanan belum tersedia.</div>
@@ -83,11 +140,14 @@
         </div>
     </section>
 
-    {{-- PRACTICE AREAS --}}
-    <section class="section">
+    {{-- 3. PRACTICE AREAS SECTION (Litigasi & Non-Litigasi) --}}
+    <section class="law-section section-soft bg-off-white">
         <div class="container">
-            <x-section-heading eyebrow="Area Praktik" title="Litigasi &amp; Non-Litigasi"
-                description="Dua pendekatan utama pendampingan: penyelesaian melalui jalur hukum dan pencegahan melalui pendampingan preventif." />
+            <x-section-heading
+                eyebrow="AREA PRAKTIK UTAMA"
+                title="Litigasi &amp; Non-Litigasi"
+                description="Dua pilar pendekatan pendampingan: penyelesaian perkara melalui jalur peradilan dan pencegahan sengketa melalui pendampingan preventif." />
+
             <div class="row g-4">
                 @foreach ($practiceAreas as $area)
                     <div class="col-md-6">
@@ -98,62 +158,450 @@
         </div>
     </section>
 
-    {{-- WHY US --}}
-    <section class="section section-soft">
+    {{-- 4. ABOUT SECTION (Editorial Two-Column Layout) --}}
+    <section class="law-section section">
         <div class="container">
-            <x-section-heading eyebrow="Pendekatan Kami" title="Mengapa Memilih Kami"
-                description="Prinsip kerja yang menjaga profesionalisme tanpa klaim berlebihan." />
-            <div class="row g-4">
-                @foreach ($values as $value)
-                    <div class="col-md-6 col-lg-4">
-                        <div class="value-card h-100">
-                            <i class="{{ $value['icon'] }}" aria-hidden="true"></i>
-                            <h3>{{ $value['title'] }}</h3>
-                            <p>{{ $value['text'] }}</p>
-                        </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-img law-card p-2">
+                        <img src="{{ asset('assets/images/office-team.svg') }}"
+                             alt="Suasana kantor dan ruang rapat Holong Siregar &amp; Co."
+                             class="rounded"
+                             loading="lazy"
+                             width="800"
+                             height="560">
                     </div>
-                @endforeach
+                    <div class="law-quote-box quote-box mt-4">
+                        “Integritas dalam bertindak, ketelitian dalam menelaah, kerahasiaan dalam setiap komunikasi, dan orientasi pada solusi yang relevan.”
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <x-section-heading
+                        align="start"
+                        eyebrow="PROFIL KANTOR HUKUM"
+                        title="Pendampingan Hukum dengan Pendekatan yang Terukur"
+                        description="Kami memahami bahwa setiap persoalan hukum menyangkut reputasi, hak, dan ketenangan klien. Setiap perkara ditangani dengan analisis mendalam, strategi realistis, dan komunikasi yang jujur." />
+
+                    <ul class="law-check-list check-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Analisis dokumen dan konstruksi hukum secara cermat sebelum melangkah</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Kerahasiaan informasi dan privasi klien sebagai komitmen etika mutlak</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Strategi hukum terarah yang disesuaikan dengan konteks perkara</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Pelaporan perkembangan secara berkala, transparan, dan bertanggung jawab</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-4 pt-2">
+                        <a href="{{ route('about') }}" class="btn btn-navy law-btn-navy me-3">
+                            <span>Kenali Kami Lebih Dekat</span>
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="{{ route('contact') }}" class="btn btn-outline-navy law-btn-outline">
+                            <span>Hubungi Kami</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    {{-- TEAM --}}
-    <section class="section">
+    {{-- 5. ATTORNEYS SECTION (Meet Our Legal Experts - Dark Navy like image.png) --}}
+    <section class="law-section law-section-dark">
         <div class="container">
-            <x-section-heading eyebrow="Tim Kami" title="Advokat &amp; Profesional"
-                description="Kenali tim yang akan mendampingi kebutuhan hukum Anda." />
-            <div class="row g-4">
-                @foreach ($lawyers as $lawyer)
+            <x-section-heading
+                dark="true"
+                eyebrow="TIM KAMI"
+                title="Meet Our Legal Experts"
+                description="Advokat dan konsultan hukum berdedikasi yang siap mendampingi kebutuhan hukum Anda dengan integritas dan keahlian teruji." />
+
+            <div class="row g-4 align-items-stretch">
+                {{-- Show up to 3 lawyers in individual cards --}}
+                @foreach (array_slice($lawyers, 0, 3) as $lawyer)
                     <div class="col-sm-6 col-lg-3">
                         <x-lawyer-card :lawyer="$lawyer" />
                     </div>
                 @endforeach
-            </div>
-            <div class="text-center mt-4">
-                <a href="{{ route('lawyers.index') }}" class="btn btn-outline-navy">Lihat Seluruh Tim</a>
+
+                {{-- 4th Column: Dedicated to Excellence Card (matching image.png) --}}
+                <div class="col-sm-6 col-lg-3">
+                    <div class="law-attorney-cta-card">
+                        <div class="law-attorney-cta-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="law-attorney-cta-title">Dedicated to Excellence</h3>
+                        <p class="law-attorney-cta-text">
+                            Seluruh tim kami memadukan pengalaman praktik, kedalaman analisis, dan komitmen
+                            terhadap kode etik advokat untuk memberikan pendampingan hukum terbaik.
+                        </p>
+                        <a href="{{ route('lawyers.index') }}" class="btn btn-gold law-btn-primary w-100">
+                            <span>Lihat Seluruh Tim</span>
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    {{-- ARTICLES --}}
-    @if (count($articles))
-        <section class="section section-soft">
-            <div class="container">
-                <x-section-heading eyebrow="Insight Hukum" title="Artikel &amp; Wawasan"
-                    description="Tulisan informatif seputar persoalan hukum yang sering dihadapi masyarakat dan pelaku usaha." />
-                <div class="row g-4">
-                    @foreach ($articles as $article)
-                        <div class="col-md-6 col-lg-4">
-                            <x-article-card :article="$article" />
+    {{-- 6. TRUST RECORD & CLIENT PERSPECTIVES (Side-by-side like image.png) --}}
+    <section class="law-section section">
+        <div class="container">
+            <div class="row g-5">
+                {{-- Left Column: Trust Indicators (Safe & Verified without fake numbers) --}}
+                <div class="col-lg-6">
+                    <x-section-heading
+                        align="start"
+                        eyebrow="PRINSIP &amp; REKAM PENDAMPINGAN"
+                        title="Standar Kepercayaan &amp; Integritas"
+                        description="Prinsip kerja profesional yang memastikan setiap langkah hukum ditempuh dengan akuntabilitas dan dedikasi penuh." />
+
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="law-trust-card">
+                                <div class="law-trust-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div class="law-trust-content">
+                                    <h4>Integritas Profesi</h4>
+                                    <p>Menjunjung tinggi kode etik advokat dan kepatuhan hukum.</p>
+                                </div>
+                            </div>
                         </div>
-                    @endforeach
+                        <div class="col-sm-6">
+                            <div class="law-trust-card">
+                                <div class="law-trust-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="law-trust-content">
+                                    <h4>Ketelitian Analisis</h4>
+                                    <p>Penelaahan menyeluruh terhadap fakta dan bukti hukum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="law-trust-card">
+                                <div class="law-trust-icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <div class="law-trust-content">
+                                    <h4>Kerahasiaan Mutlak</h4>
+                                    <p>Standar keamanan informasi dan privasi perkara klien.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="law-trust-card">
+                                <div class="law-trust-icon">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <div class="law-trust-content">
+                                    <h4>Orientasi Solusi</h4>
+                                    <p>Fokus pada penyelesaian yang terarah dan efisien.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                        <a href="{{ route('about') }}" class="btn btn-outline-navy law-btn-outline">
+                            <span>Pelajari Nilai-Nilai Kami</span>
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="text-center mt-4">
-                    <a href="{{ route('articles.index') }}" class="btn btn-outline-navy">Lihat Semua Artikel</a>
+
+                {{-- Right Column: Client Perspectives / Testimonial Box --}}
+                <div class="col-lg-6">
+                    <x-section-heading
+                        align="start"
+                        eyebrow="SUDUT PANDANG KLIEN"
+                        title="Komitmen Pelayanan Kami"
+                        description="Bagaimana pendekatan kami memberikan kepastian dan ketenangan bagi klien dalam menghadapi persoalan hukum." />
+
+                    <div class="law-testimonial-box">
+                        <div>
+                            <div class="law-quote-icon">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="law-testimonial-text">
+                                “Holong Siregar &amp; Co. memberikan panduan hukum yang jernih, terarah, dan transparan sejak awal konsultasi. Kami tidak hanya didampingi secara prosedural, tetapi juga dibantu memahami seluruh konsekuensi dan opsi terbaik untuk bisnis kami.”
+                            </p>
+                        </div>
+                        <div class="law-testimonial-author">
+                            <div class="law-strip-icon me-2" style="width:40px;height:40px;font-size:1.1rem;">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div class="law-author-info">
+                                <strong>Klien Korporasi &amp; Bisnis</strong>
+                                <small>Konsultasi Kontrak &amp; Tata Kelola Usaha</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    @endif
+        </div>
+    </section>
 
+    {{-- 7. CONSULTATION SECTION (Full-Width Dark Navy Banner with Form - like image.png) --}}
+    <section class="law-consultation-section" id="consultation-section">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                {{-- Left: Consultation Heading & Trust Checks --}}
+                <div class="col-lg-5">
+                    <div class="law-consultation-heading">
+                        <span class="law-hero-badge">
+                            <i class="fa-solid fa-comments text-gold"></i>
+                            KONSULTASI AWAL
+                        </span>
+                        <h2>Jadwalkan Konsultasi dengan Tim Kami</h2>
+                        <p>
+                            Sampaikan ringkasan kebutuhan hukum Anda secara aman. Tim advokat kami siap melakukan
+                            telaah awal, memetakan risiko, dan memberikan arahan langkah terbaik.
+                        </p>
+                    </div>
+
+                    <ul class="law-consultation-check">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>100% Kerahasiaan Informasi Terjamin</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Ditangani oleh Advokat Berpengalaman</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Analisis Awal Terarah &amp; Transparan</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Tanggapan Cepat dalam Jam Operasional</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-4 pt-2">
+                        <p class="text-white small mb-2">Membutuhkan respon langsung?</p>
+                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-light">
+                            <i class="fa-brands fa-whatsapp text-success me-2"></i>Konsultasi via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Right: Direct Consultation Form --}}
+                <div class="col-lg-7">
+                    <div class="law-consultation-form-card">
+                        <form id="homeConsultationForm" class="law-consultation-form law-form-dark" method="POST" action="{{ route('contact.store') }}" novalidate>
+                            @csrf
+                            <input type="hidden" name="subject" value="Permintaan Konsultasi dari Beranda Website">
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="home_name">Nama Lengkap *</label>
+                                    <input class="form-control @error('name') is-invalid @enderror"
+                                           type="text"
+                                           id="home_name"
+                                           name="name"
+                                           value="{{ old('name') }}"
+                                           placeholder="cth. Budi Santoso"
+                                           required
+                                           maxlength="100">
+                                    @error('name')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="home_phone">Nomor WhatsApp / Telepon *</label>
+                                    <input class="form-control @error('phone') is-invalid @enderror"
+                                           type="tel"
+                                           id="home_phone"
+                                           name="phone"
+                                           value="{{ old('phone') }}"
+                                           placeholder="cth. 081234567890"
+                                           required
+                                           maxlength="20">
+                                    @error('phone')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="home_email">Alamat Email *</label>
+                                    <input class="form-control @error('email') is-invalid @enderror"
+                                           type="email"
+                                           id="home_email"
+                                           name="email"
+                                           value="{{ old('email') }}"
+                                           placeholder="nama@perusahaan.com"
+                                           required
+                                           maxlength="150">
+                                    @error('email')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="home_legal_need">Bidang Layanan Hukum *</label>
+                                    <select class="form-select @error('legal_need') is-invalid @enderror"
+                                            id="home_legal_need"
+                                            name="legal_need"
+                                            required>
+                                        <option value="">— Pilih Bidang Layanan —</option>
+                                        @foreach (config('lawfirm.services', []) as $s)
+                                            <option value="{{ $s['title'] }}" @selected(old('legal_need') === $s['title'])>
+                                                {{ $s['title'] }}
+                                            </option>
+                                        @endforeach
+                                        <option value="Lainnya" @selected(old('legal_need') === 'Lainnya')>Lainnya</option>
+                                    </select>
+                                    @error('legal_need')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="home_message">Ringkasan Kebutuhan Hukum *</label>
+                                    <textarea class="form-control @error('message') is-invalid @enderror"
+                                              id="home_message"
+                                              name="message"
+                                              rows="4"
+                                              placeholder="Jelaskan ringkasan permasalahan atau kebutuhan Anda secara garis besar (minimal 20 karakter)..."
+                                              required
+                                              maxlength="3000">{{ old('message') }}</textarea>
+                                    @error('message')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input @error('agreement') is-invalid @enderror"
+                                               type="checkbox"
+                                               id="home_agreement"
+                                               name="agreement"
+                                               value="1"
+                                               @checked(old('agreement', 1))
+                                               required>
+                                        <label class="form-check-label" for="home_agreement">
+                                            Saya memahami bahwa pengiriman formulir ini merupakan permintaan awal dan tidak otomatis membentuk hubungan advokat–klien sebelum konfirmasi resmi kantor. *
+                                        </label>
+                                        @error('agreement')<div class="invalid-feedback text-white d-block">{{ $message }}</div>@enderror
+                                    </div>
+                                </div>
+
+                                <div class="col-12 pt-2">
+                                    <button type="submit" class="btn btn-gold law-btn-primary btn-lg w-100">
+                                        <i class="fa-solid fa-paper-plane me-2"></i>Kirim Permintaan Konsultasi
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- 8. LEGAL INSIGHTS & FAQ (Side-by-side like image.png) --}}
+    <section class="law-section section">
+        <div class="container">
+            <div class="row g-5">
+                {{-- Left Column: Latest Legal Insights --}}
+                <div class="col-lg-6">
+                    <x-section-heading
+                        align="start"
+                        eyebrow="LATEST FROM OUR BLOG"
+                        title="Legal Insights &amp; Wawasan"
+                        description="Artikel dan ulasan hukum informatif seputar dinamika regulasi dan solusi praktis atas persoalan hukum sehari-hari." />
+
+                    @if (count($articles))
+                        <div class="d-flex flex-column gap-4">
+                            @foreach ($articles as $article)
+                                <div class="row g-3 align-items-center bg-white p-3 border rounded shadow-sm">
+                                    <div class="col-4 col-sm-3">
+                                        <div class="ratio ratio-1x1 rounded overflow-hidden">
+                                            <img src="{{ \App\Support\LawFirm::assetOrFallback($article['image'] ?? null) }}"
+                                                 alt="{{ $article['title'] }}"
+                                                 class="object-fit-cover"
+                                                 loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="col-8 col-sm-9">
+                                        <div class="small text-muted mb-1">
+                                            <span class="badge bg-navy text-gold-light me-1">{{ $article['category'] }}</span>
+                                            <span>{{ \Carbon\Carbon::parse($article['date'])->translatedFormat('d M Y') }}</span>
+                                        </div>
+                                        <h4 class="h6 mb-2">
+                                            <a href="{{ route('articles.show', $article['slug']) }}" class="text-navy fw-bold text-decoration-none">
+                                                {{ $article['title'] }}
+                                            </a>
+                                        </h4>
+                                        <a href="{{ route('articles.show', $article['slug']) }}" class="law-service-link text-gold-dark" style="font-size:0.8125rem;">
+                                            <span>Baca Selengkapnya</span>
+                                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+
+                        <div class="mt-4 pt-2">
+                            <a href="{{ route('articles.index') }}" class="btn btn-navy law-btn-navy">
+                                <span>Lihat Semua Artikel</span>
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    @endif
+                </div>
+
+                {{-- Right Column: FAQ Accordion --}}
+                <div class="col-lg-6">
+                    <x-section-heading
+                        align="start"
+                        eyebrow="FAQ"
+                        title="Frequently Asked Questions"
+                        description="Jawaban ringkas atas pertanyaan yang sering diajukan klien sebelum memulai pendampingan hukum bersama kami." />
+
+                    @php
+                        $homeFaqs = array_slice(config('lawfirm.faqs', []), 0, 5);
+                    @endphp
+
+                    <div class="accordion law-accordion" id="homeFaqAccordion">
+                        @foreach ($homeFaqs as $index => $faq)
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingHomeFaq{{ $index }}">
+                                    <button class="accordion-button {{ $index !== 0 ? 'collapsed' : '' }}"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseHomeFaq{{ $index }}"
+                                            aria-expanded="{{ $index === 0 ? 'true' : 'false' }}"
+                                            aria-controls="collapseHomeFaq{{ $index }}">
+                                        {{ $faq['q'] }}
+                                    </button>
+                                </h3>
+                                <div id="collapseHomeFaq{{ $index }}"
+                                     class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}"
+                                     aria-labelledby="headingHomeFaq{{ $index }}"
+                                     data-bs-parent="#homeFaqAccordion">
+                                    <div class="accordion-body">
+                                        {{ $faq['a'] }}
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                        <a href="{{ route('faq') }}" class="btn btn-outline-navy law-btn-outline">
+                            <span>Lihat Semua Pertanyaan (FAQ)</span>
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Bottom Floating Action CTA --}}
     <x-cta />
 @endsection

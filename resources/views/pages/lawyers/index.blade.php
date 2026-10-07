@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
-@section('title', 'Tim Kami | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Kenali advokat dan profesional Holong Siregar & Co. Law Office beserta fokus praktik masing-masing.')
+@section('title', 'Tim Advokat & Profesional | Holong Siregar & Co. Law Office')
+@section('meta_description', 'Kenali advokat dan profesional Holong Siregar & Co. Law Office beserta fokus praktik dan keahlian masing-masing.')
 
 @section('content')
-    <section class="page-hero">
+    <section class="law-page-hero page-hero">
         <div class="container">
             <x-breadcrumb :items="[
                 ['label' => 'Beranda', 'url' => route('home')],
                 ['label' => 'Tim Kami'],
             ]" />
-            <p class="eyebrow">TIM KAMI</p>
-            <h1>Advokat &amp; Profesional</h1>
-            <p>Tim yang mendampingi setiap mandat dengan ketelitian, kerahasiaan, dan komunikasi yang bertanggung jawab.</p>
+            <span class="law-section-eyebrow eyebrow text-gold-light">TIM ADVOKAT</span>
+            <h1 class="law-heading">Advokat &amp; Tim Profesional</h1>
+            <p>Advokat berpengalaman yang siap mendampingi setiap kebutuhan hukum Anda dengan ketelitian, integritas, dan komitmen penuh.</p>
         </div>
     </section>
 
-    <section class="section">
+    <section class="law-section section">
         <div class="container">
             @if (count($lawyers))
                 <div class="row g-4">

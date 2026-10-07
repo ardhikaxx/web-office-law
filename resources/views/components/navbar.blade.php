@@ -4,7 +4,7 @@
     $links = [
         ['label' => 'Beranda', 'route' => 'home'],
         ['label' => 'Tentang Kami', 'route' => 'about'],
-        ['label' => 'Layanan Hukum', 'route' => 'services.index'],
+        ['label' => 'Layanan', 'route' => 'services.index'],
         ['label' => 'Area Praktik', 'route' => 'practice-areas.index'],
         ['label' => 'Tim Kami', 'route' => 'lawyers.index'],
         ['label' => 'Artikel', 'route' => 'articles.index'],
@@ -35,46 +35,74 @@
     };
 @endphp
 
-<header class="site-header sticky-top">
-    <div class="topbar d-none d-lg-block">
+<header class="law-header site-header sticky-top">
+    {{-- Topbar --}}
+    <div class="law-topbar topbar d-none d-lg-block">
         <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex gap-4">
-                <span><i class="fa-solid fa-envelope me-2"></i>{{ $site['email'] ?? '[Email Resmi]' }}</span>
-                <span><i class="fa-solid fa-phone me-2"></i>{{ $site['whatsapp_display'] ?? '' }}</span>
+            <div class="d-flex align-items-center gap-4">
+                <span>
+                    <i class="fa-solid fa-location-dot me-2"></i>{{ $site['address'] ?? '[Alamat Kantor]' }}, {{ $site['city'] ?? '' }}
+                </span>
+                <span>
+                    <i class="fa-solid fa-envelope me-2"></i>{{ $site['email'] ?? '[Email Resmi]' }}
+                </span>
+                <span>
+                    <i class="fa-solid fa-phone me-2"></i>{{ $site['whatsapp_display'] ?? '' }}
+                </span>
             </div>
-            <div class="d-flex gap-3 align-items-center">
-                <span><i class="fa-regular fa-clock me-2"></i>{{ $site['hours'] ?? '' }}</span>
+            <div class="d-flex align-items-center gap-3">
+                <span>
+                    <i class="fa-regular fa-clock me-2"></i>{{ $site['hours'] ?? 'Senin – Jumat: 09.00 – 17.00 WIB' }}
+                </span>
             </div>
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light main-nav" aria-label="Navigasi utama">
+    {{-- Main Navbar --}}
+    <nav class="navbar navbar-expand-lg law-navbar main-nav" aria-label="Navigasi utama">
         <div class="container">
-            <a class="navbar-brand brand" href="{{ route('home') }}">
-                <span class="brand-mark" aria-hidden="true">HS</span>
-                <span class="brand-text">
-                    <strong>Holong Siregar <span class="text-gold">&amp; Co.</span></strong>
-                    <small>LAW OFFICE</small>
-                </span>
+            {{-- Brand with Official Symbol Justice Asset --}}
+            <a class="navbar-brand law-brand brand" href="{{ route('home') }}" aria-label="Holong Siregar &amp; Co. Law Office">
+                <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                     alt="Simbol Justice Holong Siregar &amp; Co."
+                     class="law-brand-symbol"
+                     width="48"
+                     height="48"
+                     loading="eager">
+                <div class="law-brand-titles">
+                    <span class="law-brand-name">
+                        Holong Siregar <span>&amp; Co.</span>
+                    </span>
+                    <span class="law-brand-sub">LAW OFFICE</span>
+                </div>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Buka menu navigasi">
-                <span class="navbar-toggler-icon"></span>
+            {{-- Hamburger Toggler for Mobile --}}
+            <button class="navbar-toggler law-navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Buka navigasi menu">
+                <i class="fa-solid fa-bars"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+            {{-- Navigation Items --}}
+            <div class="collapse navbar-collapse law-navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                     @foreach ($links as $link)
                         <li class="nav-item">
                             <a class="nav-link {{ $isActive($link['route']) ? 'active' : '' }}"
-                                @if ($isActive($link['route'])) aria-current="page" @endif
-                                href="{{ route($link['route']) }}">{{ $link['label'] }}</a>
+                               @if ($isActive($link['route'])) aria-current="page" @endif
+                               href="{{ route($link['route']) }}">
+                                {{ $link['label'] }}
+                            </a>
                         </li>
                     @endforeach
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a class="btn btn-gold" href="{{ route('contact') }}">
-                            Konsultasi Sekarang
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-gold law-btn-primary" href="{{ route('contact') }}">
+                            <i class="fa-solid fa-comments me-1"></i> Konsultasi Sekarang
                         </a>
                     </li>
                 </ul>
