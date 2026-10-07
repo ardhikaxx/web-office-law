@@ -52,7 +52,7 @@
             </div>
             <div class="d-flex align-items-center gap-3">
                 <span>
-                    <i class="fa-regular fa-clock me-2"></i>{{ $site['hours'] ?? 'Senin – Jumat: 09.00 – 17.00 WIB' }}
+                    <i class="fa-regular fa-clock me-2"></i>{{ $site['hours'] ?? 'Senin – Sabtu, 08:00 – 17:30 WIB' }}
                 </span>
             </div>
         </div>

@@ -37,7 +37,7 @@ return [
         'whatsapp' => '6285771633860',
         'whatsapp_display' => '0857-7163-3860',
         'whatsapp_message' => 'Halo Holong Siregar & Co., saya ingin berkonsultasi mengenai kebutuhan hukum saya.',
-        'hours' => 'Senin – Jumat, 09.00 – 17.00 WIB',
+        'hours' => 'Senin – Sabtu, 08:00 – 17:30 WIB',
         'instagram' => '#',
         'linkedin' => '#',
         'facebook' => '#',

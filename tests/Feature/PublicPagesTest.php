@@ -260,3 +260,13 @@ test('authentic office addresses for bogor and tangerang render across website',
     $home->assertSee('Villa Grand Tomang, Periuk, Kota Tangerang');
     $home->assertSee('Kota Bogor &amp; Kota Tangerang', false);
 });
+
+test('authentic operating hours render across website', function () {
+    $contact = $this->get('/kontak');
+    $contact->assertOk();
+    $contact->assertSee('Senin – Sabtu, 08:00 – 17:30 WIB');
+
+    $home = $this->get('/');
+    $home->assertOk();
+    $home->assertSee('Senin – Sabtu, 08:00 – 17:30 WIB');
+});

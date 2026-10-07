@@ -67,7 +67,7 @@
                             <i class="fa-regular fa-clock"></i>
                         </div>
                         <h2 class="h5 law-heading">Jam Operasional</h2>
-                        <p class="text-muted mb-0">{{ $site['hours'] ?? 'Senin – Jumat, 09.00 – 17.00 WIB' }}</p>
+                        <p class="text-muted mb-0">{{ $site['hours'] ?? 'Senin – Sabtu, 08:00 – 17:30 WIB' }}</p>
                     </div>
                 </div>
             </div>

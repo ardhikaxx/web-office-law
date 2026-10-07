@@ -107,7 +107,7 @@
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-regular fa-clock"></i>
-                        <span>{{ $site['hours'] ?? 'Senin – Jumat, 09.00 – 17.00 WIB' }}</span>
+                        <span>{{ $site['hours'] ?? 'Senin – Sabtu, 08:00 – 17:30 WIB' }}</span>
                     </div>
 
                     <div class="mt-3 pt-2">
