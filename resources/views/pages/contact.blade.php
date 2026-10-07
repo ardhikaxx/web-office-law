@@ -21,12 +21,19 @@
             {{-- Contact Cards Row --}}
             <div class="row g-4 mb-5">
                 <div class="col-md-6 col-lg-3">
-                    <div class="contact-info-card">
+                    <div class="contact-info-card h-100">
                         <div class="law-service-icon mb-3">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <h2 class="h5 law-heading">Alamat Kantor</h2>
-                        <p class="text-muted mb-0">{{ $site['address'] ?? '[Alamat Kantor]' }}, {{ $site['city'] ?? '' }}</p>
+                        <div class="small mb-2">
+                            <strong class="text-navy d-block">1. Kantor Bogor:</strong>
+                            <span class="text-muted">Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah, Kota Bogor</span>
+                        </div>
+                        <div class="small mb-0">
+                            <strong class="text-navy d-block">2. Kantor Tangerang:</strong>
+                            <span class="text-muted">Villa Grand Tomang, Periuk, Kota Tangerang</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -194,6 +201,28 @@
                         </ul>
 
                         <hr class="my-4">
+
+                        <h3 class="h6 law-heading mb-3">
+                            <i class="fa-solid fa-building-columns text-gold me-2"></i>Lokasi Kantor Operasional
+                        </h3>
+                        <div class="p-3 bg-light rounded-3 mb-2 border">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fa-solid fa-map-pin text-gold mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-navy d-block small">Kantor 1 — Kota Bogor</strong>
+                                    <p class="text-muted small mb-0">Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah, Kota Bogor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-light rounded-3 mb-3 border">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fa-solid fa-map-pin text-gold mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-navy d-block small">Kantor 2 — Kota Tangerang</strong>
+                                    <p class="text-muted small mb-0">Villa Grand Tomang, Periuk, Kota Tangerang</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <h3 class="h6 law-heading">Informasi Terkait</h3>
                         <p class="text-muted small mb-3">

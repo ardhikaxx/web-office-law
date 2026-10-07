@@ -36,8 +36,8 @@
     <div class="law-topbar topbar d-none d-lg-block">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-4">
-                <span>
-                    <i class="fa-solid fa-location-dot me-2"></i>{{ $site['address'] ?? '[Alamat Kantor]' }}, {{ $site['city'] ?? '' }}
+                <span title="Kantor 1: Aspol Panaragan Kidul, Kota Bogor | Kantor 2: Villa Grand Tomang, Kota Tangerang">
+                    <i class="fa-solid fa-location-dot me-2 text-gold"></i>Kota Bogor &amp; Kota Tangerang
                 </span>
                 <span>
                     <a href="mailto:{{ $site['email'] }}" class="text-decoration-none text-light opacity-90" style="color:inherit;">

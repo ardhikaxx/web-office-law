@@ -247,3 +247,16 @@ test('contact info renders official email, phone, and whatsapp url with 0857-716
     $home->assertSee('https://wa.me/6285771633860', false);
     $home->assertSee('wa-float');
 });
+
+test('authentic office addresses for bogor and tangerang render across website', function () {
+    $contact = $this->get('/kontak');
+    $contact->assertOk();
+    $contact->assertSee('Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah, Kota Bogor');
+    $contact->assertSee('Villa Grand Tomang, Periuk, Kota Tangerang');
+
+    $home = $this->get('/');
+    $home->assertOk();
+    $home->assertSee('Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah, Kota Bogor');
+    $home->assertSee('Villa Grand Tomang, Periuk, Kota Tangerang');
+    $home->assertSee('Kota Bogor &amp; Kota Tangerang', false);
+});

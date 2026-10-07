@@ -79,9 +79,19 @@
                 {{-- Col 4: Kontak & Kantor --}}
                 <div class="col-lg-3 col-md-6">
                     <h3 class="law-footer-title">Informasi Kantor</h3>
-                    <div class="law-footer-contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>{{ $site['address'] ?? '[Alamat Kantor]' }}, {{ $site['city'] ?? '' }}</span>
+                    <div class="law-footer-contact-item mb-2">
+                        <i class="fa-solid fa-location-dot mt-1"></i>
+                        <div>
+                            <strong class="text-white d-block small mb-1">Kantor 1 (Bogor):</strong>
+                            <span class="opacity-90">Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah, Kota Bogor</span>
+                        </div>
+                    </div>
+                    <div class="law-footer-contact-item mb-3">
+                        <i class="fa-solid fa-location-dot mt-1"></i>
+                        <div>
+                            <strong class="text-white d-block small mb-1">Kantor 2 (Tangerang):</strong>
+                            <span class="opacity-90">Villa Grand Tomang, Periuk, Kota Tangerang</span>
+                        </div>
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-solid fa-envelope"></i>
