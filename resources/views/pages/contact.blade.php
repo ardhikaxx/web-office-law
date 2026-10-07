@@ -104,7 +104,7 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label class="form-label" for="phone">Nomor WhatsApp / Telepon *</label>
+                                    <label class="form-label" for="phone">Nomor WhatsApp *</label>
                                     <input class="form-control @error('phone') is-invalid @enderror"
                                            type="tel"
                                            id="phone"
@@ -116,26 +116,13 @@
                                     @error('phone')<div class="invalid-feedback">{{ $message }}</div>@enderror
                                 </div>
 
-                                <div class="col-md-6">
-                                    <label class="form-label" for="email">Alamat Email *</label>
-                                    <input class="form-control @error('email') is-invalid @enderror"
-                                           type="email"
-                                           id="email"
-                                           name="email"
-                                           value="{{ old('email') }}"
-                                           placeholder="nama@email.com"
-                                           required
-                                           maxlength="150">
-                                    @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                                </div>
-
-                                <div class="col-md-6">
+                                <div class="col-12">
                                     <label class="form-label" for="legal_need">Jenis Kebutuhan Hukum *</label>
                                     <select class="form-select @error('legal_need') is-invalid @enderror"
                                             id="legal_need"
                                             name="legal_need"
                                             required>
-                                        <option value="">— Pilih Kebutuhan —</option>
+                                        <option value="">— Pilih Kebutuhan Hukum —</option>
                                         @foreach ($services as $service)
                                             <option value="{{ $service['title'] }}" @selected(old('legal_need') === $service['title'])>
                                                 {{ $service['title'] }}
@@ -147,25 +134,12 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label class="form-label" for="subject">Subjek Permasalahan *</label>
-                                    <input class="form-control @error('subject') is-invalid @enderror"
-                                           type="text"
-                                           id="subject"
-                                           name="subject"
-                                           value="{{ old('subject') }}"
-                                           placeholder="Ringkasan singkat subjek konsultasi"
-                                           required
-                                           maxlength="150">
-                                    @error('subject')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                                </div>
-
-                                <div class="col-12">
                                     <label class="form-label" for="message">Ringkasan Permasalahan *</label>
                                     <textarea class="form-control @error('message') is-invalid @enderror"
                                               id="message"
                                               name="message"
-                                              rows="5"
-                                              placeholder="Tuliskan kronologi dan inti persoalan secara jelas tanpa menyertakan dokumen sangat rahasia (minimal 20 karakter)..."
+                                              rows="4"
+                                              placeholder="Tuliskan secara ringkas kronologi, inti persoalan, atau pertanyaan hukum Anda..."
                                               required
                                               maxlength="3000">{{ old('message') }}</textarea>
                                     @error('message')<div class="invalid-feedback">{{ $message }}</div>@enderror
@@ -178,7 +152,7 @@
                                                id="agreement"
                                                name="agreement"
                                                value="1"
-                                               @checked(old('agreement'))
+                                               @checked(old('agreement', '1'))
                                                required>
                                         <label class="form-check-label small" for="agreement">
                                             Saya memahami bahwa informasi yang saya kirimkan bersifat permintaan awal dan <strong>bukan otomatis membentuk hubungan advokat–klien</strong> sebelum konfirmasi resmi dari kantor. *
@@ -189,7 +163,7 @@
 
                                 <div class="col-12 pt-2">
                                     <button type="submit" class="btn btn-gold law-btn-primary btn-lg w-100">
-                                        <i class="fa-solid fa-paper-plane me-2"></i>Kirim Permintaan Konsultasi
+                                        <i class="fa-brands fa-whatsapp me-2"></i>Kirim Konsultasi ke WhatsApp
                                     </button>
                                 </div>
                             </div>

@@ -387,7 +387,6 @@
                     <div class="law-consultation-form-card">
                         <form id="homeConsultationForm" class="law-consultation-form law-form-dark" method="POST" action="{{ route('contact.store') }}" novalidate>
                             @csrf
-                            <input type="hidden" name="subject" value="Permintaan Konsultasi dari Beranda Website">
 
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -404,7 +403,7 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label class="form-label" for="home_phone">Nomor WhatsApp / Telepon *</label>
+                                    <label class="form-label" for="home_phone">Nomor WhatsApp *</label>
                                     <input class="form-control @error('phone') is-invalid @enderror"
                                            type="tel"
                                            id="home_phone"
@@ -416,20 +415,7 @@
                                     @error('phone')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
                                 </div>
 
-                                <div class="col-md-6">
-                                    <label class="form-label" for="home_email">Alamat Email *</label>
-                                    <input class="form-control @error('email') is-invalid @enderror"
-                                           type="email"
-                                           id="home_email"
-                                           name="email"
-                                           value="{{ old('email') }}"
-                                           placeholder="nama@perusahaan.com"
-                                           required
-                                           maxlength="150">
-                                    @error('email')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
-                                </div>
-
-                                <div class="col-md-6">
+                                <div class="col-12">
                                     <label class="form-label" for="home_legal_need">Bidang Layanan Hukum *</label>
                                     <select class="form-select @error('legal_need') is-invalid @enderror"
                                             id="home_legal_need"
@@ -447,12 +433,12 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label class="form-label" for="home_message">Ringkasan Kebutuhan Hukum *</label>
+                                    <label class="form-label" for="home_message">Ringkasan Permasalahan *</label>
                                     <textarea class="form-control @error('message') is-invalid @enderror"
                                               id="home_message"
                                               name="message"
                                               rows="4"
-                                              placeholder="Jelaskan ringkasan permasalahan atau kebutuhan Anda secara garis besar (minimal 20 karakter)..."
+                                              placeholder="Tuliskan secara ringkas kronologi atau kebutuhan hukum Anda..."
                                               required
                                               maxlength="3000">{{ old('message') }}</textarea>
                                     @error('message')<div class="invalid-feedback text-white">{{ $message }}</div>@enderror
@@ -476,7 +462,7 @@
 
                                 <div class="col-12 pt-2">
                                     <button type="submit" class="btn btn-gold law-btn-primary btn-lg w-100">
-                                        <i class="fa-solid fa-paper-plane me-2"></i>Kirim Permintaan Konsultasi
+                                        <i class="fa-brands fa-whatsapp me-2"></i>Kirim Konsultasi ke WhatsApp
                                     </button>
                                 </div>
                             </div>

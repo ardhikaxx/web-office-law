@@ -91,23 +91,23 @@ test('services section renders all 7 services with real text from image referenc
     }
 });
 
-test('consultation form validates and succeeds', function () {
+test('consultation form validates and redirects directly to whatsapp with formatted chat', function () {
     $payload = [
         'name' => 'Budi Santoso',
         'phone' => '081234567890',
-        'email' => 'budi@example.com',
         'legal_need' => 'Perdata Umum & Khusus',
-        'subject' => 'Konsultasi wanprestasi kontrak',
-        'message' => 'Saya membutuhkan pendampingan terkait wanprestasi kontrak kerja sama usaha yang terjadi sejak tiga bulan lalu.',
+        'message' => 'Saya butuh bantuan hukum wanprestasi kerja sama usaha.',
         'agreement' => '1',
     ];
 
-    $this->post('/kontak', $payload)
-        ->assertRedirect(route('contact'))
-        ->assertSessionHas('consultation_success')
-        ->assertSessionHas('consultation_wa_url');
+    $response = $this->post('/kontak', $payload);
+    $response->assertRedirect();
+    $targetUrl = $response->headers->get('Location');
+    expect($targetUrl)->toContain('https://wa.me/6285771633860?text=')
+        ->toContain('Budi+Santoso')
+        ->toContain('Perdata+Umum+%26+Khusus');
 
-    $this->post('/kontak', [])->assertSessionHasErrors(['name', 'phone', 'email', 'message', 'agreement']);
+    $this->post('/kontak', [])->assertSessionHasErrors(['name', 'phone', 'legal_need', 'message', 'agreement']);
 });
 
 test('about page renders authentic vision and mission', function () {
@@ -133,13 +133,11 @@ test('application operates purely hardcoded without any database queries', funct
     $payload = [
         'name' => 'Budi Hardcode',
         'phone' => '081234567890',
-        'email' => 'budi@example.com',
         'legal_need' => 'Perdata Umum & Khusus',
-        'subject' => 'Konsultasi Perdata',
         'message' => 'Uji konsultasi tanpa koneksi atau query database.',
         'agreement' => '1',
     ];
-    $this->post('/kontak', $payload)->assertRedirect(route('contact'));
+    $this->post('/kontak', $payload)->assertRedirect();
 
     expect(DB::getQueryLog())->toBeEmpty();
 });

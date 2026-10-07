@@ -22,18 +22,16 @@ class ContactController extends Controller
         // database, melainkan dikonfirmasi ke pengguna dan disiapkan tautan WhatsApp langsung.
         $validated = $request->validated();
 
-        $waMessage = "Halo Holong Siregar & Co., saya {$validated['name']} ingin berkonsultasi mengenai kebutuhan hukum: {$validated['legal_need']}.\n\n"
-            ."Subjek: {$validated['subject']}\n"
-            ."Telepon/WA: {$validated['phone']}\n"
-            ."Email: {$validated['email']}\n\n"
-            ."Ringkasan Permasalahan:\n{$validated['message']}";
+        $waMessage = "Halo *Holong Siregar & Co. Law Office*,\n"
+            ."Saya ingin mengajukan permohonan konsultasi hukum melalui website:\n\n"
+            ."*Nama Lengkap:* {$validated['name']}\n"
+            ."*Nomor Kontak/WA:* {$validated['phone']}\n"
+            ."*Kebutuhan Hukum:* {$validated['legal_need']}\n\n"
+            ."*Ringkasan Permasalahan:*\n{$validated['message']}\n\n"
+            .'Mohon informasi jadwal dan arahan konsultasi selanjutnya. Terima kasih.';
 
         $waUrl = LawFirm::whatsappUrl($waMessage);
 
-        return redirect()
-            ->route('contact')
-            ->with('consultation_success', 'Terima kasih, '.$validated['name'].'. Permintaan konsultasi Anda telah kami terima untuk ditinjau lebih lanjut.')
-            ->with('consultation_name', $validated['name'])
-            ->with('consultation_wa_url', $waUrl);
+        return redirect()->away($waUrl);
     }
 }
