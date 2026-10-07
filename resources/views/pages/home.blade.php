@@ -9,50 +9,50 @@
         <div class="law-hero-bg hero-bg" aria-hidden="true"></div>
         <div class="law-hero-overlay hero-overlay" aria-hidden="true"></div>
 
-        <div class="container law-hero-container hero-content">
-            <div class="row align-items-center g-5">
-                {{-- Left: Authority Headline & Value Proposition --}}
-                <div class="col-lg-7">
-                    <span class="law-hero-badge hero-label">
-                        <i class="fa-solid fa-scale-balanced text-gold"></i>
-                        HOLONG SIREGAR &amp; CO. LAW OFFICE
-                    </span>
-                    <h1 class="law-hero-title hero-title">
-                        Solusi Hukum yang <span class="text-gold">Tegas, Terukur</span>, dan Terpercaya
-                    </h1>
-                    <p class="law-hero-text hero-text">
-                        Holong Siregar &amp; Co. memberikan pendampingan hukum profesional melalui analisis
-                        yang cermat, strategi yang relevan, komunikasi terbuka, serta pendekatan yang bertanggung jawab.
-                    </p>
-                    <div class="law-hero-actions hero-actions">
-                        <a href="#consultation-section" class="btn btn-gold law-btn-primary btn-lg">
-                            <i class="fa-solid fa-calendar-check me-2"></i>Konsultasi Sekarang
-                        </a>
-                        <a href="{{ route('services.index') }}" class="btn btn-outline-light btn-lg">
-                            <span>Pelajari Layanan</span>
-                            <i class="fa-solid fa-arrow-right ms-2"></i>
-                        </a>
+        <div class="law-hero-main">
+            <div class="container law-hero-container hero-content">
+                <div class="row align-items-center g-5">
+                    {{-- Left: Authority Headline & Value Proposition --}}
+                    <div class="col-lg-7">
+                        <span class="law-hero-badge hero-label">
+                            <i class="fa-solid fa-scale-balanced text-gold"></i>
+                            HOLONG SIREGAR &amp; CO. LAW OFFICE
+                        </span>
+                        <h1 class="law-hero-title hero-title">
+                            Solusi Hukum yang <span class="text-gold">Tegas, Terukur</span>, dan Terpercaya
+                        </h1>
+                        <p class="law-hero-text hero-text">
+                            Holong Siregar &amp; Co. memberikan pendampingan hukum profesional melalui analisis
+                            yang cermat, strategi yang relevan, komunikasi terbuka, serta pendekatan yang bertanggung jawab.
+                        </p>
+                        <div class="law-hero-actions hero-actions">
+                            <a href="#consultation-section" class="btn btn-gold law-btn-primary btn-lg">
+                                <i class="fa-solid fa-calendar-check me-2"></i>Konsultasi Sekarang
+                            </a>
+                            <a href="{{ route('services.index') }}" class="btn btn-outline-light btn-lg">
+                                <span>Pelajari Layanan</span>
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                {{-- Right: Official Justice Symbol Statue (Lady Justice) --}}
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="law-hero-visual">
-                        <div class="law-hero-statue-wrap">
-                            <div class="law-hero-statue-glow"></div>
-                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                                 alt="Simbol Justice - Holong Siregar &amp; Co. Law Office"
-                                 class="law-hero-statue"
-                                 width="420"
-                                 height="500"
-                                 loading="eager">
-                            <div class="law-hero-floating-card">
-                                <i class="fa-solid fa-shield-halved"></i>
-                                <div>
-                                    <strong>Dedicated to Justice</strong>
-                                    <small>Integritas &amp; Profesionalisme</small>
-                                </div>
-                            </div>
+            {{-- Right: Official Justice Symbol Statue (Lady Justice), flush to the right edge & strip --}}
+            <div class="law-hero-visual d-none d-lg-block">
+                <div class="law-hero-statue-wrap">
+                    <div class="law-hero-statue-glow"></div>
+                    <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                         alt="Simbol Justice - Holong Siregar &amp; Co. Law Office"
+                         class="law-hero-statue"
+                         width="1855"
+                         height="2048"
+                         loading="eager">
+                    <div class="law-hero-floating-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <strong>Dedicated to Justice</strong>
+                            <small>Integritas &amp; Profesionalisme</small>
                         </div>
                     </div>
                 </div>
