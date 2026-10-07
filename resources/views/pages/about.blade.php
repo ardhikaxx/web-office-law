@@ -75,8 +75,29 @@
                 title="Komitmen &amp; Standar Pelayanan Kami"
                 description="Landasan dedikasi Holong Siregar &amp; Co. dalam memberikan pendampingan hukum prima dan menjaga integritas profesi." />
 
-            <div class="row g-4">
-                <div class="col-lg-6">
+            <div class="row g-4 align-items-stretch">
+                {{-- Official Emblem Card: Officium Nobile & Simbol Keadilan --}}
+                <div class="col-lg-4">
+                    <div class="law-emblem-card text-white p-4 h-100 rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="law-emblem-glow" aria-hidden="true"></div>
+                        <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                             alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                             class="law-emblem-img mb-3"
+                             width="1855"
+                             height="2048"
+                             loading="lazy">
+                        <span class="badge bg-gold text-navy fw-bold text-uppercase px-3 py-1 mb-2" style="letter-spacing: 0.15em;">
+                            Officium Nobile
+                        </span>
+                        <h3 class="h5 text-white fw-bold mb-2">Simbol Integritas &amp; Keadilan</h3>
+                        <p class="small text-white-50 mb-0">
+                            Menjunjung tinggi kehormatan profesi advokat dengan integritas moral, kepatuhan kode etik, dan dedikasi penuh memperjuangkan hak hukum klien.
+                        </p>
+                    </div>
+                </div>
+
+                {{-- Visi Kami --}}
+                <div class="col-lg-4 col-md-6">
                     <div class="law-card bg-white p-4 p-md-5 h-100 border rounded-3 shadow-sm d-flex flex-column">
                         <div class="d-flex align-items-center gap-3 mb-3">
                             <div class="law-service-icon mb-0" style="font-size:1.85rem;">
@@ -92,7 +113,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+
+                {{-- Misi Kami --}}
+                <div class="col-lg-4 col-md-6">
                     <div class="law-card bg-white p-4 p-md-5 h-100 border rounded-3 shadow-sm d-flex flex-column">
                         <div class="d-flex align-items-center gap-3 mb-3">
                             <div class="law-service-icon mb-0" style="font-size:1.85rem;">

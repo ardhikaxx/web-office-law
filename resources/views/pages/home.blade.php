@@ -338,8 +338,17 @@
     </section>
 
     {{-- 7. CONSULTATION SECTION (Full-Width Dark Navy Banner with Form - like image.png) --}}
-    <section class="law-consultation-section" id="consultation-section">
-        <div class="container">
+    <section class="law-consultation-section position-relative overflow-hidden" id="consultation-section">
+        {{-- Artistic Justice Symbol Ambient Watermark --}}
+        <div class="law-consultation-watermark" aria-hidden="true">
+            <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                 width="1855"
+                 height="2048"
+                 loading="lazy">
+        </div>
+
+        <div class="container position-relative" style="z-index: 2;">
             <div class="row g-5 align-items-center">
                 {{-- Left: Consultation Heading & Trust Checks --}}
                 <div class="col-lg-5">

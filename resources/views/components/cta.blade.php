@@ -3,8 +3,17 @@
     'description' => 'Sampaikan ringkasan kebutuhan hukum Anda. Tim advokat kami siap melakukan telaah awal secara profesional dan menjaga kerahasiaan penuh.',
 ])
 
-<section class="law-cta-band cta-band">
-    <div class="container">
+<section class="law-cta-band cta-band position-relative overflow-hidden">
+    {{-- Artistic Justice Symbol Watermark for High Legal Aesthetic --}}
+    <div class="law-cta-watermark" aria-hidden="true">
+        <img src="{{ asset('assets/images/simbol-justice.png') }}"
+             alt="Simbol Keadilan - Holong Siregar &amp; Co."
+             width="1855"
+             height="2048"
+             loading="lazy">
+    </div>
+
+    <div class="container position-relative" style="z-index: 2;">
         <div class="row align-items-center g-4">
             <div class="col-lg-8">
                 <p class="law-cta-eyebrow cta-eyebrow">
