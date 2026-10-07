@@ -21,7 +21,10 @@
     <meta name="twitter:title" content="@yield('title', 'Holong Siregar & Co. Law Office')">
     <meta name="twitter:description" content="@yield('meta_description', 'Pendampingan hukum profesional yang tegas, terukur, dan terpercaya.')">
 
-    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/favicon.svg') }}">
+    {{-- Browser Favicon --}}
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/logo.png') }}">
 
     {{-- Fonts: Playfair Display (Headings) + Plus Jakarta Sans (Body) --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">

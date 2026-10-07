@@ -44,10 +44,11 @@ test('home page renders official justice symbol asset in hero', function () {
     $response->assertSee('Holong Siregar');
 });
 
-test('navbar and footer render logo with full rounded styling', function () {
+test('browser tab favicon, navbar, and footer render logo asset', function () {
     $response = $this->get('/');
     $response->assertOk();
     $response->assertSee('assets/images/logo.png');
+    $response->assertSee('rel="icon" type="image/png"', false);
     $response->assertSee('rounded-circle');
     $response->assertSee('rounded-full');
 });
