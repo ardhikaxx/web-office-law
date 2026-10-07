@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Pertanyaan Umum (FAQ) | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Pertanyaan yang sering diajukan seputar konsultasi, layanan, biaya, dan pendampingan hukum di Holong Siregar & Co.')
+@section('title', 'Tanya Jawab Seputar Konsultasi & Layanan Hukum (FAQ) | Holong Siregar & Co.')
+@section('meta_description', 'Pertanyaan yang sering diajukan seputar prosedur konsultasi hukum, kerahasiaan data, penanganan perkara, dan biaya di kantor hukum Holong Siregar & Co.')
+@section('meta_keywords', 'faq konsultasi hukum, biaya sewa pengacara, cara konsultasi advokat, tanya hukum online, prosedur pendampingan hukum bogor tangerang')
 
 @section('content')
     <section class="law-page-hero page-hero">
@@ -64,4 +65,24 @@
     </section>
 
     <x-cta />
+
+    @if (!empty($faqs) && count($faqs))
+        @php
+            $faqSchema = [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => array_map(function ($f) {
+                    return [
+                        '@type' => 'Question',
+                        'name' => strip_tags($f['q'] ?? ''),
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => strip_tags($f['a'] ?? ''),
+                        ],
+                    ];
+                }, $faqs),
+            ];
+        @endphp
+        <script type="application/ld+json">{!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+    @endif
 @endsection

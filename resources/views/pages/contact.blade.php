@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Kontak & Konsultasi | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Hubungi Holong Siregar & Co. Law Office untuk permintaan konsultasi awal: alamat kantor, email resmi, WhatsApp, jam operasional, dan formulir konsultasi.')
+@section('title', 'Kontak & Konsultasi Hukum WhatsApp | Holong Siregar & Co. Law Office')
+@section('meta_description', 'Hubungi kantor hukum Holong Siregar & Co. Law Office via WhatsApp 0857-7163-3860 atau formulir online. Kantor resmi di Kota Bogor & Kota Tangerang. Pelayanan Senin - Sabtu.')
+@section('meta_keywords', 'kontak pengacara bogor, nomor wa advokat tangerang, konsultasi hukum online gratis wa, kantor hukum holong siregar bogor, alamat kantor advokat tangerang, konsultasi hukum wa')
 
 @section('content')
     <section class="law-page-hero page-hero">

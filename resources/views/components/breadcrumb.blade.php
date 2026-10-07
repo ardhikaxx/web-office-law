@@ -14,4 +14,20 @@
             @endforeach
         </ol>
     </nav>
+
+    @php
+        $breadcrumbSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => array_values(array_map(function ($idx, $item) {
+                return [
+                    '@type' => 'ListItem',
+                    'position' => $idx + 1,
+                    'name' => strip_tags($item['label'] ?? ''),
+                    'item' => !empty($item['url']) ? $item['url'] : url()->current(),
+                ];
+            }, array_keys($items), $items)),
+        ];
+    @endphp
+    <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @endif

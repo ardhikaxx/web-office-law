@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Profil Holong Siregar & Co. Law Office: kantor hukum yang berkomitmen memberikan pendampingan profesional, strategis, dan berintegritas.')
+@section('title', 'Tentang Kami | Kantor Hukum & Advokat Holong Siregar & Co.')
+@section('meta_description', 'Profil resmi Holong Siregar & Co. Law Office. Firma hukum berintegritas tinggi dengan komitmen Officium Nobile di Kota Bogor dan Kota Tangerang.')
+@section('meta_keywords', 'profil holong siregar, tentang holong siregar law office, kantor pengacara bogor, kantor hukum tangerang, advokat perdata pidana, officium nobile advokat')
 
 @section('content')
     {{-- Internal Page Hero --}}

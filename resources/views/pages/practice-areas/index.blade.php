@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Area Praktik | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Area praktik Holong Siregar & Co.: Litigasi (pendampingan perkara dan sengketa) dan Non-Litigasi (konsultasi, kontrak, legal opinion, dan mitigasi risiko).')
+@section('title', 'Area Praktik Litigasi & Non-Litigasi | Holong Siregar & Co.')
+@section('meta_description', 'Pendampingan hukum komprehensif jalur Litigasi (penyelesaian sengketa di pengadilan) dan Non-Litigasi (mediasi, review kontrak, legal compliance) di Bogor & Tangerang.')
+@section('meta_keywords', 'pengacara litigasi bogor, advokat non litigasi tangerang, mediasi sengketa hukum, penanganan perkara pengadilan, konsultan hukum preventif')
 
 @section('content')
     <section class="law-page-hero page-hero">

@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Holong Siregar & Co. Law Office | Pendampingan Hukum Profesional')
-@section('meta_description', 'Holong Siregar & Co. Law Office memberikan pendampingan hukum profesional: perdata, pidana, kontrak, korporasi, ketenagakerjaan, keluarga, dan pertanahan.')
+@section('title', 'Holong Siregar & Co. Law Office | Kantor Hukum & Advokat Pengacara Bogor & Tangerang')
+@section('meta_description', 'Holong Siregar & Co. Law Office adalah kantor hukum dan advokat pengacara resmi di Kota Bogor dan Kota Tangerang. Layanan profesional litigasi & non-litigasi: perdata, pidana, kontrak bisnis, hukum keluarga, hukum perusahaan, dan konsultasi WhatsApp.')
+@section('meta_keywords', 'kantor hukum bogor, advokat bogor, pengacara bogor, kantor hukum tangerang, advokat tangerang, pengacara tangerang, holong siregar, holong siregar and co, jasa hukum bogor, konsultan hukum tangerang, pengacara perdata, pengacara pidana, hukum keluarga, perceraian, kontrak bisnis, recovery asset, legal corporate jabodetabek')
 
 @section('content')
     {{-- 1. HERO SECTION (Inspired by image.png) --}}
