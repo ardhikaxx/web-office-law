@@ -143,3 +143,95 @@ test('application operates purely hardcoded without any database queries', funct
 
     expect(DB::getQueryLog())->toBeEmpty();
 });
+
+test('team section renders all 8 members in correct order with authentic photos and no linkedin or email', function () {
+    $response = $this->get('/tim');
+    $response->assertOk();
+
+    // Check all 8 members and their positions
+    $response->assertSeeInOrder([
+        'HOLONG SIREGAR, S.H.',
+        'M.AKUNG KURNIA R, S.H., M.H.',
+        'ADYTIA RACHMAN, S.H.',
+        'DAUD WILTON PURBA, S.H.',
+        'AKTOVEN L. RUMAPEA, S.H.',
+        'YUDHA ANTARIKSA PUTRA, S.H.',
+        'FELIX JONATHAN, S.H.',
+        'DANIEL SORMIN',
+    ]);
+
+    // Check all photo assets are present in order
+    $response->assertSeeInOrder([
+        'holong-siregar.jpg',
+        'm-akung-kurnia.jpg',
+        'adytia-rachman.jpg',
+        'daud-wilton.jpg',
+        'aktoven.jpg',
+        'yudha-antariksa.jpg',
+        'felix-jonathan.jpg',
+        'daniel.jpg',
+    ]);
+
+    // Verify linkedin and email are not present for lawyer cards
+    $response->assertDontSee('law-attorney-social');
+    $response->assertDontSee('aria-label="LinkedIn HOLONG', false);
+    $response->assertDontSee('mailto:');
+
+    // Verify lawyers without detail do not have links to profile
+    $response->assertDontSee('href="'.route('lawyers.show', 'felix-jonathan').'"', false);
+    $response->assertDontSee('href="'.route('lawyers.show', 'daniel-sormin').'"', false);
+
+    // Home page also displays all 8 members in order
+    $home = $this->get('/');
+    $home->assertOk();
+    $home->assertSeeInOrder([
+        'HOLONG SIREGAR, S.H.',
+        'M.AKUNG KURNIA R, S.H., M.H.',
+        'ADYTIA RACHMAN, S.H.',
+        'DAUD WILTON PURBA, S.H.',
+        'AKTOVEN L. RUMAPEA, S.H.',
+        'YUDHA ANTARIKSA PUTRA, S.H.',
+        'FELIX JONATHAN, S.H.',
+        'DANIEL SORMIN',
+    ]);
+});
+
+test('lawyers with detail profile can be viewed while lawyers without detail return 404', function () {
+    // 1. Holong Siregar
+    $holong = $this->get('/tim/holong-siregar');
+    $holong->assertOk();
+    $holong->assertSee('Pengadilan Tinggi Banten');
+    $holong->assertSee('Indonesia 50 Best Lawyer');
+
+    // 2. M. Akung Kurnia
+    $akung = $this->get('/tim/m-akung-kurnia-r');
+    $akung->assertOk();
+    $akung->assertSee('Univ. Muhammadiyah Tangerang');
+    $akung->assertSee('Doktoral (S3)');
+
+    // 3. Adytia Rachman
+    $adytia = $this->get('/tim/adytia-rachman');
+    $adytia->assertOk();
+    $adytia->assertSee('Badan Narkotika Nasional (BNN)');
+    $adytia->assertSee('Universitas Esa Unggul');
+
+    // 4. Daud Wilton Purba
+    $daud = $this->get('/tim/daud-wilton-purba');
+    $daud->assertOk();
+    $daud->assertSee('IKHAPI');
+    $daud->assertSee('Universitas Harapan Indonesia');
+
+    // 5. Aktoven L. Rumapea
+    $aktoven = $this->get('/tim/aktoven-l-rumapea');
+    $aktoven->assertOk();
+    $aktoven->assertSee('Universitas Indonesia');
+
+    // 6. Yudha Antariksa Putra
+    $yudha = $this->get('/tim/yudha-antariksa-putra');
+    $yudha->assertOk();
+    $yudha->assertSee('Universitas Esa Unggul');
+
+    // 7 & 8: Felix Jonathan and Daniel Sormin do NOT have detail profiles -> 404
+    $this->get('/tim/felix-jonathan')->assertNotFound();
+    $this->get('/tim/daniel-sormin')->assertNotFound();
+});

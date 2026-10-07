@@ -31,7 +31,9 @@ class SitemapController extends Controller
         }
 
         foreach (LawFirm::lawyers() as $lawyer) {
-            $urls[] = ['loc' => route('lawyers.show', $lawyer['slug']), 'priority' => '0.6'];
+            if (! empty($lawyer['has_detail'])) {
+                $urls[] = ['loc' => route('lawyers.show', $lawyer['slug']), 'priority' => '0.6'];
+            }
         }
 
         return response()

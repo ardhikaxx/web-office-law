@@ -18,11 +18,11 @@ class LawyerController extends Controller
     {
         $lawyer = LawFirm::findLawyer($slug);
 
-        abort_if($lawyer === null, 404);
+        abort_if($lawyer === null || empty($lawyer['has_detail']), 404);
 
         $others = array_values(array_filter(
             LawFirm::lawyers(),
-            fn ($item) => $item['slug'] !== $slug
+            fn ($item) => $item['slug'] !== $slug && ! empty($item['has_detail'])
         ));
 
         return view('pages.lawyers.show', [

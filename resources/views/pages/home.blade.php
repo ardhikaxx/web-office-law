@@ -222,30 +222,18 @@
                 description="Advokat dan konsultan hukum berdedikasi yang siap mendampingi kebutuhan hukum Anda dengan integritas dan keahlian teruji." />
 
             <div class="row g-4 align-items-stretch">
-                {{-- Show up to 3 lawyers in individual cards --}}
-                @foreach (array_slice($lawyers, 0, 3) as $lawyer)
+                @foreach ($lawyers as $lawyer)
                     <div class="col-sm-6 col-lg-3">
                         <x-lawyer-card :lawyer="$lawyer" />
                     </div>
                 @endforeach
+            </div>
 
-                {{-- 4th Column: Dedicated to Excellence Card (matching image.png) --}}
-                <div class="col-sm-6 col-lg-3">
-                    <div class="law-attorney-cta-card">
-                        <div class="law-attorney-cta-icon">
-                            <i class="fa-solid fa-scale-balanced"></i>
-                        </div>
-                        <h3 class="law-attorney-cta-title">Dedicated to Excellence</h3>
-                        <p class="law-attorney-cta-text">
-                            Seluruh tim kami memadukan pengalaman praktik, kedalaman analisis, dan komitmen
-                            terhadap kode etik advokat untuk memberikan pendampingan hukum terbaik.
-                        </p>
-                        <a href="{{ route('lawyers.index') }}" class="btn btn-gold law-btn-primary w-100">
-                            <span>Lihat Seluruh Tim</span>
-                            <i class="fa-solid fa-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="text-center mt-5 pt-2">
+                <a href="{{ route('lawyers.index') }}" class="btn btn-gold law-btn-primary px-4 py-3">
+                    <span>Lihat Halaman Lengkap Tim Kami</span>
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
             </div>
         </div>
     </section>

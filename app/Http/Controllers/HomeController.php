@@ -12,7 +12,7 @@ class HomeController extends Controller
         return view('pages.home', [
             'services' => LawFirm::services(),
             'practiceAreas' => LawFirm::practiceAreas(),
-            'lawyers' => array_slice(LawFirm::lawyers(), 0, 4),
+            'lawyers' => LawFirm::lawyers(),
             'values' => array_slice(config('lawfirm.values', []), 0, 6),
         ]);
     }
