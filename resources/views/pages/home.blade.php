@@ -310,14 +310,14 @@
                 </div>
 
                 {{-- Right Column: Client Perspectives / Testimonial Box --}}
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-flex flex-column">
                     <x-section-heading
                         align="start"
                         eyebrow="SUDUT PANDANG KLIEN"
                         title="Komitmen Pelayanan Kami"
                         description="Bagaimana pendekatan kami memberikan kepastian dan ketenangan bagi klien dalam menghadapi persoalan hukum." />
 
-                    <div class="law-testimonial-box position-relative overflow-hidden">
+                    <div class="law-testimonial-box position-relative overflow-hidden flex-grow-1">
                         {{-- Subtle Justice Symbol Watermark --}}
                         <div class="law-testimonial-watermark" aria-hidden="true">
                             <img src="{{ asset('assets/images/simbol-justice.png') }}"
@@ -331,7 +331,7 @@
                                 <i class="fa-solid fa-quote-left"></i>
                             </div>
                             <p class="law-testimonial-text">
-                                “Holong Siregar &amp; Co. memberikan panduan hukum yang jernih, terarah, dan transparan sejak awal konsultasi. Kami tidak hanya didampingi secara prosedural, tetapi juga dibantu memahami seluruh konsekuensi dan opsi terbaik untuk bisnis kami.”
+                                “Holong Siregar & Co. memberikan panduan hukum yang jernih, terarah, dan transparan sejak awal konsultasi. Kami tidak hanya didampingi secara prosedural, tetapi juga dibantu memahami seluruh konsekuensi dan opsi terbaik untuk bisnis kami.”
                             </p>
                         </div>
                         <div class="law-testimonial-author position-relative" style="z-index: 2;">
@@ -339,8 +339,8 @@
                                 <i class="fa-solid fa-building"></i>
                             </div>
                             <div class="law-author-info">
-                                <strong>Klien Korporasi &amp; Bisnis</strong>
-                                <small>Konsultasi Kontrak &amp; Tata Kelola Usaha</small>
+                                <strong>Klien Korporasi & Bisnis</strong>
+                                <small>Konsultasi Kontrak & Tata Kelola Usaha</small>
                             </div>
                         </div>
                     </div>
