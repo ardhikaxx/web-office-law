@@ -52,6 +52,36 @@ test('navbar and footer render logo with full rounded styling', function () {
     $response->assertSee('rounded-full');
 });
 
+test('services section renders all 7 services with real text from image reference', function () {
+    $response = $this->get('/');
+    $response->assertOk();
+    $response->assertSee('Layanan hukum untuk berbagai kebutuhan');
+    $response->assertSee('Setiap layanan disusun untuk membantu klien memahami pilihan');
+    $response->assertSee('Perdata Umum & Khusus');
+    $response->assertSee('Pidana Umum & Khusus');
+    $response->assertSee('Legal Contract & Review Contract');
+    $response->assertSee('Hukum Keluarga & Perceraian');
+    $response->assertSee('Hukum Perusahaan');
+    $response->assertSee('Legal Konsultasi');
+    $response->assertSee('Recovery Asset');
+    $response->assertSee('Lihat detail layanan');
+
+    // All 7 service detail pages render successfully
+    $slugs = [
+        'perdata-umum-khusus',
+        'pidana-umum-khusus',
+        'legal-contract-review-contract',
+        'hukum-keluarga-perceraian',
+        'hukum-perusahaan',
+        'legal-konsultasi',
+        'recovery-asset',
+    ];
+
+    foreach ($slugs as $slug) {
+        $this->get("/layanan/{$slug}")->assertOk();
+    }
+});
+
 test('consultation form validates and succeeds', function () {
     $payload = [
         'name' => 'Budi Santoso',

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1c2e"/>
+      <stop offset="100%" stop-color="#122b46"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a67e1a"/>
+      <stop offset="50%" stop-color="#e0be6c"/>
+      <stop offset="100%" stop-color="#a67e1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="12" fill="url(#g1)"/>
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="none" stroke="url(#goldG)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Asset Recovery / Safe Vault & Shield Emblem -->
+  <g transform="translate(300, 190) scale(1.3)">
+    <!-- Vault Box -->
+    <rect x="-60" y="-50" width="120" height="100" rx="8" fill="none" stroke="url(#goldG)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="30" fill="none" stroke="url(#goldG)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="10" fill="url(#goldG)"/>
+    <line x1="0" y1="-30" x2="0" y2="-15" stroke="url(#goldG)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="0" y1="15" x2="0" y2="30" stroke="url(#goldG)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-30" y1="0" x2="-15" y2="0" stroke="url(#goldG)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="15" y1="0" x2="30" y2="0" stroke="url(#goldG)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Corner Rivets -->
+    <circle cx="-45" cy="-35" r="3" fill="#e0be6c"/>
+    <circle cx="45" cy="-35" r="3" fill="#e0be6c"/>
+    <circle cx="-45" cy="35" r="3" fill="#e0be6c"/>
+    <circle cx="45" cy="35" r="3" fill="#e0be6c"/>
+    <!-- Recovery Arrow Arc -->
+    <path d="M -75 -20 A 85 85 0 0 1 75 -20" fill="none" stroke="#e0be6c" stroke-width="2.5" stroke-dasharray="6,4"/>
+    <polygon points="75,-30 85,-18 70,-15" fill="#e0be6c"/>
+  </g>
+</svg>

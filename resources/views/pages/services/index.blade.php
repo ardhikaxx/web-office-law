@@ -21,8 +21,8 @@
             @if (count($services))
                 <div class="row g-4">
                     @foreach ($services as $service)
-                        <div class="col-md-6 col-lg-4">
-                            <x-service-card :service="$service" />
+                        <div class="{{ $loop->last && $loop->iteration % 3 === 1 ? 'col-12' : 'col-md-6 col-lg-4' }}">
+                            <x-service-card :service="$service" :is-wide="$loop->last && $loop->iteration % 3 === 1" />
                         </div>
                     @endforeach
                 </div>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1c2e"/>
+      <stop offset="100%" stop-color="#122b46"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a67e1a"/>
+      <stop offset="50%" stop-color="#e0be6c"/>
+      <stop offset="100%" stop-color="#a67e1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="12" fill="url(#g1)"/>
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="none" stroke="url(#goldG)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Speech Bubbles / Consultation Emblem -->
+  <g transform="translate(300, 190) scale(1.3)">
+    <!-- Primary Bubble -->
+    <path d="M -70 -50 C -70 -75, 40 -75, 40 -50 C 40 -25, -20 -25, -45 -10 L -40 -25 C -60 -25, -70 -35, -70 -50 Z" fill="url(#goldG)" opacity="0.9"/>
+    <!-- Secondary Bubble -->
+    <path d="M -10 -15 C -10 -35, 80 -35, 80 -15 C 80 5, 30 5, 10 20 L 15 5 C -2 5, -10 -5, -10 -15 Z" fill="none" stroke="url(#goldG)" stroke-width="3"/>
+    <!-- Chat Lines -->
+    <line x1="-50" y1="-55" x2="20" y2="-55" stroke="#0a1c2e" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-50" y1="-43" x2="0" y2="-43" stroke="#0a1c2e" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-18" x2="60" y2="-18" stroke="#e0be6c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="10" y1="-8" x2="45" y2="-8" stroke="#e0be6c" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -113,26 +113,22 @@
     </section>
 
     {{-- 2. SERVICES SECTION (Comprehensive Legal Services) --}}
-    <section class="law-section section">
+    <section class="law-section law-section-soft section" id="layanan">
         <div class="container">
             <x-section-heading
                 eyebrow="RUANG LINGKUP PRAKTIK"
-                title="Layanan Hukum untuk Berbagai Kebutuhan"
-                description="Bidang layanan utama yang dirancang untuk memberikan kepastian dan perlindungan hukum optimal bagi perorangan maupun badan usaha." />
+                title="Layanan hukum untuk berbagai kebutuhan"
+                description="Setiap layanan disusun untuk membantu klien memahami pilihan dan menentukan langkah hukum yang tepat sesuai konteks kebutuhannya."
+                align="start"
+                :divider="false" />
 
             @if (count($services))
                 <div class="row g-4">
                     @foreach ($services as $service)
-                        <div class="col-md-6 col-lg-4">
-                            <x-service-card :service="$service" />
+                        <div class="{{ $loop->last && $loop->iteration % 3 === 1 ? 'col-12' : 'col-md-6 col-lg-4' }}">
+                            <x-service-card :service="$service" :is-wide="$loop->last && $loop->iteration % 3 === 1" />
                         </div>
                     @endforeach
-                </div>
-                <div class="text-center mt-5">
-                    <a href="{{ route('services.index') }}" class="btn btn-outline-navy law-btn-outline">
-                        <span>Lihat Semua Layanan</span>
-                        <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </a>
                 </div>
             @else
                 <div class="empty-state">Data layanan belum tersedia.</div>
@@ -141,7 +137,7 @@
     </section>
 
     {{-- 3. PRACTICE AREAS SECTION (Litigasi & Non-Litigasi) --}}
-    <section class="law-section section-soft bg-off-white">
+    <section class="law-section section bg-white">
         <div class="container">
             <x-section-heading
                 eyebrow="AREA PRAKTIK UTAMA"

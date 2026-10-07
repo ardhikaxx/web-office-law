@@ -58,7 +58,7 @@
                 <div class="col-lg-3 col-md-6 col-6">
                     <h3 class="law-footer-title">Layanan Hukum</h3>
                     <ul class="law-footer-links">
-                        @foreach (array_slice(config('lawfirm.services', []), 0, 6) as $service)
+                        @foreach (config('lawfirm.services', []) as $service)
                             <li>
                                 <a href="{{ route('services.show', $service['slug']) }}">
                                     {{ $service['title'] }}
