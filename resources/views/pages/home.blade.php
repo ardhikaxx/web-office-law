@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Pengacara di Tangerang & Bogor Terpercaya | Kantor Hukum & Advokat Holong Siregar & Co.')
+@section('title', \App\Support\Seo::title('Pengacara di Tangerang & Bogor Terpercaya | Kantor Hukum & Advokat Holong Siregar & Co.'))
 @section('meta_description', 'Mencari pengacara di Tangerang atau Bogor? Holong Siregar & Co. Law Office adalah kantor hukum advokat profesional untuk perkara perdata, pidana, perceraian, sengketa tanah, kontrak bisnis di Kota Tangerang, BSD, Tangsel & Bogor.')
-@section('meta_keywords', 'pengacara di tangerang, pengacara tangerang, advokat tangerang, kantor hukum tangerang, pengacara terbaik di tangerang, pengacara terbaik tangerang, jasa pengacara tangerang, kantor advokat tangerang, konsultan hukum tangerang, lawyer tangerang, law firm tangerang, pengacara bsd, pengacara serpong, pengacara gading serpong, pengacara alam sutera, pengacara karawaci, pengacara bintaro, pengacara tangerang selatan, pengacara tangsel, pengacara kota tangerang, pengacara kabupaten tangerang, pengacara periuk, pengacara cikokol, pengacara ciputat, pengacara pamulang, pengacara perceraian tangerang, pengacara perdata tangerang, pengacara pidana tangerang, pengacara sengketa tanah tangerang, pengacara perusahaan tangerang, corporate lawyer tangerang, pengacara hutang piutang tangerang, pengacara waris tangerang, konsultasi hukum tangerang, biaya pengacara tangerang, nomor telepon pengacara tangerang, cari pengacara di tangerang, pengacara pengadilan negeri tangerang, pengacara pengadilan agama tangerang, pengacara di bogor, pengacara bogor, kantor hukum bogor, advokat bogor, holong siregar, holong siregar and co, holong siregar law office')
+@section('meta_keywords', \App\Support\Seo::keywords())
+@section('canonical', route('home'))
 
 @section('content')
     {{-- 1. HERO SECTION (Inspired by image.png) --}}

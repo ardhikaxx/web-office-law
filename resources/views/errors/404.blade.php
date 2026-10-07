@@ -2,6 +2,7 @@
 
 @section('title', 'Halaman Tidak Ditemukan (404) | Holong Siregar & Co.')
 @section('meta_description', 'Halaman yang Anda cari tidak ditemukan atau telah berpindah alamat.')
+@section('meta_robots', 'noindex, nofollow')
 
 @section('content')
     <section class="law-section section text-center py-5 my-5">

@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Profil Kantor Pengacara di Tangerang & Bogor | Holong Siregar & Co. Law Office')
+@section('title', \App\Support\Seo::title('Profil Kantor Pengacara di Tangerang & Bogor'))
 @section('meta_description', 'Profil resmi kantor hukum & advokat pengacara Holong Siregar & Co. di Tangerang (Villa Grand Tomang) dan Bogor. Berpengalaman menangani perkara perdata, pidana, sengketa bisnis, dan hukum keluarga.')
-@section('meta_keywords', 'pengacara di tangerang, pengacara tangerang, kantor hukum tangerang, advokat tangerang, profil holong siregar, advokat bsd serpong tangerang, pengacara perdata tangerang, pengacara pidana tangerang, kantor pengacara bogor, advokat bogor')
+@section('meta_keywords', \App\Support\Seo::keywords(['profil holong siregar', 'kantor advokat tangerang', 'profil kantor hukum tangerang']))
+@section('canonical', route('about'))
 
 @section('content')
     {{-- Internal Page Hero --}}

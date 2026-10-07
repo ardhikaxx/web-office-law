@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
-@section('title', $lawyer['name'] . ' | Profil Advokat Holong Siregar & Co.')
-@section('meta_description', $lawyer['short_bio'] ?? $lawyer['position'])
+@section('title', \App\Support\Seo::title($lawyer['name'] . ' — ' . $lawyer['position'] . ' di Tangerang'))
+@section('meta_description', 'Profil advokat ' . $lawyer['name'] . ' (' . $lawyer['position'] . ' pada Holong Siregar & Co. Law Office). Spesialisasi ' . $lawyer['specialization'] . ' di Tangerang & Bogor.')
+@section('meta_keywords', \App\Support\Seo::keywords(['advokat ' . strtolower($lawyer['name']), 'pengacara ' . strtolower($lawyer['name']), 'profil advokat tangerang', 'pengacara ' . strtolower($lawyer['specialization'])]))
+@section('canonical', route('lawyers.show', $lawyer['slug']))
 
 @section('content')
     <section class="law-page-hero page-hero">
@@ -115,3 +117,10 @@
 
     <x-cta />
 @endsection
+
+@push('schema_extra')
+    @php
+        $personSchema = \App\Support\Seo::personSchema($lawyer);
+    @endphp
+    <script type="application/ld+json">{!! json_encode($personSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush

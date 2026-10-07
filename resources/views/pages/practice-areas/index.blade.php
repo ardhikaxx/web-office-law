@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Area Praktik Advokat Pengacara di Tangerang & Bogor | Holong Siregar & Co.')
+@section('title', \App\Support\Seo::title('Area Praktik Litigasi & Non-Litigasi di Tangerang & Bogor'))
 @section('meta_description', 'Area praktik hukum litigasi & non-litigasi oleh advokat pengacara di Tangerang & Bogor. Penanganan perkara persidangan di PN Tangerang, PA Tangerang, PN Bogor, serta mediasi non-litigasi.')
-@section('meta_keywords', 'area praktik advokat tangerang, pengacara litigasi tangerang, pengacara non litigasi tangerang, advokat pengadilan negeri tangerang, advokat pengadilan agama tangerang, pengacara bogor, jasa hukum tangerang')
+@section('meta_keywords', \App\Support\Seo::keywords(['praktik litigasi tangerang', 'non litigasi bsd', 'advokat pengadilan negeri tangerang']))
+@section('canonical', route('practice-areas.index'))
 
 @section('content')
     <section class="law-page-hero page-hero">

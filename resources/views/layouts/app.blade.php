@@ -9,9 +9,9 @@
     <meta name="description" content="@yield('meta_description', 'Mencari pengacara di Tangerang & Bogor? Holong Siregar & Co. Law Office menyediakan jasa advokat profesional untuk perdata, pidana, perceraian, sengketa tanah, kontrak bisnis, dan hukum perusahaan di Kota Tangerang, BSD, Tangsel & Bogor.')">
     <meta name="keywords" content="@yield('meta_keywords', 'pengacara di tangerang, pengacara tangerang, advokat tangerang, kantor hukum tangerang, pengacara terbaik di tangerang, pengacara terbaik tangerang, jasa pengacara tangerang, kantor advokat tangerang, konsultan hukum tangerang, lawyer tangerang, law firm tangerang, pengacara bsd, pengacara serpong, pengacara gading serpong, pengacara alam sutera, pengacara karawaci, pengacara bintaro, pengacara tangerang selatan, pengacara tangsel, pengacara kota tangerang, pengacara kabupaten tangerang, pengacara periuk, pengacara cikokol, pengacara ciputat, pengacara pamulang, pengacara perceraian tangerang, pengacara perdata tangerang, pengacara pidana tangerang, pengacara sengketa tanah tangerang, pengacara perusahaan tangerang, corporate lawyer tangerang, pengacara hutang piutang tangerang, pengacara waris tangerang, konsultasi hukum tangerang, biaya pengacara tangerang, nomor telepon pengacara tangerang, cari pengacara di tangerang, pengacara pengadilan negeri tangerang, pengacara pengadilan agama tangerang, pengacara di bogor, pengacara bogor, kantor hukum bogor, advokat bogor, holong siregar, holong siregar and co, holong siregar law office')">
     <meta name="author" content="Holong Siregar & Co. Law Office">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="robots" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
+    <meta name="googlebot" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
+    <meta name="bingbot" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
 
     {{-- Geo Meta Tags (Local SEO Tangerang & Bogor) --}}
     <meta name="geo.region" content="ID-BT;ID-JB">
@@ -19,7 +19,7 @@
     <meta name="geo.position" content="-6.178306;106.631889">
     <meta name="ICBM" content="-6.178306, 106.631889">
 
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
@@ -27,15 +27,18 @@
     <meta property="og:site_name" content="Holong Siregar & Co. Law Office">
     <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')))">
     <meta property="og:description" content="@yield('meta_description', 'Kantor hukum dan advokat pengacara profesional di Tangerang & Bogor. Menangani perkara perdata, pidana, perceraian, sengketa bisnis, dan kontrak.')">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:url" content="@yield('canonical', url()->current())">
+    <meta property="og:image" content="@yield('og_image', asset('assets/images/logo.png'))">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:alt" content="Logo Resmi Holong Siregar & Co. Law Office - Pengacara Tangerang & Bogor">
 
     {{-- Twitter Cards --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')">
     <meta name="twitter:description" content="@yield('meta_description', 'Kantor hukum dan advokat pengacara profesional di Tangerang & Bogor.')">
-    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/logo.png'))">
 
     {{-- Browser Favicon --}}
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
@@ -216,6 +219,7 @@
       ]
     }
     </script>
+    @stack('schema_extra')
 
     {{-- Fonts: Playfair Display (Headings) + Plus Jakarta Sans (Body) --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">

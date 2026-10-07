@@ -1,8 +1,15 @@
 @extends('layouts.app')
 
-@section('title', $service['title'] . ' | Pengacara di Tangerang & Bogor - Holong Siregar & Co.')
-@section('meta_description', $service['short_description'] . ' Layanan pengacara profesional di wilayah Tangerang (BSD, Serpong) dan Bogor oleh kantor hukum Holong Siregar & Co.')
-@section('meta_keywords', strtolower($service['title']) . ', pengacara ' . strtolower($service['title']) . ' tangerang, pengacara ' . strtolower($service['title']) . ' bogor, jasa pengacara di tangerang, kantor advokat tangerang, holong siregar')
+@php
+    $pageTitle = $service['title'] . ' di Tangerang & Bogor';
+    $targetKeywords = implode(', ', $service['target_keywords'] ?? []);
+    $metaKeywords = \App\Support\Seo::keywords($targetKeywords);
+@endphp
+
+@section('title', \App\Support\Seo::title($pageTitle))
+@section('meta_description', 'Layanan pengacara ' . strtolower($service['title']) . ' profesional di wilayah Kota Tangerang, BSD, Serpong, dan Bogor oleh kantor hukum Holong Siregar & Co. Konsultasi hukum cepat via WhatsApp.')
+@section('meta_keywords', $metaKeywords)
+@section('canonical', route('services.show', $service['slug']))
 
 @section('content')
     <section class="law-page-hero page-hero">
@@ -12,7 +19,7 @@
                 ['label' => 'Layanan Hukum', 'url' => route('services.index')],
                 ['label' => $service['title']],
             ]" />
-            <span class="law-section-eyebrow eyebrow text-gold-light">LAYANAN HUKUM</span>
+            <span class="law-section-eyebrow eyebrow text-gold-light">LAYANAN HUKUM — TANGERANG &amp; BOGOR</span>
             <h1 class="law-heading">{{ $service['title'] }}</h1>
             <p>{{ $service['short_description'] }}</p>
         </div>
@@ -29,7 +36,7 @@
                         </div>
                         <div>
                             <h2 class="h3 law-heading mb-1">Ruang Lingkup &amp; Penanganan</h2>
-                            <span class="text-gold-dark fw-bold small">BIDANG PRAKTIK PROFESIONAL</span>
+                            <span class="text-gold-dark fw-bold small">BIDANG PRAKTIK PROFESIONAL DI TANGERANG &amp; BOGOR</span>
                         </div>
                     </div>
 
@@ -49,17 +56,86 @@
                             </ul>
                         @endif
 
-                        <h3 class="h5 law-heading mt-4 mb-3">Pendekatan Kerja Tim Kami</h3>
-                        <p class="text-muted">
-                            Setiap penanganan diawali dengan telaah fakta dan alat bukti, pemetaan risiko yuridis,
-                            serta formulasi opsi strategi yang proporsional. Seluruh keputusan krusial didiskusikan
-                            bersama klien, dan perkembangan proses terdokumentasi secara transparan dan tertib hukum.
-                        </p>
+                        @if (!empty($service['when_needed']))
+                            <h3 class="h5 law-heading mt-5 mb-3">
+                                <i class="fa-solid fa-clipboard-question text-gold me-2"></i>Kapan Anda Membutuhkan Layanan Ini?
+                            </h3>
+                            <p class="text-muted small">Situasi konkret yang paling sering dihadapi calon klien di wilayah Tangerang dan sekitarnya:</p>
+                            <ul class="law-check-list check-list">
+                                @foreach ($service['when_needed'] as $item)
+                                    <li>
+                                        <i class="fa-solid fa-triangle-exclamation text-gold"></i>
+                                        <span>{{ $item }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+
+                        @if (!empty($service['workflow']))
+                            <h3 class="h5 law-heading mt-5 mb-3">
+                                <i class="fa-solid fa-diagram-project text-gold me-2"></i>Alur &amp; Tahapan Pendampingan Hukum
+                            </h3>
+                            <div class="row g-3 mb-3">
+                                @foreach ($service['workflow'] as $flow)
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light rounded-3 h-100 border">
+                                            <div class="d-flex align-items-center gap-2 mb-2">
+                                                <span class="badge bg-gold text-white fw-bold">Langkah {{ $flow['step'] }}</span>
+                                                <strong class="text-navy small">{{ $flow['title'] }}</strong>
+                                            </div>
+                                            <p class="text-muted small mb-0">{{ $flow['desc'] }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
+
+                        @if (!empty($service['jurisdiction']))
+                            <div class="p-3 bg-light rounded-3 mt-4 border">
+                                <div class="d-flex align-items-start gap-2">
+                                    <i class="fa-solid fa-location-dot text-gold mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <strong class="text-navy d-block small">Wilayah Yurisdiksi &amp; Penanganan Utama:</strong>
+                                        <p class="text-muted small mb-0">{{ $service['jurisdiction'] }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+
+                        @if (!empty($service['faqs']))
+                            <h3 class="h5 law-heading mt-5 mb-3">
+                                <i class="fa-solid fa-circle-question text-gold me-2"></i>Pertanyaan Umum Terkait Layanan Ini (FAQ)
+                            </h3>
+                            <div class="accordion law-accordion" id="serviceFaqAccordion">
+                                @foreach ($service['faqs'] as $idx => $f)
+                                    <div class="accordion-item mb-2 border rounded">
+                                        <h4 class="accordion-header" id="headingServiceFaq{{ $idx }}">
+                                            <button class="accordion-button {{ $idx !== 0 ? 'collapsed' : '' }} py-3"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseServiceFaq{{ $idx }}"
+                                                    aria-expanded="{{ $idx === 0 ? 'true' : 'false' }}"
+                                                    aria-controls="collapseServiceFaq{{ $idx }}">
+                                                {{ $f['q'] }}
+                                            </button>
+                                        </h4>
+                                        <div id="collapseServiceFaq{{ $idx }}"
+                                             class="accordion-collapse collapse {{ $idx === 0 ? 'show' : '' }}"
+                                             aria-labelledby="headingServiceFaq{{ $idx }}"
+                                             data-bs-parent="#serviceFaqAccordion">
+                                            <div class="accordion-body text-muted small leading-relaxed">
+                                                {{ $f['a'] }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
 
                         <div class="alert alert-light border mt-4 p-3 d-flex align-items-center gap-3">
                             <i class="fa-solid fa-circle-info text-gold fs-4"></i>
                             <div class="small text-muted">
-                                Informasi di halaman ini merupakan panduan umum dan bukan nasihat hukum individual. Hubungi kantor kami untuk konsultasi perkara spesifik Anda.
+                                Informasi di halaman ini merupakan panduan edukasi umum dan tidak otomatis membentuk hubungan advokat–klien. Hubungi kantor kami untuk konsultasi perkara spesifik Anda.
                             </div>
                         </div>
                     </div>
@@ -72,14 +148,33 @@
                         <div class="text-center mb-3">
                             <i class="fa-solid fa-calendar-check text-gold fs-2 mb-2"></i>
                             <h3 class="h5 law-heading mb-1">Konsultasikan Perkara Anda</h3>
-                            <p class="text-muted small">Diskusikan kebutuhan Anda dengan tim advokat kami untuk mendapatkan arahan yang tepat.</p>
+                            <p class="text-muted small">Diskusikan kebutuhan hukum Anda bersama tim advokat profesional kami di Tangerang &amp; Bogor.</p>
                         </div>
                         <a href="{{ route('contact') }}" class="btn btn-gold law-btn-primary w-100 mb-2">
                             <i class="fa-solid fa-comments me-2"></i>Konsultasi Sekarang
                         </a>
                         <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-navy law-btn-outline w-100">
-                            <i class="fa-brands fa-whatsapp text-success me-2"></i>Chat WhatsApp
+                            <i class="fa-brands fa-whatsapp text-success me-2"></i>Chat WhatsApp Cepat
                         </a>
+                    </div>
+
+                    {{-- Local Office Quick Info --}}
+                    <div class="law-card p-4 bg-white mb-4 border">
+                        <h3 class="h6 law-heading mb-3">
+                            <i class="fa-solid fa-building-columns text-gold me-2"></i>Basis Kantor Operasional
+                        </h3>
+                        <div class="small mb-3">
+                            <strong class="text-navy d-block">Kantor Tangerang:</strong>
+                            <span class="text-muted">Villa Grand Tomang, Periuk, Kota Tangerang</span>
+                        </div>
+                        <div class="small mb-3">
+                            <strong class="text-navy d-block">Kantor Bogor:</strong>
+                            <span class="text-muted">Aspol Panaragan Kidul RT/RW: 04/04, Kec. Bogor Tengah, Kota Bogor</span>
+                        </div>
+                        <div class="small">
+                            <strong class="text-navy d-block">Waktu Operasional:</strong>
+                            <span class="text-muted">Senin – Sabtu, 08:00 – 17:30 WIB</span>
+                        </div>
                     </div>
 
                     {{-- Related Services --}}
@@ -112,3 +207,14 @@
 
     <x-cta />
 @endsection
+
+@push('schema_extra')
+    @php
+        $serviceSchema = \App\Support\Seo::serviceSchema($service);
+        $faqSchema = !empty($service['faqs']) ? \App\Support\Seo::faqSchema($service['faqs']) : null;
+    @endphp
+    <script type="application/ld+json">{!! json_encode($serviceSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+    @if ($faqSchema)
+        <script type="application/ld+json">{!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+    @endif
+@endpush

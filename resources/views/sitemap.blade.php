@@ -3,8 +3,8 @@
     @foreach ($urls as $url)
     <url>
         <loc>{{ $url['loc'] }}</loc>
-        <lastmod>{{ date('Y-m-d') }}</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>{{ $url['lastmod'] ?? '2026-10-08' }}</lastmod>
+        <changefreq>{{ $url['changefreq'] ?? 'weekly' }}</changefreq>
         <priority>{{ $url['priority'] ?? '0.5' }}</priority>
     </url>
     @endforeach

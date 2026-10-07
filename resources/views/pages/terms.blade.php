@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Syarat & Ketentuan | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Syarat dan ketentuan resmi penggunaan website Holong Siregar & Co. Law Office.')
+@section('meta_description', 'Syarat dan ketentuan resmi penggunaan website dan layanan informasi Holong Siregar & Co. Law Office.')
+@section('canonical', route('terms'))
 
 @section('content')
     <section class="law-page-hero page-hero">

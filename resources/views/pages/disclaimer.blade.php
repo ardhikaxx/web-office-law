@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Disclaimer | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Disclaimer Holong Siregar & Co.: informasi website bersifat umum dan bukan nasihat hukum individual.')
+@section('meta_description', 'Disclaimer resmi Holong Siregar & Co. Law Office: materi website ini bersifat informasi umum dan bukan merupakan nasihat hukum formal atau pengganti konsultasi advokat.')
+@section('canonical', route('disclaimer'))
 
 @section('content')
     <section class="law-page-hero page-hero">
