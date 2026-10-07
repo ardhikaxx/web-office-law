@@ -61,11 +61,11 @@
     {{-- Main Navbar --}}
     <nav class="navbar navbar-expand-lg law-navbar main-nav" aria-label="Navigasi utama">
         <div class="container">
-            {{-- Brand with Official Symbol Justice Asset --}}
+            {{-- Brand with Official Logo Asset --}}
             <a class="navbar-brand law-brand brand" href="{{ route('home') }}" aria-label="Holong Siregar &amp; Co. Law Office">
-                <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                     alt="Simbol Justice Holong Siregar &amp; Co."
-                     class="law-brand-symbol"
+                <img src="{{ asset('assets/images/logo.png') }}"
+                     alt="Logo Holong Siregar &amp; Co."
+                     class="law-brand-symbol rounded-circle rounded-full"
                      width="48"
                      height="48"
                      loading="eager">

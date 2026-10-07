@@ -210,10 +210,15 @@ img {
 .law-brand-symbol {
   width: 48px;
   height: 48px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
   flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
   transition: transform 0.3s ease;
+}
+
+.rounded-full {
+  border-radius: 9999px !important;
 }
 
 .law-brand:hover .law-brand-symbol {

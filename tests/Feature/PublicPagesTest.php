@@ -37,11 +37,19 @@ test('unknown slugs return 404 with law firm branding', function () {
     $this->get('/area-praktik/tidak-ada')->assertNotFound();
 });
 
-test('home page renders official justice symbol asset', function () {
+test('home page renders official justice symbol asset in hero', function () {
     $response = $this->get('/');
     $response->assertOk();
     $response->assertSee('simbol-justice.png');
     $response->assertSee('Holong Siregar');
+});
+
+test('navbar and footer render logo with full rounded styling', function () {
+    $response = $this->get('/');
+    $response->assertOk();
+    $response->assertSee('assets/images/logo.png');
+    $response->assertSee('rounded-circle');
+    $response->assertSee('rounded-full');
 });
 
 test('consultation form validates and succeeds', function () {

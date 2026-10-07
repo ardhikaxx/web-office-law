@@ -5,9 +5,9 @@
                 {{-- Col 1: Identity & Description --}}
                 <div class="col-lg-4 col-md-6">
                     <a class="law-brand brand d-inline-flex align-items-center gap-3 mb-3 text-decoration-none" href="{{ route('home') }}">
-                        <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                             alt="Simbol Justice Holong Siregar &amp; Co."
-                             class="law-brand-symbol"
+                        <img src="{{ asset('assets/images/logo.png') }}"
+                             alt="Logo Holong Siregar &amp; Co."
+                             class="law-brand-symbol rounded-circle rounded-full"
                              width="48"
                              height="48"
                              loading="lazy">
