@@ -170,6 +170,10 @@ return [
         ],
     ],
 
+    'vision' => 'Memberikan solusi tepat pada permasalahan hukum, kebutuhan hukum, dan memberikan hasil pelayanan sangat baik kepada klien/mitra yang merupakan standart kami atas dasar Jasa Hukum.',
+
+    'mission' => 'Menjaga komunikasi dengan baik kepada klien/mitra kami secara berkesinambungan dalam pelayanan jasa hukum yang maksimal untuk kepentingan klien/mitra dengan mengutamakan kode Etik Profesi Advokat (OFFICIUM NOBILE).',
+
     'faqs' => [
         ['q' => 'Bagaimana cara memulai konsultasi?', 'a' => 'Sampaikan ringkasan kebutuhan Anda melalui halaman Kontak atau tombol WhatsApp. Kami akan menerima permintaan konsultasi untuk ditinjau lebih lanjut, kemudian menghubungi Anda untuk langkah berikutnya.'],
         ['q' => 'Apakah mengisi formulir berarti saya sudah menjadi klien?', 'a' => 'Belum. Hubungan advokat–klien terbentuk setelah ada konfirmasi dan kesepakatan penugasan dari kantor, bukan otomatis dari pengiriman formulir atau pembacaan informasi di website.'],

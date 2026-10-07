@@ -12,6 +12,8 @@ class AboutController extends Controller
         return view('pages.about', [
             'lawyers' => LawFirm::lawyers(),
             'values' => config('lawfirm.values', []),
+            'vision' => LawFirm::vision(),
+            'mission' => LawFirm::mission(),
         ]);
     }
 }

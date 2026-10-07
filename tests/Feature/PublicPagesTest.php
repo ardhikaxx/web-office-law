@@ -103,3 +103,12 @@ test('consultation form validates and succeeds', function () {
     $this->post('/kontak', $payload)->assertRedirect(route('contact'));
     $this->post('/kontak', [])->assertSessionHasErrors(['name', 'phone', 'email', 'message', 'agreement']);
 });
+
+test('about page renders authentic vision and mission', function () {
+    $response = $this->get('/tentang-kami');
+    $response->assertOk();
+    $response->assertSee('Visi Kami');
+    $response->assertSee('Misi Kami');
+    $response->assertSee('Memberikan solusi tepat pada permasalahan hukum');
+    $response->assertSee('OFFICIUM NOBILE');
+});

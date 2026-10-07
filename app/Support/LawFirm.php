@@ -72,6 +72,16 @@ class LawFirm
         return null;
     }
 
+    public static function vision(): string
+    {
+        return (string) config('lawfirm.vision', '');
+    }
+
+    public static function mission(): string
+    {
+        return (string) config('lawfirm.mission', '');
+    }
+
     public static function whatsappUrl(?string $message = null): string
     {
         $number = preg_replace('/[^0-9]/', '', (string) self::site('whatsapp', ''));

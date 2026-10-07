@@ -168,7 +168,8 @@
                              height="560">
                     </div>
                     <div class="law-quote-box quote-box mt-4">
-                        “Integritas dalam bertindak, ketelitian dalam menelaah, kerahasiaan dalam setiap komunikasi, dan orientasi pada solusi yang relevan.”
+                        <div class="small fw-bold text-gold-dark text-uppercase mb-1">Visi &amp; Komitmen Pelayanan</div>
+                        “Memberikan solusi tepat pada permasalahan dan kebutuhan hukum, serta menjaga komunikasi berkesinambungan demi kepentingan klien dengan mengutamakan kode Etik Profesi Advokat (Officium Nobile).”
                     </div>
                 </div>
                 <div class="col-lg-6">

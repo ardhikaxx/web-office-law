@@ -68,45 +68,44 @@
     </section>
 
     {{-- Visi & Misi --}}
-    <section class="law-section section-soft bg-off-white">
+    <section class="law-section section-soft bg-off-white" id="visi-misi">
         <div class="container">
+            <x-section-heading
+                eyebrow="VISI &amp; MISI"
+                title="Komitmen &amp; Standar Pelayanan Kami"
+                description="Landasan dedikasi Holong Siregar &amp; Co. dalam memberikan pendampingan hukum prima dan menjaga integritas profesi." />
+
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="law-card bg-white p-4 p-md-5 h-100">
-                        <div class="law-service-icon mb-3">
-                            <i class="fa-solid fa-compass"></i>
+                    <div class="law-card bg-white p-4 p-md-5 h-100 border rounded-3 shadow-sm d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="law-service-icon mb-0" style="font-size:1.85rem;">
+                                <i class="fa-solid fa-compass text-gold"></i>
+                            </div>
+                            <div>
+                                <span class="text-gold-dark fw-bold small text-uppercase">Standar Jasa Hukum</span>
+                                <h2 class="h3 law-heading mb-0">Visi Kami</h2>
+                            </div>
                         </div>
-                        <h2 class="h3 law-heading mb-3">Visi Kami</h2>
-                        <p class="law-section-desc mb-0">
-                            Menjadi kantor hukum terdepan yang dipercaya karena integritas tinggi, ketelitian analisis,
-                            dan mutu pendampingan berstandar prima — menghadirkan kepastian dan perlindungan hukum sejati bagi setiap klien.
+                        <p class="law-section-desc fs-5 leading-relaxed text-navy mb-0 pt-2">
+                            {{ $vision ?? config('lawfirm.vision') }}
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="law-card bg-white p-4 p-md-5 h-100">
-                        <div class="law-service-icon mb-3">
-                            <i class="fa-solid fa-shield-halved"></i>
+                    <div class="law-card bg-white p-4 p-md-5 h-100 border rounded-3 shadow-sm d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="law-service-icon mb-0" style="font-size:1.85rem;">
+                                <i class="fa-solid fa-scale-balanced text-gold"></i>
+                            </div>
+                            <div>
+                                <span class="text-gold-dark fw-bold small text-uppercase">Officium Nobile</span>
+                                <h2 class="h3 law-heading mb-0">Misi Kami</h2>
+                            </div>
                         </div>
-                        <h2 class="h3 law-heading mb-3">Misi Kami</h2>
-                        <ul class="law-check-list check-list mb-0">
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span>Memberikan telaah dan analisis hukum yang objektif, cermat, dan bertanggung jawab</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span>Menyusun strategi hukum yang relevan dengan tujuan dan kepentingan jangka panjang klien</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span>Menegakkan standar etika profesi advokat dan menjaga kerahasiaan tanpa kompromi</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span>Menyediakan komunikasi yang jelas, transparan, dan dapat diakses setiap saat</span>
-                            </li>
-                        </ul>
+                        <p class="law-section-desc fs-5 leading-relaxed text-navy mb-0 pt-2">
+                            {{ $mission ?? config('lawfirm.mission') }}
+                        </p>
                     </div>
                 </div>
             </div>
