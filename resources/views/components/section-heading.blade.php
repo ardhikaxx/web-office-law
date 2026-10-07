@@ -14,7 +14,7 @@
 
 <div class="law-section-heading section-heading {{ $alignClass }} {{ $dark ? 'is-dark' : '' }}">
     @if ($eyebrow)
-        <span class="law-section-eyebrow section-eyebrow">{{ $eyebrow }}</span>
+        <span class="law-section-eyebrow section-eyebrow">{!! $eyebrow !!}</span>
     @endif
     
     <h2 class="law-section-title section-title">{!! $title !!}</h2>
@@ -26,6 +26,6 @@
     @endif
 
     @if ($description)
-        <p class="law-section-desc section-desc">{{ $description }}</p>
+        <p class="law-section-desc section-desc">{!! $description !!}</p>
     @endif
 </div>

@@ -28,7 +28,7 @@
                     <x-section-heading
                         align="start"
                         eyebrow="PROFIL KANTOR"
-                        title="Pendampingan Hukum yang Profesional &amp; Bertanggung Jawab"
+                        title="Pendampingan Hukum yang Profesional & Bertanggung Jawab"
                         description="Kami memahami bahwa setiap persoalan hukum menyangkut kepercayaan dan kelangsungan hak klien. Karena itu, setiap mandat ditangani dengan pemahaman mendalam, analisis cermat, dan strategi terukur — bukan sekadar rutinitas prosedur." />
 
                     <p>
@@ -80,9 +80,9 @@
     <section class="law-section section-soft bg-off-white" id="visi-misi">
         <div class="container">
             <x-section-heading
-                eyebrow="VISI &amp; MISI"
-                title="Komitmen &amp; Standar Pelayanan Kami"
-                description="Landasan dedikasi Holong Siregar &amp; Co. dalam memberikan pendampingan hukum prima dan menjaga integritas profesi." />
+                eyebrow="VISI & MISI"
+                title="Komitmen & Standar Pelayanan Kami"
+                description="Landasan dedikasi Holong Siregar & Co. dalam memberikan pendampingan hukum prima dan menjaga integritas profesi." />
 
             <div class="row g-4 align-items-stretch">
                 {{-- Official Emblem Card: Officium Nobile & Simbol Keadilan --}}
@@ -98,7 +98,7 @@
                         <span class="badge bg-gold text-navy fw-bold text-uppercase px-3 py-1 mb-2" style="letter-spacing: 0.15em;">
                             Officium Nobile
                         </span>
-                        <h3 class="h5 text-white fw-bold mb-2">Simbol Integritas &amp; Keadilan</h3>
+                        <h3 class="h5 text-white fw-bold mb-2">Simbol Integritas & Keadilan</h3>
                         <p class="small text-white-50 mb-0">
                             Menjunjung tinggi kehormatan profesi advokat dengan integritas moral, kepatuhan kode etik, dan dedikasi penuh memperjuangkan hak hukum klien.
                         </p>
@@ -203,7 +203,7 @@
         <div class="container">
             <x-section-heading
                 eyebrow="TIM ADVOKAT"
-                title="Advokat &amp; Konsultan Hukum Kami"
+                title="Advokat & Konsultan Hukum Kami"
                 description="Profesional berdedikasi yang siap memberikan solusi hukum terbaik untuk Anda." />
 
             <div class="row g-4">

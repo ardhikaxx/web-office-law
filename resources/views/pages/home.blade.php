@@ -141,7 +141,7 @@
         <div class="container">
             <x-section-heading
                 eyebrow="AREA PRAKTIK UTAMA"
-                title="Litigasi &amp; Non-Litigasi"
+                title="Litigasi & Non-Litigasi"
                 description="Dua pilar pendekatan pendampingan: penyelesaian perkara melalui jalur peradilan dan pencegahan sengketa melalui pendampingan preventif." />
 
             <div class="row g-4">
@@ -257,8 +257,8 @@
                 <div class="col-lg-6">
                     <x-section-heading
                         align="start"
-                        eyebrow="PRINSIP &amp; REKAM PENDAMPINGAN"
-                        title="Standar Kepercayaan &amp; Integritas"
+                        eyebrow="PRINSIP & REKAM PENDAMPINGAN"
+                        title="Standar Kepercayaan & Integritas"
                         description="Prinsip kerja profesional yang memastikan setiap langkah hukum ditempuh dengan akuntabilitas dan dedikasi penuh." />
 
                     <div class="row g-3">

@@ -8,7 +8,7 @@
         <div class="container">
             <x-breadcrumb :items="[
                 ['label' => 'Beranda', 'url' => route('home')],
-                ['label' => 'Syarat &amp; Ketentuan'],
+                ['label' => 'Syarat & Ketentuan'],
             ]" />
             <span class="law-section-eyebrow eyebrow text-gold-light">INFORMASI LEGAL</span>
             <h1 class="law-heading">Syarat &amp; Ketentuan</h1>
