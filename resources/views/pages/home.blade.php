@@ -7,7 +7,7 @@
 
 @section('content')
     {{-- 1. HERO SECTION (Inspired by image.png) --}}
-    <section class="law-hero hero">
+    <section class="law-hero">
         <div class="law-hero-bg hero-bg" aria-hidden="true"></div>
         <div class="law-hero-overlay hero-overlay" aria-hidden="true"></div>
 

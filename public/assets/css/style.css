@@ -531,11 +531,11 @@ img {
   background-color: var(--law-navy-dark);
   color: #ffffff;
   overflow: hidden;
-  padding: 6.5rem 0 0;
+  padding: 6.5rem 0 0 !important;
   min-height: 86vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
 }
 
 .law-hero-bg {
@@ -765,7 +765,8 @@ img {
   border-top: 1px solid rgba(197, 155, 39, 0.35);
   border-bottom: 2px solid var(--law-gold);
   padding: 1.5rem 0;
-  margin-top: auto;
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
 }
 
 .law-strip-item {
@@ -806,7 +807,12 @@ img {
 }
 
 /* Compatibility aliases for hero */
-.hero { position: relative; background: var(--law-navy-dark); color: #fff; padding: 6rem 0 4rem; }
+.hero {
+  position: relative;
+  background: var(--law-navy-dark);
+  color: #fff;
+  padding: 6.5rem 0 0 !important;
+}
 .hero-content { position: relative; z-index: 2; }
 .hero-label { display: inline-block; font-size: 0.75rem; letter-spacing: 0.22em; font-weight: 700; color: var(--law-gold); margin-bottom: 1rem; }
 .hero-title { color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem; }
