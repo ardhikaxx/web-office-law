@@ -174,8 +174,7 @@ test('team section renders all 8 members in correct order with authentic photos 
 
     // Verify linkedin and email are not present for lawyer cards
     $response->assertDontSee('law-attorney-social');
-    $response->assertDontSee('aria-label="LinkedIn HOLONG', false);
-    $response->assertDontSee('mailto:');
+    $response->assertDontSee('aria-label="Email HOLONG', false);
 
     // Verify lawyers without detail do not have links to profile
     $response->assertDontSee('href="'.route('lawyers.show', 'felix-jonathan').'"', false);
@@ -234,4 +233,19 @@ test('lawyers with detail profile can be viewed while lawyers without detail ret
     // 7 & 8: Felix Jonathan and Daniel Sormin do NOT have detail profiles -> 404
     $this->get('/tim/felix-jonathan')->assertNotFound();
     $this->get('/tim/daniel-sormin')->assertNotFound();
+});
+
+test('contact info renders official email, phone, and whatsapp url with 0857-7163-3860 across website', function () {
+    $response = $this->get('/kontak');
+    $response->assertOk();
+    $response->assertSee('lawofficeholongsiregar@gmail.com');
+    $response->assertSee('0857-7163-3860');
+    $response->assertSee('https://wa.me/6285771633860', false);
+
+    $home = $this->get('/');
+    $home->assertOk();
+    $home->assertSee('lawofficeholongsiregar@gmail.com');
+    $home->assertSee('0857-7163-3860');
+    $home->assertSee('https://wa.me/6285771633860', false);
+    $home->assertSee('wa-float');
 });

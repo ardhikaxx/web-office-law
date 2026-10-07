@@ -36,8 +36,8 @@
                         </div>
                         <h2 class="h5 law-heading">Email Resmi</h2>
                         <p class="text-muted mb-0">
-                            <a href="mailto:{{ $site['email'] ?? 'info@holongsiregar.com' }}" class="text-navy text-decoration-none">
-                                {{ $site['email'] ?? '[Email Resmi]' }}
+                            <a href="mailto:{{ $site['email'] }}" class="text-navy text-decoration-none">
+                                {{ $site['email'] }}
                             </a>
                         </p>
                     </div>

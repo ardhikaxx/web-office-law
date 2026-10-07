@@ -76,11 +76,15 @@
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-solid fa-envelope"></i>
-                        <span>{{ $site['email'] ?? '[Email Resmi]' }}</span>
+                        <a href="mailto:{{ $site['email'] }}" class="text-decoration-none text-light opacity-90" style="color:inherit;">
+                            {{ $site['email'] }}
+                        </a>
                     </div>
                     <div class="law-footer-contact-item">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <span>{{ $site['whatsapp_display'] ?? '' }}</span>
+                        <i class="fa-brands fa-whatsapp text-success"></i>
+                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via WhatsApp">
+                            {{ $site['whatsapp_display'] }}
+                        </a>
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-regular fa-clock"></i>

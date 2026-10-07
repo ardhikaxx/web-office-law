@@ -40,10 +40,14 @@
                     <i class="fa-solid fa-location-dot me-2"></i>{{ $site['address'] ?? '[Alamat Kantor]' }}, {{ $site['city'] ?? '' }}
                 </span>
                 <span>
-                    <i class="fa-solid fa-envelope me-2"></i>{{ $site['email'] ?? '[Email Resmi]' }}
+                    <a href="mailto:{{ $site['email'] }}" class="text-decoration-none text-light opacity-90" style="color:inherit;">
+                        <i class="fa-solid fa-envelope me-2 text-gold"></i>{{ $site['email'] }}
+                    </a>
                 </span>
                 <span>
-                    <i class="fa-solid fa-phone me-2"></i>{{ $site['whatsapp_display'] ?? '' }}
+                    <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via WhatsApp">
+                        <i class="fa-brands fa-whatsapp me-2 text-gold"></i>{{ $site['whatsapp_display'] }}
+                    </a>
                 </span>
             </div>
             <div class="d-flex align-items-center gap-3">
