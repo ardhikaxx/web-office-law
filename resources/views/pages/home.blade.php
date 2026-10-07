@@ -18,7 +18,7 @@
                     <div class="col-lg-7">
                         <span class="law-hero-badge hero-label">
                             <i class="fa-solid fa-scale-balanced text-gold"></i>
-                            KANTOR HUKUM &amp; PENGACARA DI TANGERANG &amp; BOGOR
+                            PENGACARA DI TANGERANG &amp; BOGOR
                         </span>
                         <h1 class="law-hero-title hero-title">
                             Solusi Hukum yang <span class="text-gold">Tegas, Terukur</span>, dan Terpercaya
