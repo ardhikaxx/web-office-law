@@ -38,8 +38,8 @@
                 </div>
             </div>
 
-            {{-- Right: Official Justice Symbol Statue (Lady Justice), flush to the right edge & strip --}}
-            <div class="law-hero-visual d-none d-lg-block">
+            {{-- Right: Official Justice Symbol Statue (Lady Justice), flush to the right edge & strip (stacked below text on mobile) --}}
+            <div class="law-hero-visual">
                 <div class="law-hero-statue-wrap">
                     <div class="law-hero-statue-glow"></div>
                     <img src="{{ asset('assets/images/simbol-justice.png') }}"
