@@ -26,12 +26,13 @@
                             yang cermat, strategi yang relevan, komunikasi terbuka, serta pendekatan yang bertanggung jawab.
                         </p>
                         <div class="law-hero-actions hero-actions">
-                            <a href="#consultation-section" class="btn btn-gold law-btn-primary btn-lg">
-                                <i class="fa-solid fa-calendar-check me-2"></i>Konsultasi Sekarang
+                            <a href="#consultation-section" class="btn btn-gold law-btn-primary">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <span>Konsultasi Sekarang</span>
                             </a>
-                            <a href="{{ route('services.index') }}" class="btn btn-outline-light btn-lg">
+                            <a href="{{ route('services.index') }}" class="btn btn-outline-light">
                                 <span>Pelajari Layanan</span>
-                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                                <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>

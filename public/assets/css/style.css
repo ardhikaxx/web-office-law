@@ -305,7 +305,7 @@ img {
 .btn-gold {
   background-color: var(--law-gold);
   border: 1px solid var(--law-gold);
-  color: #0b1a2c !important;
+  color: #ffffff !important;
   font-weight: 700;
   font-size: 0.9375rem;
   padding: 0.68rem 1.5rem;
@@ -316,17 +316,23 @@ img {
   justify-content: center;
   gap: 0.5rem;
   transition: all 0.25s ease;
+  text-shadow: 0 1px 2px rgba(12, 31, 56, 0.25);
 }
 
 .law-btn-primary:hover,
 .btn-gold:hover,
 .law-btn-primary:focus,
 .btn-gold:focus {
-  background-color: var(--law-gold-light);
-  border-color: var(--law-gold-light);
-  color: #050d18 !important;
+  background-color: var(--law-gold-dark);
+  border-color: var(--law-gold-dark);
+  color: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(197, 155, 39, 0.38);
+}
+
+.law-btn-primary i,
+.btn-gold i {
+  color: #ffffff !important;
 }
 
 .law-btn-navy,
@@ -391,13 +397,14 @@ img {
 
 .law-btn-outline-gold:hover {
   background-color: var(--law-gold);
-  color: #0b1a2c !important;
+  color: #ffffff !important;
 }
 
 .btn-outline-light {
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
   color: #ffffff !important;
   font-weight: 600;
+  font-size: 0.9375rem;
   padding: 0.68rem 1.5rem;
   border-radius: var(--law-radius-sm);
   display: inline-flex;
@@ -613,6 +620,26 @@ img {
   gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.law-hero-actions .btn {
+  height: 52px;
+  min-height: 52px;
+  padding: 0 1.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  box-sizing: border-box;
+}
+
+.law-hero-actions .btn i {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 /* Hero Right: Lady Justice Symbol Showcase (full-bleed, flush to right edge & strip) */
