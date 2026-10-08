@@ -21,12 +21,11 @@
                             KANTOR ADVOKAT &amp; KONSULTAN HUKUM
                         </span>
                         <h1 class="law-hero-title hero-title">
-                            Pengacara di Tangerang &amp; Bogor
-                            <span class="d-block text-gold">Solusi Hukum yang Tegas, Terukur &amp; Terpercaya</span>
+                            Pengacara Holong Siregar &amp; Co
+                            <span class="d-block text-gold">Solusi Hukum yang tegas, terukur &amp; terpercaya</span>
                         </h1>
                         <p class="law-hero-text hero-text">
-                            Holong Siregar &amp; Co. Law Office adalah kantor hukum dan advokat pengacara berdedikasi
-                            melayani wilayah <strong>Kota Tangerang, BSD, Serpong, Tangerang Selatan</strong>, dan <strong>Bogor</strong>.
+                            Law Office Holong Siregar &amp; Co adalah kantor hukum dan advokat pengacara yang telah berpengalaman.
                             Kami memberikan pendampingan hukum profesional melalui analisis cermat, strategi relevan,
                             komunikasi terbuka, serta integritas penuh.
                         </p>

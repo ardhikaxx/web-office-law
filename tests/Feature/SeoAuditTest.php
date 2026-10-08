@@ -152,14 +152,14 @@ test('sitemap.xml returns valid xml with image extension, dynamic lastmod, and a
     expect($content)->toContain('<image:loc>');
 });
 
-test('homepage H1 includes primary target keyword Pengacara di Tangerang & Bogor', function () {
+test('homepage H1 displays brand headline Pengacara Holong Siregar & Co', function () {
     $response = $this->get('/');
     $response->assertOk();
 
     preg_match('/<h1[^>]*>(.*?)<\/h1>/s', $response->getContent(), $h1Match);
     expect($h1Match)->not->toBeEmpty();
-    expect($h1Match[1])->toContain('Pengacara di Tangerang');
-    expect($h1Match[1])->toContain('Bogor');
+    expect($h1Match[1])->toContain('Pengacara Holong Siregar');
+    expect($h1Match[1])->toContain('Solusi Hukum');
 });
 
 test('technical seo metadata includes theme-color, webmanifest, twitter site, and dedicated 1200x630 og-image', function () {
