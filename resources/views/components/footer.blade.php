@@ -104,21 +104,15 @@
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-brands fa-whatsapp text-success"></i>
-                        <div>
-                            <span class="d-block text-muted" style="font-size:0.75rem;">WhatsApp &amp; Telp 1:</span>
-                            <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via WhatsApp">
-                                {{ $site['whatsapp_display'] }}
-                            </a>
-                        </div>
+                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via WhatsApp">
+                            <span class="text-white-50">WhatsApp &amp; Telp:</span> <span class="text-white fw-semibold ms-1">{{ $site['whatsapp_display'] }}</span>
+                        </a>
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-solid fa-phone text-gold"></i>
-                        <div>
-                            <span class="d-block text-muted" style="font-size:0.75rem;">Telepon Kantor 2:</span>
-                            <a href="tel:{{ preg_replace('/[^0-9]/', '', $site['phone_2'] ?? '085771633860') }}" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via Telepon">
-                                {{ $site['phone_2'] ?? '0857-7163-3860' }}
-                            </a>
-                        </div>
+                        <a href="tel:{{ preg_replace('/[^0-9]/', '', $site['phone_2'] ?? '085771633860') }}" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via Telepon">
+                            <span class="text-white-50">Telepon Kantor:</span> <span class="text-white fw-semibold ms-1">{{ $site['phone_2'] ?? '0857-7163-3860' }}</span>
+                        </a>
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-regular fa-clock"></i>
