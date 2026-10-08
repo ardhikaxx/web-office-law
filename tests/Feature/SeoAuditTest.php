@@ -88,7 +88,7 @@ test('lawyer detail pages return valid 200 with Person schema', function () {
             expect($content)->toContain('"@type":"Person"');
             expect($content)->toContain('"name":"'.$lawyer['name'].'"');
             expect($content)->toContain('"worksFor"');
-            expect($content)->toContain('PERADI');
+            expect($content)->not->toContain('PERADI');
         }
     }
 });

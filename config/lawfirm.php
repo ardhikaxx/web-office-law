@@ -55,7 +55,6 @@ return [
         'hours' => 'Senin – Sabtu, 08:00 – 17:30 WIB',
         'instagram' => 'https://www.instagram.com/pengacarahs',
         'maps_embed' => null,
-        'google_site_verification' => env('GOOGLE_SITE_VERIFICATION', ''),
     ],
 
     'services' => [
@@ -309,7 +308,6 @@ return [
                 'Ketua Organisasi Kepemudaan Tingkat Kota (2017)',
                 'Wakil Ketua Organisasi Kepemudaan Tingkat Provinsi (2021)',
                 'Pengurus Organisasi Kemasyarakatan Tingkat Kota (2022)',
-                'Perhimpunan Advokat Indonesia (PERADI)',
             ],
         ],
         [
@@ -330,9 +328,7 @@ return [
                 'Praktisi Hukum & Advokat',
                 'Akademisi / Dosen Ilmu Hukum Universitas di Tangerang',
             ],
-            'organizations' => [
-                'Perhimpunan Advokat Indonesia (PERADI)',
-            ],
+            'organizations' => [],
         ],
         [
             'name' => 'ADYTIA RACHMAN, S.H.',
@@ -350,9 +346,7 @@ return [
                 'Institusi Badan Narkotika Nasional (BNN)',
                 'Praktisi Hukum & Advokat',
             ],
-            'organizations' => [
-                'Perhimpunan Advokat Indonesia (PERADI)',
-            ],
+            'organizations' => [],
         ],
         [
             'name' => 'DAUD WILTON PURBA, S.H.',
@@ -373,7 +367,6 @@ return [
             ],
             'organizations' => [
                 'Ikatan Kuasa Hukum dan Advokat Pajak Indonesia (IKHAPI)',
-                'Perhimpunan Advokat Indonesia (PERADI)',
             ],
         ],
         [
@@ -392,9 +385,7 @@ return [
                 'Senior Associate Advokat',
                 'Penanganan Perkara & Analisis Hukum',
             ],
-            'organizations' => [
-                'Perhimpunan Advokat Indonesia (PERADI)',
-            ],
+            'organizations' => [],
         ],
         [
             'name' => 'YUDHA ANTARIKSA PUTRA, S.H.',
@@ -412,9 +403,7 @@ return [
                 'Legal Associate',
                 'Riset Regulasi & Pendampingan Kasus',
             ],
-            'organizations' => [
-                'Perhimpunan Advokat Indonesia (PERADI)',
-            ],
+            'organizations' => [],
         ],
         [
             'name' => 'FELIX JONATHAN, S.H.',
