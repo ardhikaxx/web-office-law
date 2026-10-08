@@ -290,7 +290,7 @@ return [
             'name' => 'HOLONG SIREGAR, S.H.',
             'slug' => 'holong-siregar',
             'position' => 'MANAGING PARTNER',
-            'specialization' => 'Litigasi Perdata & Korporasi',
+            'specialization' => 'Praktisi Hukum, Perdata & Korporasi',
             'photo' => 'images/lawyers/holong-siregar.webp',
             'has_detail' => true,
             'short_bio' => 'Advokat berlisensi dengan rekam jejak litigasi perdata, pidana, korporasi, perbankan, dan kepemimpinan organisasi.',
