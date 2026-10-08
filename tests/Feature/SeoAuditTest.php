@@ -171,9 +171,15 @@ test('technical seo metadata includes theme-color, webmanifest, twitter site, an
     expect($content)->toContain('rel="manifest"');
     expect($content)->toContain('site.webmanifest');
     expect($content)->toContain('name="twitter:site" content="@holongsiregar"');
-    expect($content)->toContain('assets/images/og-image.png');
+    expect($content)->toContain('assets/images/og-image.webp');
     expect($content)->toContain('property="og:image:width" content="1200"');
     expect($content)->toContain('property="og:image:height" content="630"');
+    expect($content)->toContain('property="og:image:type" content="image/webp"');
+
+    // Instagram link exists, facebook & linkedin removed
+    expect($content)->toContain('https://www.instagram.com/pengacarahs');
+    expect($content)->not->toContain('fa-linkedin-in');
+    expect($content)->not->toContain('fa-facebook-f');
 
     // Obsolete geo tags are cleanly removed
     expect($content)->not->toContain('name="ICBM"');

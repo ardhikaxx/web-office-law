@@ -186,7 +186,7 @@ class Seo
             '@id' => route('articles.show', $article['slug']).'#article',
             'headline' => $article['title'] ?? '',
             'description' => $article['excerpt'] ?? '',
-            'image' => ! empty($article['image']) ? asset('assets/'.$article['image']) : asset('assets/images/og-image.png'),
+            'image' => ! empty($article['image']) ? asset('assets/'.$article['image']) : asset('assets/images/og-image.webp'),
             'datePublished' => $article['published_at'] ?? '2026-10-08',
             'dateModified' => $article['updated_at'] ?? ($article['published_at'] ?? '2026-10-08'),
             'author' => [
@@ -201,7 +201,7 @@ class Seo
                 'url' => route('home'),
                 'logo' => [
                     '@type' => 'ImageObject',
-                    'url' => asset('assets/images/logo.png'),
+                    'url' => asset('assets/images/logo.webp'),
                 ],
             ],
             'mainEntityOfPage' => [

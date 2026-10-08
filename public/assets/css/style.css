@@ -642,6 +642,8 @@ img {
   line-height: 1.18;
   margin-bottom: 1.4rem;
   max-width: 680px;
+}
+
 .law-hero-title .text-gold {
   color: var(--law-gold-light) !important;
   position: relative;

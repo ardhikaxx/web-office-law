@@ -53,9 +53,7 @@ return [
         'whatsapp_display' => '081-3188-41961',
         'whatsapp_message' => 'Halo Holong Siregar & Co., saya ingin berkonsultasi mengenai kebutuhan hukum saya.',
         'hours' => 'Senin – Sabtu, 08:00 – 17:30 WIB',
-        'instagram' => '#',
-        'linkedin' => '#',
-        'facebook' => '#',
+        'instagram' => 'https://www.instagram.com/pengacarahs',
         'maps_embed' => null,
     ],
 

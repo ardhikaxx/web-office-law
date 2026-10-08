@@ -39,15 +39,11 @@
                         kepentingan terbaik setiap klien.
                     </p>
                     <div class="law-footer-social">
-                        <a href="{{ $site['linkedin'] ?? '#' }}" aria-label="LinkedIn" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="{{ $site['instagram'] ?? '#' }}" aria-label="Instagram" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="{{ $site['facebook'] ?? '#' }}" aria-label="Facebook" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
+                        @if (! empty($site['instagram']))
+                            <a href="{{ $site['instagram'] }}" aria-label="Instagram @pengacarahs" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        @endif
                         <a href="{{ $whatsappUrl }}" aria-label="WhatsApp" target="_blank" rel="noopener">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>

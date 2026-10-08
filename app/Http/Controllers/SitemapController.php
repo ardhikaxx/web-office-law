@@ -21,7 +21,7 @@ class SitemapController extends Controller
                 'changefreq' => 'daily',
                 'lastmod' => $siteModified,
                 'images' => [
-                    ['loc' => asset('assets/images/og-image.png'), 'title' => 'Holong Siregar & Co. Law Office - Pengacara Tangerang & Bogor'],
+                    ['loc' => asset('assets/images/og-image.webp'), 'title' => 'Holong Siregar & Co. Law Office - Pengacara Tangerang & Bogor'],
                     ['loc' => asset('assets/images/simbol-justice.webp'), 'title' => 'Simbol Keadilan Lady Justice'],
                 ],
             ],
@@ -31,7 +31,7 @@ class SitemapController extends Controller
                 'changefreq' => 'weekly',
                 'lastmod' => $siteModified,
                 'images' => [
-                    ['loc' => asset('assets/images/og-image.png'), 'title' => 'Katalog Layanan Hukum Holong Siregar & Co.'],
+                    ['loc' => asset('assets/images/og-image.webp'), 'title' => 'Katalog Layanan Hukum Holong Siregar & Co.'],
                 ],
             ],
             [
@@ -40,7 +40,7 @@ class SitemapController extends Controller
                 'changefreq' => 'daily',
                 'lastmod' => $siteModified,
                 'images' => [
-                    ['loc' => asset('assets/images/og-image.png'), 'title' => 'Artikel & Panduan Hukum Holong Siregar & Co.'],
+                    ['loc' => asset('assets/images/og-image.webp'), 'title' => 'Artikel & Panduan Hukum Holong Siregar & Co.'],
                 ],
             ],
             [
