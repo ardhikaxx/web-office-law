@@ -171,10 +171,11 @@ test('technical seo metadata includes theme-color, webmanifest, twitter site, an
     expect($content)->toContain('rel="manifest"');
     expect($content)->toContain('site.webmanifest');
     expect($content)->toContain('name="twitter:site" content="@holongsiregar"');
-    expect($content)->toContain('assets/images/og-image.webp');
+    expect($content)->toContain('assets/images/og-image.jpg');
+    expect($content)->toContain('property="og:image:secure_url"');
     expect($content)->toContain('property="og:image:width" content="1200"');
     expect($content)->toContain('property="og:image:height" content="630"');
-    expect($content)->toContain('property="og:image:type" content="image/webp"');
+    expect($content)->toContain('property="og:image:type" content="image/jpeg"');
 
     // Instagram link exists, facebook & linkedin removed
     expect($content)->toContain('https://www.instagram.com/pengacarahs');
@@ -191,6 +192,7 @@ test('all lawyer photos and key visual assets have optimized webp versions avail
     expect(file_exists(public_path('assets/images/simbol-justice.webp')))->toBeTrue();
     expect(file_exists(public_path('assets/images/logo.webp')))->toBeTrue();
     expect(file_exists(public_path('assets/images/og-image.webp')))->toBeTrue();
+    expect(file_exists(public_path('assets/images/og-image.jpg')))->toBeTrue();
 
     foreach (LawFirm::lawyers() as $lawyer) {
         expect($lawyer['photo'])->toEndWith('.webp');

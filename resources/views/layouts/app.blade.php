@@ -17,17 +17,18 @@
     <link rel="canonical" href="@yield('canonical', url()->current())">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-    {{-- Open Graph / Facebook --}}
+    {{-- Open Graph / Facebook / WhatsApp --}}
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Holong Siregar & Co. Law Office">
     <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')))">
     <meta property="og:description" content="@yield('meta_description', 'Kantor advokat & pengacara di Tangerang & Bogor. Melayani perkara perdata, pidana, perceraian, sengketa tanah, dan hukum bisnis profesional.')">
     <meta property="og:url" content="@yield('canonical', url()->current())">
-    <meta property="og:image" content="@yield('og_image', asset('assets/images/og-image.webp'))">
+    <meta property="og:image" content="@yield('og_image', asset('assets/images/og-image.jpg'))">
+    <meta property="og:image:secure_url" content="@yield('og_image_secure', asset('assets/images/og-image.jpg'))">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:type" content="@yield('og_image_type', 'image/jpeg')">
     <meta property="og:image:alt" content="@yield('og_image_alt', 'Holong Siregar & Co. Law Office - Pengacara di Tangerang & Bogor')">
 
     {{-- Twitter Cards --}}
@@ -35,7 +36,8 @@
     <meta name="twitter:site" content="@holongsiregar">
     <meta name="twitter:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')))">
     <meta name="twitter:description" content="@yield('meta_description', 'Kantor advokat & pengacara di Tangerang & Bogor.')">
-    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/og-image.webp'))">
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/og-image.jpg'))">
+    <meta name="twitter:image:alt" content="@yield('og_image_alt', 'Holong Siregar & Co. Law Office - Pengacara di Tangerang & Bogor')">
 
     @stack('meta_extra')
 
@@ -69,7 +71,7 @@
             "url": "{{ asset('assets/images/logo.webp') }}",
             "caption": "Holong Siregar & Co. Law Office"
           },
-          "image": "{{ asset('assets/images/logo.webp') }}",
+          "image": "{{ asset('assets/images/og-image.jpg') }}",
           "description": "Kantor hukum dan advokat pengacara profesional terpercaya di Kota Tangerang dan Kota Bogor. Memberikan layanan litigasi dan non-litigasi untuk perdata, pidana, sengketa tanah, perceraian, kontrak bisnis, hukum korporasi, dan recovery asset di wilayah Tangerang Raya (Kota Tangerang, BSD, Serpong, Karawaci, Alam Sutera, Tangsel) dan Bogor.",
           "telephone": ["+6281318841961", "+6285771633860"],
           "email": "lawofficeholongsiregar@gmail.com",
