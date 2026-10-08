@@ -153,7 +153,7 @@ class Seo
                 '@type' => 'LegalService',
                 'name' => self::brand(),
                 'url' => route('home'),
-                'telephone' => '+6285771633860',
+                'telephone' => ['+6281318841961', '+6285771633860'],
                 'address' => [
                     '@type' => 'PostalAddress',
                     'streetAddress' => 'Villa Grand Tomang, Periuk',

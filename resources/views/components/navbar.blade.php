@@ -75,8 +75,13 @@
                     </a>
                 </span>
                 <span>
-                    <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via WhatsApp">
+                    <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="WhatsApp: {{ $site['whatsapp_display'] }}">
                         <i class="fa-brands fa-whatsapp me-2 text-gold"></i>{{ $site['whatsapp_display'] }}
+                    </a>
+                </span>
+                <span>
+                    <a href="tel:{{ preg_replace('/[^0-9]/', '', $site['phone_2'] ?? '085771633860') }}" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Telepon: {{ $site['phone_2'] ?? '0857-7163-3860' }}">
+                        <i class="fa-solid fa-phone me-2 text-gold"></i>{{ $site['phone_2'] ?? '0857-7163-3860' }}
                     </a>
                 </span>
             </div>
@@ -203,6 +208,18 @@
                     <div class="d-flex align-items-center gap-2 mb-1">
                         <i class="fa-solid fa-location-dot text-gold"></i>
                         <span>Kota Tangerang &amp; Kota Bogor</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <i class="fa-brands fa-whatsapp text-gold"></i>
+                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-muted">
+                            WA: {{ $site['whatsapp_display'] }}
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <i class="fa-solid fa-phone text-gold"></i>
+                        <a href="tel:{{ preg_replace('/[^0-9]/', '', $site['phone_2'] ?? '085771633860') }}" class="text-decoration-none text-muted">
+                            Telp: {{ $site['phone_2'] ?? '0857-7163-3860' }}
+                        </a>
                     </div>
                     <div class="d-flex align-items-center gap-2">
                         <i class="fa-regular fa-clock text-gold"></i>

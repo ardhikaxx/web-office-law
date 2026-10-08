@@ -70,7 +70,7 @@
           },
           "image": "{{ asset('assets/images/logo.png') }}",
           "description": "Kantor hukum dan advokat pengacara profesional terpercaya di Kota Tangerang dan Kota Bogor. Memberikan layanan litigasi dan non-litigasi untuk perdata, pidana, sengketa tanah, perceraian, kontrak bisnis, hukum korporasi, dan recovery asset di wilayah Tangerang Raya (Kota Tangerang, BSD, Serpong, Karawaci, Alam Sutera, Tangsel) dan Bogor.",
-          "telephone": "+6285771633860",
+          "telephone": ["+6281318841961", "+6285771633860"],
           "email": "lawofficeholongsiregar@gmail.com",
           "priceRange": "$$",
           "currenciesAccepted": "IDR",

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', \App\Support\Seo::title('Kontak Kantor Pengacara di Tangerang & Bogor | Konsultasi WhatsApp Cepat'))
-@section('meta_description', 'Hubungi kantor advokat pengacara di Tangerang (Villa Grand Tomang, Periuk) dan Bogor. Dapatkan konsultasi hukum cepat via WhatsApp 0857-7163-3860 atau formulir online.')
+@section('meta_description', 'Hubungi kantor advokat pengacara di Tangerang (Villa Grand Tomang, Periuk) dan Bogor. Dapatkan konsultasi hukum cepat via WhatsApp 081-3188-41961 atau telepon 0857-7163-3860.')
 @section('meta_keywords', \App\Support\Seo::keywords(['kontak pengacara di tangerang', 'alamat kantor pengacara tangerang', 'nomor wa pengacara tangerang', 'kantor hukum periuk tangerang', 'advokat grand tomang tangerang', 'pengacara bsd tangsel']))
 @section('canonical', route('contact'))
 
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="contact-info-card">
+                    <div class="contact-info-card h-100">
                         <div class="law-service-icon mb-3">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
@@ -52,13 +52,24 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="contact-info-card">
+                    <div class="contact-info-card h-100">
                         <div class="law-service-icon mb-3">
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-whatsapp text-success"></i>
                         </div>
-                        <h2 class="h5 law-heading">WhatsApp Konsultasi</h2>
-                        <p class="text-muted mb-3">{{ $site['whatsapp_display'] ?? '' }}</p>
-                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-navy law-btn-outline btn-sm">
+                        <h2 class="h5 law-heading">Telepon &amp; WhatsApp</h2>
+                        <div class="small mb-2">
+                            <strong class="text-navy d-block">1. WhatsApp &amp; Telp:</strong>
+                            <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-navy text-decoration-none fw-semibold">
+                                <i class="fa-brands fa-whatsapp text-success me-1"></i>{{ $site['whatsapp_display'] ?? '081-3188-41961' }}
+                            </a>
+                        </div>
+                        <div class="small mb-3">
+                            <strong class="text-navy d-block">2. Telepon Kantor:</strong>
+                            <a href="tel:{{ preg_replace('/[^0-9]/', '', $site['phone_2'] ?? '085771633860') }}" class="text-navy text-decoration-none fw-semibold">
+                                <i class="fa-solid fa-phone text-gold me-1"></i>{{ $site['phone_2'] ?? '0857-7163-3860' }}
+                            </a>
+                        </div>
+                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-navy law-btn-outline btn-sm w-100">
                             <i class="fa-brands fa-whatsapp text-success me-1"></i>Chat WhatsApp
                         </a>
                     </div>

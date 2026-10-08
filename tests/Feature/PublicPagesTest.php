@@ -104,7 +104,7 @@ test('consultation form validates and redirects directly to whatsapp with format
     $response = $this->post('/kontak', $payload);
     $response->assertRedirect();
     $targetUrl = $response->headers->get('Location');
-    expect($targetUrl)->toContain('https://wa.me/6285771633860?text=')
+    expect($targetUrl)->toContain('https://wa.me/6281318841961?text=')
         ->toContain('Budi+Santoso')
         ->toContain('Perdata+Umum+%26+Khusus');
 
@@ -234,18 +234,20 @@ test('lawyers with detail profile can be viewed while lawyers without detail ret
     $this->get('/tim/daniel-sormin')->assertNotFound();
 });
 
-test('contact info renders official email, phone, and whatsapp url with 0857-7163-3860 across website', function () {
+test('contact info renders official email, phone, and whatsapp url with 081-3188-41961 and 0857-7163-3860 across website', function () {
     $response = $this->get('/kontak');
     $response->assertOk();
     $response->assertSee('lawofficeholongsiregar@gmail.com');
+    $response->assertSee('081-3188-41961');
     $response->assertSee('0857-7163-3860');
-    $response->assertSee('https://wa.me/6285771633860', false);
+    $response->assertSee('https://wa.me/6281318841961', false);
 
     $home = $this->get('/');
     $home->assertOk();
     $home->assertSee('lawofficeholongsiregar@gmail.com');
+    $home->assertSee('081-3188-41961');
     $home->assertSee('0857-7163-3860');
-    $home->assertSee('https://wa.me/6285771633860', false);
+    $home->assertSee('https://wa.me/6281318841961', false);
     $home->assertSee('wa-float');
 });
 

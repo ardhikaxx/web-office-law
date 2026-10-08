@@ -101,9 +101,21 @@
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-brands fa-whatsapp text-success"></i>
-                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via WhatsApp">
-                            {{ $site['whatsapp_display'] }}
-                        </a>
+                        <div>
+                            <span class="d-block text-muted" style="font-size:0.75rem;">WhatsApp &amp; Telp 1:</span>
+                            <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via WhatsApp">
+                                {{ $site['whatsapp_display'] }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="law-footer-contact-item">
+                        <i class="fa-solid fa-phone text-gold"></i>
+                        <div>
+                            <span class="d-block text-muted" style="font-size:0.75rem;">Telepon Kantor 2:</span>
+                            <a href="tel:{{ preg_replace('/[^0-9]/', '', $site['phone_2'] ?? '085771633860') }}" class="text-decoration-none text-light opacity-90" style="color:inherit;" title="Hubungi via Telepon">
+                                {{ $site['phone_2'] ?? '0857-7163-3860' }}
+                            </a>
+                        </div>
                     </div>
                     <div class="law-footer-contact-item">
                         <i class="fa-regular fa-clock"></i>

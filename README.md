@@ -107,47 +107,6 @@ Website ini dibangun menggunakan arsitektur **Zero-Database High-Performance**, 
 
 ---
 
-## ⚙️ Panduan Instalasi & Menjalankan Website
-
-### 1. Kloning Repositori
-```bash
-git clone https://github.com/ardhikaxx/web-office-law.git
-cd web-office-law
-```
-
-### 2. Install Dependensi PHP
-```bash
-composer install
-```
-
-### 3. Konfigurasi Environment (`.env`)
-Salin file konfigurasi contoh dan buat kunci enkripsi aplikasi:
-```bash
-cp .env.example .env
-php artisan key:generate
-```
-> *Catatan: Karena website ini menggunakan arsitektur Zero-Database, Anda tidak perlu mengatur koneksi database MySQL.*
-
-### 4. Install Dependensi Frontend & Kompilasi Asset
-```bash
-npm install
-npm run build
-```
-
-### 5. Jalankan Pengujian Otomatis
-Pastikan seluruh 23 test fitur lolos tanpa kendala:
-```bash
-php artisan test --compact
-```
-
-### 6. Jalankan Server Pengembangan Lokal
-```bash
-php artisan serve
-```
-Buka browser dan akses: `http://127.0.0.1:8000` (atau via virtual host Apache XAMPP: `http://localhost/office-law/public`).
-
----
-
 ## 📚 Dokumentasi Sistem
 
 * [📖 **DOKUMENTASI.md**](./DOKUMENTASI.md) — Struktur arsitektur, daftar rute, dokumentasi SEO, Schema.org, dan audit sistem.
