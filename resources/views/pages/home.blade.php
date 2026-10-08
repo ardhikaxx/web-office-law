@@ -15,14 +15,14 @@
             <div class="container law-hero-container hero-content">
                 <div class="row align-items-center g-5">
                     {{-- Left: Authority Headline & Value Proposition --}}
-                    <div class="col-lg-7">
+                    <div class="col-lg-8 col-xl-7">
                         <span class="law-hero-badge hero-label">
                             <i class="fa-solid fa-scale-balanced text-gold"></i>
                             KANTOR ADVOKAT &amp; KONSULTAN HUKUM
                         </span>
                         <h1 class="law-hero-title hero-title">
-                            Pengacara Holong Siregar &amp; Co
-                            <span class="d-block text-gold">Solusi Hukum yang tegas, terukur &amp; terpercaya</span>
+                            <span class="law-hero-brand d-inline-block">Pengacara Holong Siregar <span class="text-nowrap">&amp; Co</span></span>
+                            <span class="d-block text-gold law-hero-subtitle">Solusi Hukum yang tegas, terukur &amp; terpercaya</span>
                         </h1>
                         <p class="law-hero-text hero-text">
                             Law Office Holong Siregar &amp; Co adalah kantor hukum dan advokat pengacara yang telah berpengalaman.
