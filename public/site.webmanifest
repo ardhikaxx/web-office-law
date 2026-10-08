@@ -1,0 +1,21 @@
+{
+  "name": "Holong Siregar & Co. Law Office",
+  "short_name": "Holong Law",
+  "description": "Kantor Hukum & Pengacara Profesional di Tangerang dan Bogor",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071424",
+  "theme_color": "#071424",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon-round.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

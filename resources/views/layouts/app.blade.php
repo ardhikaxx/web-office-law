@@ -5,45 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')</title>
-    <meta name="description" content="@yield('meta_description', 'Mencari pengacara di Tangerang & Bogor? Holong Siregar & Co. Law Office menyediakan jasa advokat profesional untuk perdata, pidana, perceraian, sengketa tanah, kontrak bisnis, dan hukum perusahaan di Kota Tangerang, BSD, Tangsel & Bogor.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'pengacara di tangerang, pengacara tangerang, advokat tangerang, kantor hukum tangerang, pengacara terbaik di tangerang, pengacara terbaik tangerang, jasa pengacara tangerang, kantor advokat tangerang, konsultan hukum tangerang, lawyer tangerang, law firm tangerang, pengacara bsd, pengacara serpong, pengacara gading serpong, pengacara alam sutera, pengacara karawaci, pengacara bintaro, pengacara tangerang selatan, pengacara tangsel, pengacara kota tangerang, pengacara kabupaten tangerang, pengacara periuk, pengacara cikokol, pengacara ciputat, pengacara pamulang, pengacara perceraian tangerang, pengacara perdata tangerang, pengacara pidana tangerang, pengacara sengketa tanah tangerang, pengacara perusahaan tangerang, corporate lawyer tangerang, pengacara hutang piutang tangerang, pengacara waris tangerang, konsultasi hukum tangerang, biaya pengacara tangerang, nomor telepon pengacara tangerang, cari pengacara di tangerang, pengacara pengadilan negeri tangerang, pengacara pengadilan agama tangerang, pengacara di bogor, pengacara bogor, kantor hukum bogor, advokat bogor, holong siregar, holong siregar and co, holong siregar law office')">
+    <title>@yield('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')</title>
+    <meta name="description" content="@yield('meta_description', 'Kantor advokat & pengacara di Tangerang & Bogor. Melayani perkara perdata, pidana, perceraian, sengketa tanah, dan hukum bisnis profesional.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'pengacara di tangerang, advokat tangerang, kantor hukum tangerang, pengacara bogor, jasa pengacara tangerang, holong siregar')">
     <meta name="author" content="Holong Siregar & Co. Law Office">
+    <meta name="theme-color" content="#071424">
     <meta name="robots" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
     <meta name="googlebot" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
     <meta name="bingbot" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
 
-    {{-- Geo Meta Tags (Local SEO Tangerang & Bogor) --}}
-    <meta name="geo.region" content="ID-BT;ID-JB">
-    <meta name="geo.placename" content="Kota Tangerang, Tangerang Selatan, BSD City, Kota Bogor, Banten, Jawa Barat, Indonesia">
-    <meta name="geo.position" content="-6.178306;106.631889">
-    <meta name="ICBM" content="-6.178306, 106.631889">
-
     <link rel="canonical" href="@yield('canonical', url()->current())">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
     {{-- Open Graph / Facebook --}}
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Holong Siregar & Co. Law Office">
-    <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')))">
-    <meta property="og:description" content="@yield('meta_description', 'Kantor hukum dan advokat pengacara profesional di Tangerang & Bogor. Menangani perkara perdata, pidana, perceraian, sengketa bisnis, dan kontrak.')">
+    <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')))">
+    <meta property="og:description" content="@yield('meta_description', 'Kantor advokat & pengacara di Tangerang & Bogor. Melayani perkara perdata, pidana, perceraian, sengketa tanah, dan hukum bisnis profesional.')">
     <meta property="og:url" content="@yield('canonical', url()->current())">
-    <meta property="og:image" content="@yield('og_image', asset('assets/images/logo.png'))">
+    <meta property="og:image" content="@yield('og_image', asset('assets/images/og-image.png'))">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Logo Resmi Holong Siregar & Co. Law Office - Pengacara Tangerang & Bogor">
+    <meta property="og:image:alt" content="@yield('og_image_alt', 'Holong Siregar & Co. Law Office - Pengacara di Tangerang & Bogor')">
 
     {{-- Twitter Cards --}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="@yield('title', 'Pengacara di Tangerang & Bogor | Kantor Hukum & Advokat Holong Siregar & Co.')">
-    <meta name="twitter:description" content="@yield('meta_description', 'Kantor hukum dan advokat pengacara profesional di Tangerang & Bogor.')">
-    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/logo.png'))">
+    <meta name="twitter:site" content="@holongsiregar">
+    <meta name="twitter:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')))">
+    <meta name="twitter:description" content="@yield('meta_description', 'Kantor advokat & pengacara di Tangerang & Bogor.')">
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/og-image.png'))">
+
+    @stack('meta_extra')
 
     {{-- Browser Favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon-round.png') }}">
 
     {{-- Schema.org Structured Data (JSON-LD) for Google Rich Snippets & Local Search --}}
     <script type="application/ld+json">
@@ -221,9 +220,11 @@
     </script>
     @stack('schema_extra')
 
-    {{-- Fonts: Playfair Display (Headings) + Plus Jakarta Sans (Body) --}}
+    {{-- Preconnect CDN resources --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     {{-- Bootstrap 5.3 CSS --}}
@@ -250,9 +251,9 @@
 
     {{-- Bootstrap JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    {{-- SweetAlert2 --}}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="{{ asset('assets/js/app.js') }}?v={{ filemtime(public_path('assets/js/app.js')) }}"></script>
+    {{-- SweetAlert2 & App JS (deferred to optimize Core Web Vitals) --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="{{ asset('assets/js/app.js') }}?v={{ filemtime(public_path('assets/js/app.js')) }}" defer></script>
 
     @if (session('consultation_success'))
         <script>
@@ -287,7 +288,7 @@
         </script>
     @endif
 
-    @if ($errors->any())
+    @if (! empty($errors) && $errors->any())
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 Swal.fire({

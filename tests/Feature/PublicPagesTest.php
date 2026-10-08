@@ -18,6 +18,8 @@ test('public pages render without error', function () {
         '/disclaimer',
         '/kebijakan-privasi',
         '/syarat-ketentuan',
+        '/artikel',
+        '/artikel/biaya-jasa-pengacara-di-tangerang',
         '/sitemap.xml',
     ];
 
@@ -34,7 +36,7 @@ test('unknown slugs return 404 with law firm branding', function () {
 
     $this->get('/tim/tidak-ada')->assertNotFound();
     $this->get('/area-praktik/tidak-ada')->assertNotFound();
-    $this->get('/artikel')->assertNotFound();
+    $this->get('/artikel/tidak-ada')->assertNotFound();
 });
 
 test('home page renders official justice symbol asset in hero', function () {
@@ -54,12 +56,17 @@ test('browser tab favicon, navbar, and footer render logo asset', function () {
     $response->assertSee('rounded-full');
 });
 
-test('article page and article menus are completely removed', function () {
-    $response = $this->get('/');
+test('legal articles page and article detail pages render successfully with long-tail content', function () {
+    $response = $this->get('/artikel');
     $response->assertOk();
-    $response->assertDontSee('Legal Insights &amp; Wawasan', false);
-    $response->assertDontSee('LATEST FROM OUR BLOG');
-    $response->assertDontSee('/artikel');
+    $response->assertSee('Artikel &amp; Panduan Hukum', false);
+    $response->assertSee('Biaya Jasa Pengacara di Tangerang');
+
+    $detail = $this->get('/artikel/biaya-jasa-pengacara-di-tangerang');
+    $detail->assertOk();
+    $detail->assertSee('Biaya Jasa Pengacara di Tangerang');
+    $detail->assertSee('Holong Siregar, S.H.');
+    $detail->assertSee('BlogPosting');
 });
 
 test('services section renders all 7 services with real text from image reference', function () {
@@ -159,16 +166,16 @@ test('team section renders all 8 members in correct order with authentic photos 
         'DANIEL SORMIN',
     ]);
 
-    // Check all photo assets are present in order
+    // Check all photo assets are present in order (webp format)
     $response->assertSeeInOrder([
-        'holong-siregar.jpg',
-        'm-akung-kurnia.jpg',
-        'adytia-rachman.jpg',
-        'daud-wilton.jpg',
-        'aktoven.jpg',
-        'yudha-antariksa.jpg',
-        'felix-jonathan.jpg',
-        'daniel.jpg',
+        'holong-siregar.webp',
+        'm-akung-kurnia.webp',
+        'adytia-rachman.webp',
+        'daud-wilton.webp',
+        'aktoven.webp',
+        'yudha-antariksa.webp',
+        'felix-jonathan.webp',
+        'daniel.webp',
     ]);
 
     // Verify linkedin and email are not present for lawyer cards

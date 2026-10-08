@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title('Tim Advokat & Pengacara di Tangerang & Bogor'))
-@section('meta_description', 'Profil tim advokat dan pengacara profesional Holong Siregar & Co. Law Office yang berpengalaman dan berintegritas melayani wilayah Tangerang dan Bogor.')
+@section('title', 'Tim Advokat & Pengacara | Holong Siregar & Co.')
+@section('meta_description', 'Profil advokat dan pengacara profesional Holong Siregar & Co. Berpengalaman & berintegritas melayani wilayah Tangerang, BSD & Bogor.')
 @section('meta_keywords', \App\Support\Seo::keywords(['tim advokat tangerang', 'profil pengacara tangerang', 'partner hukum tangerang']))
 @section('canonical', route('lawyers.index'))
 

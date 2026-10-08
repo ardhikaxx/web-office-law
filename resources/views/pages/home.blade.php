@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title('Pengacara di Tangerang & Bogor Terpercaya | Kantor Hukum & Advokat Holong Siregar & Co.'))
-@section('meta_description', 'Mencari pengacara di Tangerang atau Bogor? Holong Siregar & Co. Law Office adalah kantor hukum advokat profesional untuk perkara perdata, pidana, perceraian, sengketa tanah, kontrak bisnis di Kota Tangerang, BSD, Tangsel & Bogor.')
+@section('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')
+@section('meta_description', 'Kantor advokat pengacara di Tangerang & Bogor. Solusi hukum tegas & terpercaya untuk perkara perdata, pidana, sengketa tanah, perceraian & kontrak bisnis.')
 @section('meta_keywords', \App\Support\Seo::keywords())
 @section('canonical', route('home'))
 
@@ -18,10 +18,11 @@
                     <div class="col-lg-7">
                         <span class="law-hero-badge hero-label">
                             <i class="fa-solid fa-scale-balanced text-gold"></i>
-                            PENGACARA DI TANGERANG &amp; BOGOR
+                            KANTOR ADVOKAT &amp; KONSULTAN HUKUM
                         </span>
                         <h1 class="law-hero-title hero-title">
-                            Solusi Hukum yang <span class="text-gold">Tegas, Terukur</span>, dan Terpercaya
+                            Pengacara di Tangerang &amp; Bogor
+                            <span class="d-block text-gold">Solusi Hukum yang Tegas, Terukur &amp; Terpercaya</span>
                         </h1>
                         <p class="law-hero-text hero-text">
                             Holong Siregar &amp; Co. Law Office adalah kantor hukum dan advokat pengacara berdedikasi
@@ -47,12 +48,16 @@
             <div class="law-hero-visual">
                 <div class="law-hero-statue-wrap">
                     <div class="law-hero-statue-glow"></div>
-                    <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                         alt="Simbol Justice - Holong Siregar &amp; Co. Law Office"
-                         class="law-hero-statue"
-                         width="1855"
-                         height="2048"
-                         loading="eager">
+                    <picture>
+                        <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+                        <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                             alt="Simbol Keadilan - Holong Siregar &amp; Co. Law Office"
+                             class="law-hero-statue"
+                             width="800"
+                             height="883"
+                             fetchpriority="high"
+                             loading="eager">
+                    </picture>
                 </div>
             </div>
         </div>

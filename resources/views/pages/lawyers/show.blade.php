@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title($lawyer['name'] . ' — ' . $lawyer['position'] . ' di Tangerang'))
-@section('meta_description', 'Profil advokat ' . $lawyer['name'] . ' (' . $lawyer['position'] . ' pada Holong Siregar & Co. Law Office). Spesialisasi ' . $lawyer['specialization'] . ' di Tangerang & Bogor.')
+@section('title', $lawyer['name'] . ' | Advokat Holong Siregar')
+@section('meta_description', 'Profil advokat ' . $lawyer['name'] . ' (' . $lawyer['position'] . ' pada Holong Siregar & Co.). Praktisi hukum di Tangerang & Bogor.')
 @section('meta_keywords', \App\Support\Seo::keywords(['advokat ' . strtolower($lawyer['name']), 'pengacara ' . strtolower($lawyer['name']), 'profil advokat tangerang', 'pengacara ' . strtolower($lawyer['specialization'])]))
 @section('canonical', route('lawyers.show', $lawyer['slug']))
 

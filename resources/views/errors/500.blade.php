@@ -2,6 +2,7 @@
 
 @section('title', 'Gangguan Server (500) | Holong Siregar & Co.')
 @section('meta_description', 'Terjadi kendala sesaat pada sistem server kami.')
+@section('meta_robots', 'noindex, nofollow')
 
 @section('content')
     <section class="law-section section text-center py-5 my-5">

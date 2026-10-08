@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Kebijakan Privasi | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Kebijakan privasi Holong Siregar & Co. Law Office mengenai komitmen kerahasiaan data pribadi dan informasi perkara klien.')
+@section('title', 'Kebijakan Privasi | Holong Siregar & Co.')
+@section('meta_description', 'Kebijakan privasi Holong Siregar & Co. mengenai standar perlindungan data pribadi dan kerahasiaan informasi perkara klien secara profesional.')
 @section('canonical', route('privacy'))
 
 @section('content')

@@ -92,10 +92,42 @@ class LawFirm
 
     public static function assetOrFallback(?string $path, string $fallback = 'images/placeholder.svg'): string
     {
-        if ($path && file_exists(public_path('assets/'.$path))) {
-            return asset('assets/'.$path);
+        if ($path) {
+            $webpPath = preg_replace('/\.(jpe?g|png)$/i', '.webp', $path);
+            if ($webpPath !== $path && file_exists(public_path('assets/'.$webpPath))) {
+                return asset('assets/'.$webpPath);
+            }
+
+            if (file_exists(public_path('assets/'.$path))) {
+                return asset('assets/'.$path);
+            }
         }
 
         return asset('assets/'.$fallback);
+    }
+
+    public static function articles(): array
+    {
+        return config('lawfirm.articles', []);
+    }
+
+    public static function findArticle(string $slug): ?array
+    {
+        foreach (self::articles() as $article) {
+            if ($article['slug'] === $slug) {
+                return $article;
+            }
+        }
+
+        return null;
+    }
+
+    public static function relatedArticles(string $slug, int $limit = 3): array
+    {
+        return collect(self::articles())
+            ->where('slug', '!=', $slug)
+            ->take($limit)
+            ->values()
+            ->all();
     }
 }

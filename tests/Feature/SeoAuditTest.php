@@ -2,6 +2,7 @@
 
 use App\Support\LawFirm;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\ViewErrorBag;
 
 test('all public pages return 200 with proper canonical, meta tags, and single H1', function () {
     $routes = [
@@ -111,19 +112,84 @@ test('404 page returns 404 status and sets noindex nofollow robots meta tag', fu
     expect($content)->toContain('name="robots" content="noindex, nofollow"');
 });
 
-test('sitemap.xml returns valid xml with all public URLs and priority attributes', function () {
+test('500 error page template sets noindex nofollow robots meta tag', function () {
+    $rendered = view('errors.500', [
+        'whatsappUrl' => LawFirm::whatsappUrl('Halo'),
+        'errors' => new ViewErrorBag,
+    ])->render();
+
+    expect($rendered)->toContain('name="robots" content="noindex, nofollow"');
+    expect($rendered)->toContain('500 — GANGGUAN SISTEM SESAAT');
+});
+
+test('robots.txt returns text/plain with absolute sitemap url', function () {
+    $response = $this->get('/robots.txt');
+    $response->assertOk();
+    $response->assertHeader('Content-Type', 'text/plain; charset=UTF-8');
+
+    $content = $response->getContent();
+    expect($content)->toContain('User-agent: *');
+    expect($content)->toContain('Allow: /');
+    expect($content)->toContain('Disallow: /admin');
+    expect($content)->toContain('Sitemap: '.route('sitemap'));
+    expect($content)->not->toContain('Sitemap: /sitemap.xml');
+});
+
+test('sitemap.xml returns valid xml with image extension, dynamic lastmod, and articles', function () {
     $response = $this->get('/sitemap.xml');
     $response->assertOk();
     $response->assertHeader('Content-Type', 'text/xml; charset=UTF-8');
 
     $content = $response->getContent();
     expect($content)->toContain('<urlset');
+    expect($content)->toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"');
     expect($content)->toContain(route('home'));
     expect($content)->toContain(route('services.index'));
-    expect($content)->toContain(route('contact'));
+    expect($content)->toContain(route('articles.index'));
+    expect($content)->toContain(route('articles.show', 'biaya-jasa-pengacara-di-tangerang'));
     expect($content)->toContain('<priority>1.0</priority>');
-    expect($content)->toContain('<changefreq>');
-    expect($content)->toContain('<lastmod>');
+    expect($content)->toContain('<image:image>');
+    expect($content)->toContain('<image:loc>');
+});
+
+test('homepage H1 includes primary target keyword Pengacara di Tangerang & Bogor', function () {
+    $response = $this->get('/');
+    $response->assertOk();
+
+    preg_match('/<h1[^>]*>(.*?)<\/h1>/s', $response->getContent(), $h1Match);
+    expect($h1Match)->not->toBeEmpty();
+    expect($h1Match[1])->toContain('Pengacara di Tangerang');
+    expect($h1Match[1])->toContain('Bogor');
+});
+
+test('technical seo metadata includes theme-color, webmanifest, twitter site, and dedicated 1200x630 og-image', function () {
+    $response = $this->get('/');
+    $response->assertOk();
+
+    $content = $response->getContent();
+    expect($content)->toContain('name="theme-color" content="#071424"');
+    expect($content)->toContain('rel="manifest"');
+    expect($content)->toContain('site.webmanifest');
+    expect($content)->toContain('name="twitter:site" content="@holongsiregar"');
+    expect($content)->toContain('assets/images/og-image.png');
+    expect($content)->toContain('property="og:image:width" content="1200"');
+    expect($content)->toContain('property="og:image:height" content="630"');
+
+    // Obsolete geo tags are cleanly removed
+    expect($content)->not->toContain('name="ICBM"');
+    expect($content)->not->toContain('name="geo.region"');
+    expect($content)->not->toContain('name="geo.position"');
+});
+
+test('all lawyer photos and key visual assets have optimized webp versions available', function () {
+    expect(file_exists(public_path('assets/images/simbol-justice.webp')))->toBeTrue();
+    expect(file_exists(public_path('assets/images/logo.webp')))->toBeTrue();
+    expect(file_exists(public_path('assets/images/og-image.webp')))->toBeTrue();
+
+    foreach (LawFirm::lawyers() as $lawyer) {
+        expect($lawyer['photo'])->toEndWith('.webp');
+        expect(file_exists(public_path('assets/'.$lawyer['photo'])))->toBeTrue();
+    }
 });
 
 test('seo implementation preserves zero-database architecture', function () {
@@ -132,7 +198,10 @@ test('seo implementation preserves zero-database architecture', function () {
     $this->get('/')->assertOk();
     $this->get('/layanan/perdata-umum-khusus')->assertOk();
     $this->get('/tim/holong-siregar')->assertOk();
+    $this->get('/artikel')->assertOk();
+    $this->get('/artikel/biaya-jasa-pengacara-di-tangerang')->assertOk();
     $this->get('/faq')->assertOk();
+    $this->get('/robots.txt')->assertOk();
     $this->get('/sitemap.xml')->assertOk();
 
     expect(DB::getQueryLog())->toBeEmpty();

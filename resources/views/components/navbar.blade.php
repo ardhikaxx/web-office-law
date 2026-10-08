@@ -33,6 +33,12 @@
             'sub' => 'Advokat & konsultan hukum resmi',
         ],
         [
+            'label' => 'Artikel',
+            'route' => 'articles.index',
+            'icon' => 'fa-solid fa-newspaper',
+            'sub' => 'Panduan hukum & edukasi litigasi',
+        ],
+        [
             'label' => 'Kontak',
             'route' => 'contact',
             'icon' => 'fa-solid fa-envelope',
@@ -52,6 +58,9 @@
         }
         if ($route === 'lawyers.index') {
             return request()->routeIs('lawyers.*');
+        }
+        if ($route === 'articles.index') {
+            return request()->routeIs('articles.*');
         }
         if ($route === 'contact') {
             return request()->routeIs('contact*');
@@ -98,12 +107,15 @@
         <div class="container">
             {{-- Brand with Official Logo Asset --}}
             <a class="navbar-brand law-brand brand" href="{{ route('home') }}" aria-label="Holong Siregar &amp; Co. Law Office">
-                <img src="{{ asset('assets/images/logo.png') }}"
-                     alt="Logo Holong Siregar &amp; Co."
-                     class="law-brand-symbol rounded-circle rounded-full"
-                     width="48"
-                     height="48"
-                     loading="eager">
+                <picture>
+                    <source srcset="{{ asset('assets/images/logo.webp') }}" type="image/webp">
+                    <img src="{{ asset('assets/images/logo.png') }}"
+                         alt="Logo Holong Siregar &amp; Co."
+                         class="law-brand-symbol rounded-circle rounded-full"
+                         width="48"
+                         height="48"
+                         loading="eager">
+                </picture>
                 <div class="law-brand-titles">
                     <span class="law-brand-name">
                         Holong Siregar <span>&amp; Co.</span>
@@ -153,11 +165,14 @@
         {{-- Drawer Header --}}
         <div class="offcanvas-header law-drawer-header">
             <div class="d-flex align-items-center gap-2" id="mobileMenuDrawerLabel">
-                <img src="{{ asset('assets/images/logo.png') }}"
-                     alt="Logo Holong Siregar &amp; Co."
-                     class="rounded-circle"
-                     width="38"
-                     height="38">
+                <picture>
+                    <source srcset="{{ asset('assets/images/logo.webp') }}" type="image/webp">
+                    <img src="{{ asset('assets/images/logo.png') }}"
+                         alt="Logo Holong Siregar &amp; Co."
+                         class="rounded-circle"
+                         width="38"
+                         height="38">
+                </picture>
                 <div class="d-flex flex-column">
                     <span class="law-drawer-brand">Holong Siregar <span class="text-gold">&amp; Co.</span></span>
                     <span class="law-drawer-sub">LAW OFFICE</span>

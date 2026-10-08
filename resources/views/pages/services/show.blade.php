@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @php
-    $pageTitle = $service['title'] . ' di Tangerang & Bogor';
+    $pageTitle = $service['title'] . ' | Pengacara Holong Siregar';
     $targetKeywords = implode(', ', $service['target_keywords'] ?? []);
     $metaKeywords = \App\Support\Seo::keywords($targetKeywords);
 @endphp
 
-@section('title', \App\Support\Seo::title($pageTitle))
-@section('meta_description', 'Layanan pengacara ' . strtolower($service['title']) . ' profesional di wilayah Kota Tangerang, BSD, Serpong, dan Bogor oleh kantor hukum Holong Siregar & Co. Konsultasi hukum cepat via WhatsApp.')
+@section('title', $pageTitle)
+@section('meta_description', 'Layanan ' . strtolower($service['title']) . ' di Kota Tangerang, BSD & Bogor oleh advokat Holong Siregar & Co. Konsultasi cepat via WhatsApp.')
 @section('meta_keywords', $metaKeywords)
 @section('canonical', route('services.show', $service['slug']))
 

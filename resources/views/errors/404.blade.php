@@ -7,12 +7,13 @@
 @section('content')
     <section class="law-section section text-center py-5 my-5">
         <div class="container" style="max-width: 680px;">
-            <div class="position-relative d-inline-block mb-3">
-                <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                     alt="Simbol Keadilan - Holong Siregar &amp; Co."
-                     style="max-height: 140px; width: auto; filter: drop-shadow(0 12px 24px rgba(12, 31, 56, 0.2));"
-                     loading="lazy">
-            </div>
+                <picture>
+                    <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+                    <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                         alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                         style="max-height: 140px; width: auto; filter: drop-shadow(0 12px 24px rgba(12, 31, 56, 0.2));"
+                         loading="lazy">
+                </picture>
             <span class="law-section-eyebrow d-block">404 — HALAMAN TIDAK DITEMUKAN</span>
             <h1 class="law-heading display-6 mb-3">Halaman yang Anda Cari Tidak Tersedia</h1>
             <p class="text-muted mb-4 leading-relaxed">

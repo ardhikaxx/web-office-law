@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title('Layanan Pengacara di Tangerang & Bogor | Perdata, Pidana & Bisnis'))
-@section('meta_description', 'Daftar layanan jasa pengacara di Tangerang & Bogor oleh Holong Siregar & Co.: sengketa perdata, pidana, drafting kontrak, perceraian, sengketa tanah, dan hukum perusahaan.')
+@section('title', 'Layanan Pengacara Tangerang & Bogor | Holong Siregar')
+@section('meta_description', 'Layanan jasa pengacara di Tangerang & Bogor: perkara perdata, pidana, legal kontrak, gugatan perceraian, sengketa tanah, dan hukum korporasi.')
 @section('meta_keywords', \App\Support\Seo::keywords(['layanan hukum tangerang', 'jasa pengacara tangerang', 'layanan advokat bsd']))
 @section('canonical', route('services.index'))
 

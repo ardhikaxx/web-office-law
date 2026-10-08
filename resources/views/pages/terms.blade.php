@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Syarat & Ketentuan | Holong Siregar & Co. Law Office')
-@section('meta_description', 'Syarat dan ketentuan resmi penggunaan website dan layanan informasi Holong Siregar & Co. Law Office.')
+@section('title', 'Syarat & Ketentuan | Holong Siregar & Co.')
+@section('meta_description', 'Syarat dan ketentuan penggunaan situs web dan layanan informasi hukum kantor advokat Holong Siregar & Co. di Tangerang & Bogor.')
 @section('canonical', route('terms'))
 
 @section('content')

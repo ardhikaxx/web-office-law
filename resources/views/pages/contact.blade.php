@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title('Kontak Kantor Pengacara di Tangerang & Bogor | Konsultasi WhatsApp Cepat'))
-@section('meta_description', 'Hubungi kantor advokat pengacara di Tangerang (Villa Grand Tomang, Periuk) dan Bogor. Dapatkan konsultasi hukum cepat via WhatsApp 081-3188-41961 atau telepon 0857-7163-3860.')
+@section('title', 'Kontak Pengacara Tangerang & Bogor | Holong Siregar')
+@section('meta_description', 'Kontak kantor advokat Holong Siregar & Co. di Tangerang & Bogor. Konsultasi cepat via WhatsApp 081-3188-41961 atau telepon 0857-7163-3860.')
 @section('meta_keywords', \App\Support\Seo::keywords(['kontak pengacara di tangerang', 'alamat kantor pengacara tangerang', 'nomor wa pengacara tangerang', 'kantor hukum periuk tangerang', 'advokat grand tomang tangerang', 'pengacara bsd tangsel']))
 @section('canonical', route('contact'))
 

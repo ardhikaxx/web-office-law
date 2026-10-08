@@ -9,76 +9,43 @@ class Seo
      */
     public static function brand(): string
     {
-        return 'Holong Siregar & Co. Law Office';
+        return 'Holong Siregar & Co.';
     }
 
     /**
-     * Build consistent, high-ranking page title.
+     * Build consistent, high-ranking page title (optimized for <= 60 characters SERP display).
      */
     public static function title(?string $pageTitle = null): string
     {
         if (empty($pageTitle)) {
-            return 'Pengacara di Tangerang & Bogor Terpercaya | Kantor Hukum & Advokat Holong Siregar & Co.';
+            return 'Pengacara di Tangerang & Bogor | '.self::brand();
         }
 
         if (str_contains($pageTitle, 'Holong Siregar')) {
             return $pageTitle;
         }
 
-        return $pageTitle.' | '.self::brand();
+        $candidate = $pageTitle.' | '.self::brand();
+
+        if (mb_strlen($candidate) > 65 && mb_strlen($pageTitle) >= 40) {
+            return $pageTitle;
+        }
+
+        return $candidate;
     }
 
     /**
-     * Comprehensive Tangerang-centric keyword universe.
+     * Concise, focused keywords (avoids search engine keyword stuffing penalty).
      */
     public static function keywords(array|string $additional = []): string
     {
         $base = [
             'pengacara di tangerang',
-            'pengacara tangerang',
             'advokat tangerang',
             'kantor hukum tangerang',
-            'lawyer tangerang',
-            'law firm tangerang',
-            'jasa pengacara tangerang',
-            'jasa advokat tangerang',
-            'pengacara terbaik di tangerang',
-            'pengacara terpercaya tangerang',
-            'konsultan hukum tangerang',
-            'konsultasi hukum tangerang',
-            'bantuan hukum tangerang',
-            'pendampingan hukum tangerang',
-            'pengacara bsd',
-            'pengacara serpong',
-            'pengacara gading serpong',
-            'pengacara alam sutera',
-            'pengacara karawaci',
-            'pengacara bintaro',
-            'pengacara tangerang selatan',
-            'pengacara tangsel',
-            'pengacara kota tangerang',
-            'pengacara kabupaten tangerang',
-            'pengacara periuk',
-            'pengacara cikokol',
-            'pengacara ciputat',
-            'pengacara pamulang',
-            'pengacara perdata tangerang',
-            'pengacara pidana tangerang',
-            'pengacara perceraian tangerang',
-            'pengacara sengketa tanah tangerang',
-            'pengacara perusahaan tangerang',
-            'corporate lawyer tangerang',
-            'pengacara hutang piutang tangerang',
-            'pengacara waris tangerang',
-            'pengacara pengadilan negeri tangerang',
-            'pengacara pengadilan agama tangerang',
-            'biaya pengacara tangerang',
-            'pengacara di bogor',
             'pengacara bogor',
-            'kantor hukum bogor',
-            'advokat bogor',
+            'jasa pengacara tangerang',
             'holong siregar',
-            'holong siregar and co',
         ];
 
         if (is_string($additional) && ! empty($additional)) {
@@ -89,9 +56,9 @@ class Seo
             $extra = [];
         }
 
-        $merged = array_unique(array_merge($extra, $base));
+        $merged = array_values(array_unique(array_merge($extra, $base)));
 
-        return implode(', ', $merged);
+        return implode(', ', array_slice($merged, 0, 7));
     }
 
     /**
@@ -205,6 +172,44 @@ class Seo
                     ],
                 ];
             }, $faqs),
+        ];
+    }
+
+    /**
+     * Generate BlogPosting/Article Schema.org for legal educational articles.
+     */
+    public static function articleSchema(array $article): array
+    {
+        return [
+            '@context' => 'https://schema.org',
+            '@type' => 'BlogPosting',
+            '@id' => route('articles.show', $article['slug']).'#article',
+            'headline' => $article['title'] ?? '',
+            'description' => $article['excerpt'] ?? '',
+            'image' => ! empty($article['image']) ? asset('assets/'.$article['image']) : asset('assets/images/og-image.png'),
+            'datePublished' => $article['published_at'] ?? '2026-10-08',
+            'dateModified' => $article['updated_at'] ?? ($article['published_at'] ?? '2026-10-08'),
+            'author' => [
+                '@type' => 'Person',
+                'name' => $article['author'] ?? 'Holong Siregar, S.H.',
+                'jobTitle' => $article['author_role'] ?? 'Managing Partner & Advokat',
+                'url' => route('home'),
+            ],
+            'publisher' => [
+                '@type' => 'LegalService',
+                'name' => self::brand(),
+                'url' => route('home'),
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('assets/images/logo.png'),
+                ],
+            ],
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => route('articles.show', $article['slug']),
+            ],
+            'articleSection' => $article['category'] ?? 'Hukum',
+            'inLanguage' => 'id-ID',
         ];
     }
 }

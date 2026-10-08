@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /dashboard
 
-Sitemap: /sitemap.xml
+Sitemap: http://localhost:8000/sitemap.xml

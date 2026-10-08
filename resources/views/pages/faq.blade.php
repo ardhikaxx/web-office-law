@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title('Tanya Jawab Layanan Pengacara di Tangerang & Bogor (FAQ)'))
-@section('meta_description', 'Jawaban lengkap pertanyaan seputar tarif biaya pengacara di Tangerang, alur persidangan di PN Tangerang & PA Tangerang, pendampingan kepolisian, dan konsultasi WhatsApp.')
+@section('title', 'FAQ Pengacara Tangerang & Bogor | Holong Siregar')
+@section('meta_description', 'Tanya jawab tarif biaya pengacara, alur sidang perdata di PN Tangerang, pendampingan kepolisian, dan konsultasi hukum di Holong Siregar & Co.')
 @section('meta_keywords', \App\Support\Seo::keywords(['biaya pengacara tangerang', 'honorarium advokat tangerang', 'tanya jawab hukum tangerang', 'sidang pn tangerang', 'gugatan cerai pa tangerang']))
 @section('canonical', route('faq'))
 

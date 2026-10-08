@@ -1,11 +1,14 @@
 <footer class="law-footer site-footer">
     {{-- Dignified Justice Symbol Watermark --}}
     <div class="law-footer-watermark" aria-hidden="true">
-        <img src="{{ asset('assets/images/simbol-justice.png') }}"
-             alt="Simbol Keadilan - Holong Siregar &amp; Co."
-             width="1855"
-             height="2048"
-             loading="lazy">
+        <picture>
+            <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+            <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                 width="800"
+                 height="883"
+                 loading="lazy">
+        </picture>
     </div>
 
     <div class="law-footer-top">
@@ -14,12 +17,15 @@
                 {{-- Col 1: Identity & Description --}}
                 <div class="col-lg-4 col-md-6">
                     <a class="law-brand brand d-inline-flex align-items-center gap-3 mb-3 text-decoration-none" href="{{ route('home') }}">
-                        <img src="{{ asset('assets/images/logo.png') }}"
-                             alt="Logo Holong Siregar &amp; Co."
-                             class="law-brand-symbol rounded-circle rounded-full"
-                             width="48"
-                             height="48"
-                             loading="lazy">
+                        <picture>
+                            <source srcset="{{ asset('assets/images/logo.webp') }}" type="image/webp">
+                            <img src="{{ asset('assets/images/logo.png') }}"
+                                 alt="Logo Holong Siregar &amp; Co."
+                                 class="law-brand-symbol rounded-circle rounded-full"
+                                 width="48"
+                                 height="48"
+                                 loading="lazy">
+                        </picture>
                         <div class="law-brand-titles">
                             <span class="law-brand-name text-white">
                                 Holong Siregar <span class="text-gold">&amp; Co.</span>
@@ -57,6 +63,7 @@
                         <li><a href="{{ route('services.index') }}">Layanan Hukum</a></li>
                         <li><a href="{{ route('practice-areas.index') }}">Area Praktik</a></li>
                         <li><a href="{{ route('lawyers.index') }}">Tim Kami</a></li>
+                        <li><a href="{{ route('articles.index') }}">Artikel Hukum</a></li>
                         <li><a href="{{ route('contact') }}">Kontak Kami</a></li>
                         <li><a href="{{ route('faq') }}">FAQ</a></li>
                     </ul>

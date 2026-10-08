@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title('Profil Kantor Pengacara di Tangerang & Bogor'))
-@section('meta_description', 'Profil resmi kantor hukum & advokat pengacara Holong Siregar & Co. di Tangerang (Villa Grand Tomang) dan Bogor. Berpengalaman menangani perkara perdata, pidana, sengketa bisnis, dan hukum keluarga.')
+@section('title', 'Tentang Kami | Pengacara Holong Siregar & Co.')
+@section('meta_description', 'Profil kantor hukum advokat Holong Siregar & Co. di Tangerang & Bogor. Pengalaman menangani perkara perdata, pidana, sengketa tanah & bisnis.')
 @section('meta_keywords', \App\Support\Seo::keywords(['profil holong siregar', 'kantor advokat tangerang', 'profil kantor hukum tangerang']))
 @section('canonical', route('about'))
 

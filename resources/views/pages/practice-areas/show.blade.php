@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', \App\Support\Seo::title('Area Praktik ' . $area['title'] . ' di Tangerang & Bogor'))
-@section('meta_description', 'Pendampingan hukum ' . strtolower($area['title']) . ' oleh advokat pengacara Holong Siregar & Co. di Pengadilan Negeri Tangerang, PN Bogor, dan kawasan Jabodetabek.')
+@section('title', $area['title'] . ' | Pengacara Holong Siregar')
+@section('meta_description', 'Pendampingan hukum ' . strtolower($area['title']) . ' oleh kantor advokat Holong Siregar & Co. di Pengadilan Tangerang, Bogor & Jabodetabek.')
 @section('meta_keywords', \App\Support\Seo::keywords(['advokat ' . strtolower($area['title']) . ' tangerang', 'pengacara ' . strtolower($area['title']) . ' tangerang', 'litigasi pn tangerang', 'non litigasi bsd']))
 @section('canonical', route('practice-areas.show', $area['slug']))
 

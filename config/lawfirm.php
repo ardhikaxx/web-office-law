@@ -293,7 +293,7 @@ return [
             'slug' => 'holong-siregar',
             'position' => 'MANAGING PARTNER',
             'specialization' => 'Litigasi Perdata & Korporasi',
-            'photo' => 'images/lawyers/holong-siregar.jpg',
+            'photo' => 'images/lawyers/holong-siregar.webp',
             'has_detail' => true,
             'short_bio' => 'Advokat berlisensi dengan rekam jejak litigasi perdata, pidana, korporasi, perbankan, dan kepemimpinan organisasi.',
             'bio' => 'Awal memilih disiplin keilmuan dengan mengikuti profesi pengacara yang pada saat sumpah profesi pada Pengadilan Tinggi Banten menjadi yang termuda ditahun 2017, kemudian memulai karier dengan bergabung pada salah satu kantor hukum yang mendapatkan Penghargaan Indonesia 50 Best Lawyer THE MOST TRUSTED & RECOGNIZED AWARD IN INDONESIA ditahun 2019, selain itu juga aktif dalam membuat tulisan-tulisan dan/atau pendapat-pendapat hukum atas persoalan masalah hukum di Indonesia dan dari kantor hukum juga telah bergabung pada perusahaan pembiayaan dan BANK dengan keilmuan yang dimilikinya. Diluar dari profesi hukum mengikuti keorganisasian kepemudaan sebagai ketua tingkat kota ditahun 2017, wakil ketua organisasi kepemudaan tingkat provinsi di tahun 2021 dan Pengurus Organisasi Kemasyarakatan tingkat Kota ditahun 2022.',
@@ -318,7 +318,7 @@ return [
             'slug' => 'm-akung-kurnia-r',
             'position' => 'PARTNER',
             'specialization' => 'Praktisi & Akademisi Hukum',
-            'photo' => 'images/lawyers/m-akung-kurnia.jpg',
+            'photo' => 'images/lawyers/m-akung-kurnia.webp',
             'has_detail' => true,
             'short_bio' => 'Sebagai Praktisi & Akademisi pada salah satu Universitas di Tangerang, yang saat ini juga sedang menempuh Pendidikannya S3.',
             'bio' => 'Sebagai Praktisi & Akademisi pada salah satu Universitas di Tangerang, yang saat ini juga sedang menempuh Pendidikannya S3.',
@@ -340,7 +340,7 @@ return [
             'slug' => 'adytia-rachman',
             'position' => 'PARTNER',
             'specialization' => 'Advokat & Praktisi Hukum',
-            'photo' => 'images/lawyers/adytia-rachman.jpg',
+            'photo' => 'images/lawyers/adytia-rachman.webp',
             'has_detail' => true,
             'short_bio' => 'Memulai karier pada Institusi Badan Narkotika Nasional (BNN) sebelum memutuskan berkarier penuh sebagai Advokat.',
             'bio' => 'Dengan memulai bekerja pada Institusi Badan Narkotika Nasional (BNN) yang pada akhirnya memutuskan keluar dan memulai karier sebagai Advokat.',
@@ -360,7 +360,7 @@ return [
             'slug' => 'daud-wilton-purba',
             'position' => 'PARTNER',
             'specialization' => 'Praktisi Hukum & Advokat Pajak',
-            'photo' => 'images/lawyers/daud-wilton.jpg',
+            'photo' => 'images/lawyers/daud-wilton.webp',
             'has_detail' => true,
             'short_bio' => 'Praktisi Hukum & Member IKHAPI yang sedang menempuh Pendidikan S-2 di Universitas Harapan Indonesia.',
             'bio' => 'Sebagai Praktisi Hukum & Member dari Ikatan Kuasa Hukum dan Advokat Pajak Indonesia (IKHAPI) yang juga sedang menempuh Pendidikan S-2 di Universitas Harapan Indonesia.',
@@ -382,7 +382,7 @@ return [
             'slug' => 'aktoven-l-rumapea',
             'position' => 'SENIOR ASSOCIATE',
             'specialization' => 'Senior Associate',
-            'photo' => 'images/lawyers/aktoven.jpg',
+            'photo' => 'images/lawyers/aktoven.webp',
             'has_detail' => true,
             'short_bio' => 'Senior Associate berlatar belakang pendidikan Sarjana Hukum dari Universitas Indonesia.',
             'bio' => 'Senior Associate pada Holong Siregar & Co. Law Office, berfokus pada pendampingan hukum dan penanganan perkara klien.',
@@ -402,7 +402,7 @@ return [
             'slug' => 'yudha-antariksa-putra',
             'position' => 'ASSOCIATE',
             'specialization' => 'Associate',
-            'photo' => 'images/lawyers/yudha-antariksa.jpg',
+            'photo' => 'images/lawyers/yudha-antariksa.webp',
             'has_detail' => true,
             'short_bio' => 'Associate advokat berlatar belakang pendidikan Sarjana Hukum dari Universitas Esa Unggul.',
             'bio' => 'Associate pada Holong Siregar & Co. Law Office, mendampingi proses riset hukum, telaah perkara, dan koordinasi pendampingan klien.',
@@ -422,7 +422,7 @@ return [
             'slug' => 'felix-jonathan',
             'position' => 'SENIOR LEGAL',
             'specialization' => 'Senior Legal',
-            'photo' => 'images/lawyers/felix-jonathan.jpg',
+            'photo' => 'images/lawyers/felix-jonathan.webp',
             'has_detail' => false,
             'short_bio' => 'Senior Legal pada Holong Siregar & Co. Law Office.',
             'bio' => null,
@@ -435,7 +435,7 @@ return [
             'slug' => 'daniel-sormin',
             'position' => 'LEGAL STAFF',
             'specialization' => 'Legal Staff',
-            'photo' => 'images/lawyers/daniel.jpg',
+            'photo' => 'images/lawyers/daniel.webp',
             'has_detail' => false,
             'short_bio' => 'Legal Staff pada Holong Siregar & Co. Law Office.',
             'bio' => null,
@@ -473,4 +473,238 @@ return [
         ['icon' => 'fa-solid fa-bullseye', 'title' => 'Orientasi Solusi', 'text' => 'Fokus pada penyelesaian yang praktis, efisien, dan memberikan kepastian bagi klien.'],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Educational Legal Articles (Long-tail SEO & Authority)
+    |--------------------------------------------------------------------------
+    */
+    'articles' => [
+        [
+            'slug' => 'biaya-jasa-pengacara-di-tangerang',
+            'title' => 'Biaya Jasa Pengacara di Tangerang: Panduan Skema Honorarium Advokat',
+            'excerpt' => 'Panduan transparan skema biaya pengacara di Tangerang. Pelajari komponen operational fee, lawyer fee, retainer fee, serta success fee sesuai UU Advokat.',
+            'category' => 'Panduan Biaya & Layanan',
+            'reading_time' => '6 menit baca',
+            'published_at' => '2026-10-05',
+            'updated_at' => '2026-10-08',
+            'author' => 'Holong Siregar, S.H.',
+            'author_role' => 'Managing Partner & Advokat',
+            'image' => 'images/articles/artikel-1.svg',
+            'keywords' => ['biaya pengacara tangerang', 'honorarium advokat tangerang', 'tarif lawyer tangerang', 'biaya sidang pengadilan tangerang'],
+            'body' => '
+                <p class="lead">Pertanyaan yang paling sering diajukan masyarakat saat menghadapi persoalan hukum adalah: <em>"Berapa sebenarnya biaya sewa atau jasa pengacara?"</em> Di wilayah Kota Tangerang, BSD, Tangsel, dan Bogor, skema biaya pengacara diatur secara profesional dan proporsional berdasarkan kesepakatan kedua belah pihak.</p>
+                
+                <h2>Dasar Penentuan Honorarium Advokat</h2>
+                <p>Berdasarkan Pasal 21 Undang-Undang No. 18 Tahun 2003 tentang Advokat, advokat berhak menerima honorarium atas jasa hukum yang telah diberikan kepada kliennya. Besaran honorarium tidak dipatok angka tunggal oleh negara, melainkan ditentukan atas kesepakatan wajar antara advokat dan klien dengan mempertimbangkan:</p>
+                <ul>
+                    <li><strong>Tingkat kerumitan perkara:</strong> Perkara perdata gugatan sengketa tanah dengan banyak pihak tentu memerlukan analisis dan waktu lebih intensif dibanding somasi wanprestasi sederhana.</li>
+                    <li><strong>Nilai sengketa atau objek perkara:</strong> Sengketa komersial bernilai miliaran rupiah menuntut mitigasi risiko finansial yang lebih kompleks.</li>
+                    <li><strong>Tahapan penanganan:</strong> Apakah sebatas konsultasi, pembuatan legal opinion, mediasi non-litigasi di luar pengadilan, atau pendampingan litigasi penuh dari pengadilan tingkat pertama (PN Tangerang), banding di PT Banten, hingga kasasi MA.</li>
+                    <li><strong>Jangka waktu dan beban kerja:</strong> Estimasi frekuensi kehadiran persidangan dan pengumpulan alat bukti.</li>
+                </ul>
+
+                <h2>4 Komponen Utama Skema Biaya Advokat</h2>
+                <p>Dalam praktik kantor hukum profesional seperti <a href="/tentang-kami">Holong Siregar & Co.</a>, rincian biaya selalu dituangkan secara transparan dalam Surat Perjanjian Jasa Hukum (SPJH) yang meliputi:</p>
+                
+                <h3>1. Operational Fee (Biaya Operasional)</h3>
+                <p>Biaya yang timbul untuk keperluan teknis jalannya perkara, seperti transportasi advokat, pendaftaran perkara di e-Court Mahkamah Agung, biaya panggilan sidang (relaas), materai, penggandaan berkas bukti, dan akomodasi bila diperlukan pemeriksaan setempat (descente).</p>
+
+                <h3>2. Lawyer Fee (Honorarium Penanganan)</h3>
+                <p>Kompensasi profesional atas keahlian, waktu, strategi hukum, serta pendampingan langsung oleh advokat selama masa penanganan perkara berlangsung.</p>
+
+                <h3>3. Success Fee (Honorarium Keberhasilan)</h3>
+                <p>Persentase atau nominal tambahan yang disepakati bersama apabila target hukum yang dikehendaki tercapai, misalnya pemulihan aset (recovery asset) atau tercapainya perdamaian yang menguntungkan klien.</p>
+
+                <h3>4. Retainer Fee (Jasa Hukum Bulanan Perusahaan)</h3>
+                <p>Khusus bagi pelaku usaha dan korporasi di Tangerang dan Bogor yang memerlukan pendampingan hukum rutin, penelaahan kontrak bisnis berkala, dan konsultasi ketenagakerjaan tanpa harus membentuk tim legal in-house yang mahal.</p>
+
+                <div class="p-4 my-4 rounded-3 bg-light border-start border-4 border-warning">
+                    <h5 class="fw-bold mb-2 text-navy"><i class="fa-solid fa-triangle-exclamation text-gold me-2"></i>Tips Menghindari Biaya Siluman</h5>
+                    <p class="mb-0">Pastikan seluruh komitmen biaya disepakati tertulis dalam <strong>Surat Kuasa Khusus</strong> dan <strong>Surat Perjanjian Jasa Hukum</strong>. Advokat berintegritas tidak akan meminta pungutan liar di luar kontrak yang disepakati.</p>
+                </div>
+
+                <h2>Konsultasi Awal Biaya Perkara Anda</h2>
+                <p>Ingin mengetahui estimasi biaya yang tepat dan proporsional untuk perkara Anda di wilayah Tangerang atau Bogor? Hubungi tim kami melalui <a href="/kontak">halaman kontak</a> atau tombol WhatsApp untuk penjadwalan konsultasi pendahuluan secara transparan.</p>
+            ',
+        ],
+        [
+            'slug' => 'alur-persidangan-gugatan-perdata-pn-tangerang',
+            'title' => 'Alur Sidang Perdata di PN Tangerang: Dari Mediasi hingga Putusan',
+            'excerpt' => 'Simak tahapan lengkap persidangan gugatan perdata di PN Tangerang, mulai dari registrasi e-Court, mediasi wajib, jawab-jinawab, pembuktian, hingga eksekusi.',
+            'category' => 'Hukum Perdata',
+            'reading_time' => '7 menit baca',
+            'published_at' => '2026-10-06',
+            'updated_at' => '2026-10-08',
+            'author' => 'Holong Siregar, S.H.',
+            'author_role' => 'Managing Partner & Advokat',
+            'image' => 'images/articles/artikel-2.svg',
+            'keywords' => ['alur sidang pn tangerang', 'gugatan perdata tangerang', 'sidang mediasi perdata', 'pengacara perdata tangerang'],
+            'body' => '
+                <p class="lead">Menghadapi gugatan atau hendak mengajukan gugatan perdata di Pengadilan Negeri Tangerang (Jl. TMP Taruna No. 7, Sukaasih, Kota Tangerang) seringkali menimbulkan kekhawatiran karena ketidaktahuan alur persidangan. Artikel ini mengupas alur hukum acara perdata secara runut.</p>
+
+                <h2>1. Pendaftaran Gugatan Melalui e-Court</h2>
+                <p>Sejak diberlakukannya Peraturan Mahkamah Agung (PERMA) No. 7 Tahun 2022, pendaftaran gugatan perdata oleh advokat dilakukan secara elektronik melalui sistem e-Court Mahkamah Agung. Dokumen gugatan, surat kuasa, dan bukti awal diunggah secara digital, kemudian Penggugat membayar panjar biaya perkara melalui virtual account bank.</p>
+
+                <h2>2. Sidang Perdana & Pemeriksaan Legalitas</h2>
+                <p>Majelis Hakim akan memeriksa kelengkapan administrasi para pihak, antara lain:</p>
+                <ul>
+                    <li>Identitas KTP para pihak (Penggugat dan Tergugat).</li>
+                    <li>Surat Kuasa Khusus asli dan Berita Acara Sumpah (BAS) Advokat yang sah.</li>
+                    <li>Legal standing para pihak apakah memenuhi kualifikasi hukum.</li>
+                </ul>
+
+                <h2>3. Tahap Mediasi Wajib (PERMA No. 1 Tahun 2016)</h2>
+                <p>Sebelum masuk ke pokok sengketa, pengadilan <strong>wajib</strong> memerintahkan para pihak menempuh mediasi selama maksimal 30 hari kerja (dapat diperpanjang 30 hari). Mediasi dipandu oleh Hakim Mediator netral. Jika mediasi berhasil, dibuat Akta Perdamaian (Van Dading) yang berkekuatan hukum tetap. Jika gagal, persidangan dilanjutkan ke pokok perkara.</p>
+
+                <h2>4. Tahap Jawab-Jinawab (Litigasi / e-Litigation)</h2>
+                <p>Tahapan ini dapat berlangsung secara elektronik melalui sistem e-Litigation PN Tangerang:</p>
+                <ol>
+                    <li><strong>Pembacaan Gugatan:</strong> Penggugat membacakan posita dan petitum gugatannya.</li>
+                    <li><strong>Jawaban Tergugat:</strong> Memuat bantahan terhadap dalil gugatan serta eksepsi (keberatan formil). Tergugat juga dapat mengajukan gugatan balik (rekonvensi).</li>
+                    <li><strong>Replik:</strong> Tanggapan resmi Penggugat atas jawaban Tergugat.</li>
+                    <li><strong>Duplik:</strong> Tanggapan akhir Tergugat atas replik Penggugat.</li>
+                </ol>
+
+                <h2>5. Tahap Pembuktian (Puncak Persidangan)</h2>
+                <p>Tahap ini merupakan momen paling krusial. Siapa yang mendalilkan sesuatu, wajib membuktikannya (Pasal 1865 KUHPerdata). Alat bukti yang diajukan meliputi:</p>
+                <ul>
+                    <li><strong>Bukti Surat:</strong> Akta otentik notaris, perjanjian bawah tangan, bukti transfer bank, surat somasi, dan korespondensi yang telah dimateraikan dan dilegalisir di kantor pos (nazegelen).</li>
+                    <li><strong>Saksi Fakta:</strong> Orang yang melihat, mendengar, atau mengalami sendiri peristiwa hukum terkait.</li>
+                    <li><strong>Saksi Ahli:</strong> Pakar hukum, pertanahan, atau akuntan forensik bila dibutuhkan pendapat spesialis.</li>
+                </ul>
+
+                <h2>6. Kesimpulan & Pembacaan Putusan</h2>
+                <p>Setelah pembuktian selesai, masing-masing pihak menyerahkan konklusi atau kesimpulan tertulis. Selanjutnya, Majelis Hakim menggelar sidang musyawarah dan membacakan Putusan Pengadilan Negeri Tangerang.</p>
+
+                <h2>Pendampingan Pengacara Perdata Berpengalaman</h2>
+                <p>Keahlian merumuskan dalil gugatan, menyusun bukti, serta mengajukan pertanyaan kritis kepada saksi di ruang sidang sangat menentukan hasil akhir. Pelajari lebih lanjut layanan kami di <a href="/layanan/perdata-wanprestasi">Pengacara Perdata &amp; Wanprestasi</a> atau jadwalkan sesi konsultasi bersama advokat kami.</p>
+            ',
+        ],
+        [
+            'slug' => 'cara-mengajukan-somasi-dan-gugatan-wanprestasi',
+            'title' => 'Cara Membuat Somasi & Mengajukan Gugatan Wanprestasi Bisnis',
+            'excerpt' => 'Langkah hukum efektif menghadapi rekan bisnis yang ingkar janji (wanprestasi). Format somasi resmi, pembuktian kerugian materiil, dan pengajuan gugatan perdata.',
+            'category' => 'Hukum Kontrak & Bisnis',
+            'reading_time' => '5 menit baca',
+            'published_at' => '2026-10-06',
+            'updated_at' => '2026-10-08',
+            'author' => 'Holong Siregar, S.H.',
+            'author_role' => 'Managing Partner & Advokat',
+            'image' => 'images/articles/artikel-3.svg',
+            'keywords' => ['somasi wanprestasi', 'contoh somasi hutang', 'gugatan wanprestasi bisnis', 'pengacara bisnis tangerang'],
+            'body' => '
+                <p class="lead">Dalam dinamika bisnis di Tangerang Raya dan Jabodetabek, wanprestasi atau ingkar janji terhadap perjanjian kerja sama kerap menimbulkan kerugian finansial yang signifikan. Sebelum melangkah ke pengadilan, somasi (surat peringatan hukum) adalah instrumen wajib yang harus ditempuh.</p>
+
+                <h2>Unsur Wanprestasi Menurut Pasal 1243 KUHPerdata</h2>
+                <p>Seseorang atau badan hukum dinyatakan melakukan wanprestasi apabila tidak memenuhi kewajiban (prestasi) yang tercantum dalam perjanjian sah. Wanprestasi dapat berwujud dalam 4 kondisi:</p>
+                <ul>
+                    <li>Sama sekali tidak melaksanakan apa yang diperjanjikan.</li>
+                    <li>Melaksanakan apa yang diperjanjikan, tetapi terlambat.</li>
+                    <li>Melaksanakan kewajiban, tetapi tidak sesuai dengan kesepakatan spesifikasi.</li>
+                    <li>Melakukan hal yang menurut perjanjian dilarang untuk dilakukan.</li>
+                </ul>
+
+                <h2>Fungsi Krusial Surat Somasi</h2>
+                <p>Menurut Pasal 1238 KUHPerdata, debitur harus terlebih dahulu dinyatakan lalai melalui surat perintah atau akta sejenis sebelum kreditur dapat menuntut ganti rugi bunga atau pembatalan perjanjian. Somasi membuktikan bahwa pihak yang berutang telah diberi kesempatan cukup dan itikad baik untuk menyelesaikan kewajibannya.</p>
+
+                <h2>Format Somasi Resmi yang Berkekuatan Hukum</h2>
+                <p>Somasi yang disusun oleh kantor advokat resmi memiliki bobot psikologis dan yuridis yang jauh lebih kuat dibanding surat peringatan biasa. Unsur pokok somasi yang wajib ada:</p>
+                <ol>
+                    <li><strong>Dasar Hubungan Hukum:</strong> Menyebutkan nomor perjanjian, tanggal akta, dan poin pasal kesepakatan.</li>
+                    <li><strong>Bentuk Pelanggaran (Wanprestasi):</strong> Menjabarkan secara faktual kewajiban apa yang belum dipenuhi disertai nominal kerugian.</li>
+                    <li><strong>Tuntutan Ganti Rugi / Pemenuhan:</strong> Tindakan konkret yang diminta (pelunasan pembayaran, penyerahan barang, dll).</li>
+                    <li><strong>Tenggat Waktu yang Wajar:</strong> Umumnya 7 hari atau 14 hari kalender sejak surat diterima.</li>
+                    <li><strong>Peringatan Langkah Hukum Tegas:</strong> Menyatakan tegas bahwa jika batas waktu diabaikan, proses hukum gugatan perdata di Pengadilan Negeri atau pelaporan pidana (apabila ada unsur penipuan Pasal 378 KUHP) akan segera ditempuh.</li>
+                </ol>
+
+                <h2>Langkah Litigasi: Gugatan Wanprestasi & Sita Jaminan</h2>
+                <p>Bila somasi tidak diindahkan, langkah selanjutnya adalah mendaftarkan gugatan wanprestasi ke Pengadilan Negeri tempat domisili Tergugat. Untuk mencegah Tergugat memindahtangankan hartanya selama proses persidangan, kuasa hukum dapat memohonkan <strong>Sita Jaminan (Conservatoir Beslag)</strong> atas rekening atau aset properti Tergugat.</p>
+
+                <p>Kaji klausul kontrak kerja sama Anda bersama tim konsultan kami di <a href="/layanan/legal-contract">Legal Contract &amp; Review</a> atau konsultasikan pembuatan surat somasi melalui <a href="/kontak">layanan kontak kami</a>.</p>
+            ',
+        ],
+        [
+            'slug' => 'hak-saksi-dan-tersangka-dalam-pemeriksaan-bap-polisi',
+            'title' => 'Hak Saksi & Tersangka Saat Pemeriksaan BAP di Kepolisian',
+            'excerpt' => 'Ketahui hak konstitusional Anda saat dipanggil penyidik polisi. Panduan menghadapi BAP dengan tenang, didampingi advokat, dan menghindari intimidasi.',
+            'category' => 'Hukum Pidana',
+            'reading_time' => '6 menit baca',
+            'published_at' => '2026-10-07',
+            'updated_at' => '2026-10-08',
+            'author' => 'Holong Siregar, S.H.',
+            'author_role' => 'Managing Partner & Advokat',
+            'image' => 'images/articles/artikel-4.svg',
+            'keywords' => ['hak tersangka bap polisi', 'pendampingan pengacara pidana', 'bap polres metro tangerang', 'pasal 54 kuhap'],
+            'body' => '
+                <p class="lead">Menerima surat panggilan dari pihak kepolisian — baik Polres Metro Tangerang Kota, Polres Tangerang Selatan, maupun Polresta Bogor — sering membuat seseorang panik. Memahami hak-hak Anda berdasarkan Kitab Undang-Undang Hukum Acara Pidana (KUHAP) adalah perlindungan pertama dari potensi pelanggaran prosedur.</p>
+
+                <h2>1. Hak Didampingi Advokat (Pasal 54 KUHAP)</h2>
+                <p>Pasal 54 KUHAP menegaskan: <em>"Guna kepentingan pembelaan, tersangka atau terdakwa berhak mendapat bantuan hukum dari seorang atau lebih penasihat hukum selama dalam waktu dan pada setiap tingkat pemeriksaan."</em></p>
+                <p>Bahkan untuk tindak pidana yang diancam pidana mati atau penjara 15 tahun ke atas, atau orang yang tidak mampu yang diancam pidana 5 tahun ke atas, penyidik <strong>wajib menunjuk penasihat hukum</strong> bagi tersangka (Pasal 56 KUHAP). Tanpa pendampingan advokat, pemeriksaan tersebut cacat hukum (prosedural error).</p>
+
+                <h2>2. Hak Memberikan Keterangan Bebas Tanpa Tekanan</h2>
+                <p>Berdasarkan Pasal 52 KUHAP, tersangka atau saksi berhak memberikan keterangan secara bebas tanpa adanya tekanan, ancaman, kekerasan fisik, intimidasi psikologis, atau rayuan dari pihak penyidik. Keterangan yang diberikan di bawah tekanan tidak memiliki nilai pembuktian yang sah di mata hakim.</p>
+
+                <h2>3. Hak Mengetahui Pasal yang Disangkakan</h2>
+                <p>Penyidik wajib memberitahukan dengan jelas dalam bahasa yang dimengerti apa tindak pidana yang disangkakan, dasar laporan polisi (LP), serta uraian singkat peristiwa hukum sebelum pertanyaan BAP dimulai (Pasal 51 KUHAP).</p>
+
+                <h2>4. Hak Membaca & Mengoreksi Lembar BAP</h2>
+                <p>Setelah juru periksa mengetik seluruh tanya jawab, Anda berhak membaca kembali secara cermat setiap lembar Berita Acara Pemeriksaan (BAP). Jika ada jawaban yang disalahartikan atau tidak sesuai dengan perkataan Anda, Anda <strong>berhak meminta perubahan atau perbaikan</strong> sebelum menandatanganinya.</p>
+
+                <h2>5. Hak Mengajukan Saksi yang Meringankan (A de Charge)</h2>
+                <p>Tersangka berhak mengajukan saksi atau ahli yang menguntungkan bagi dirinya (Pasal 65 KUHAP) guna membantah sangkaan pelapor atau membuktikan alibi yang sah.</p>
+
+                <div class="p-4 my-4 rounded-3 bg-light border-start border-4 border-warning">
+                    <h5 class="fw-bold mb-2 text-navy"><i class="fa-solid fa-user-shield text-gold me-2"></i>Mengapa Pendampingan Advokat Begitu Penting?</h5>
+                    <p class="mb-0">Advokat hadir mendampingi untuk memastikan pertanyaan penyidik tetap relevan, tidak menjebak, menolak bentuk tekanan verbal, serta mencatat setiap kejanggalan dalam berita acara resmi pemeriksaan.</p>
+                </div>
+
+                <p>Bila Anda atau kerabat Anda menerima panggilan klarifikasi atau pemeriksaan dari aparat kepolisian, segera konsultasikan dengan tim <a href="/layanan/pidana">Pengacara Pidana Holong Siregar &amp; Co.</a> untuk perlindungan hukum terukur.</p>
+            ',
+        ],
+        [
+            'slug' => 'solusi-sengketa-tanah-dan-sertifikat-ganda',
+            'title' => 'Solusi Hukum Sengketa Tanah & Sertifikat Ganda di Tangerang',
+            'excerpt' => 'Cara menyelesaikan sengketa kepemilikan tanah dan tumpang tindih sertifikat hak milik (SHM) di BPN. Jalur mediasi BPN, gugatan PTUN, dan perdata di Pengadilan.',
+            'category' => 'Pertanahan & Properti',
+            'reading_time' => '8 menit baca',
+            'published_at' => '2026-10-07',
+            'updated_at' => '2026-10-08',
+            'author' => 'Holong Siregar, S.H.',
+            'author_role' => 'Managing Partner & Advokat',
+            'image' => 'images/articles/artikel-5.svg',
+            'keywords' => ['sengketa tanah tangerang', 'sertifikat ganda bpn', 'gugatan ptun serang tanah', 'pengacara sengketa tanah tangerang'],
+            'body' => '
+                <p class="lead">Pesatnya pertumbuhan pembangunan properti di kawasan Kota Tangerang, Tangerang Selatan (BSD, Serpong, Bintaro), dan Bogor menjadikan sengketa kepemilikan tanah dan sertifikat ganda (overlapping certificate) sebagai masalah pertanahan yang paling sering terjadi.</p>
+
+                <h2>Penyebab Munculnya Sertifikat Ganda</h2>
+                <p>Sertifikat ganda terjadi ketika terdapat dua atau lebih sertifikat hak atas tanah yang diterbitkan oleh Kantor Pertanahan (BPN) di atas bidang tanah yang sama, baik sebagian maupun seluruhnya. Faktor pemicunya meliputi:</p>
+                <ul>
+                    <li>Peralihan hak berdasarkan girik/letter C yang tidak tercatat rapi di kantor kelurahan pada masa lampau.</li>
+                    <li>Kesalahan pengukuran fisik di lapangan atau batas koordinat peta pendaftaran tanah masa lalu yang belum terdigitalisasi.</li>
+                    <li>Adanya tindak pidana pemalsuan surat warkah tanah atau mafia tanah yang memanipulasi riwayat perolehan hak.</li>
+                </ul>
+
+                <h2>Langkah 1: Penelusuran Warkah di Kantor Pertanahan (BPN)</h2>
+                <p>Langkah awal yang mutlak dilakukan adalah mengajukan permohonan pengecekan sertifikat dan penelusuran riwayat warkah tanah di Kantor Pertanahan setempat (BPN Kota Tangerang, BPN Tangsel, atau BPN Kabupaten Bogor). Dari warkah, dapat diketahui akta jual beli (AJB), surat ukur, dan riwayat sah asal-usul tanah tersebut.</p>
+
+                <h2>Langkah 2: Mediasi Sengketa Melalui Kantor Wilayah BPN</h2>
+                <p>Berdasarkan Peraturan Menteri ATR/BPN No. 21 Tahun 2020 tentang Penanganan dan Penyelesaian Kasus Pertanahan, para pihak yang bersengketa dapat mengajukan pengaduan untuk mediasi di kantor BPN. BPN dapat melakukan gelar perkara dan penelitian lapangan. Jika terbukti terjadi cacat administrasi berat, BPN dapat menerbitkan keputusan pembatalan sertifikat.</p>
+
+                <h2>Langkah 3: Gugatan ke PTUN (Pembatalan Sertifikat Cacat Hukum)</h2>
+                <p>Jika sertifikat pihak lawan diterbitkan karena cacat prosedur atau bertentangan dengan Asas-Asas Umum Pemerintahan yang Baik (AUPB), pihak yang dirugikan dapat mengajukan gugatan pembatalan sertifikat ke Pengadilan Tata Usaha Negara (PTUN Serang untuk wilayah Banten). Perhatikan tenggat waktu pengajuan gugatan PTUN adalah 90 hari sejak diketahuinya Keputusan Tata Usaha Negara tersebut.</p>
+
+                <h2>Langkah 4: Gugatan Perdata Perbuatan Melawan Hukum (PMH) ke Pengadilan Negeri</h2>
+                <p>Guna menetapkan siapa pemilik sah yang berhak atas objek tanah tersebut, gugatan perdata diajukan ke Pengadilan Negeri Tangerang dengan dasar Perbuatan Melawan Hukum (Pasal 1365 KUHPerdata). Petitum gugatan mencakup:</p>
+                <ul>
+                    <li>Menyatakan Penggugat adalah pemilik sah tanah sengketa.</li>
+                    <li>Menyatakan sertifikat atau penguasaan fisik Tergugat tidak berkekuatan hukum.</li>
+                    <li>Menghukum Tergugat mengosongkan dan menyerahkan tanah seketika dan tanpa beban apapun.</li>
+                    <li>Meletakkan sita jaminan (CB) guna mencegah peralihan hak selama proses persidangan.</li>
+                </ul>
+
+                <p>Lindungi hak properti dan aset tanah Anda dengan strategi hukum pertanahan komprehensif. Hubungi tim kami di <a href="/layanan/sengketa-tanah">Pengacara Sengketa Tanah &amp; Properti</a> atau konsultasikan kasus tanah Anda di <a href="/kontak">halaman kontak</a>.</p>
+            ',
+        ],
+    ],
 ];
