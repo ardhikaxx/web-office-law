@@ -24,8 +24,8 @@
     <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')))">
     <meta property="og:description" content="@yield('meta_description', 'Kantor advokat & pengacara di Tangerang & Bogor. Melayani perkara perdata, pidana, perceraian, sengketa tanah, dan hukum bisnis profesional.')">
     <meta property="og:url" content="@yield('canonical', url()->current())">
-    <meta property="og:image" content="@yield('og_image', asset('assets/images/og-image.jpg'))">
-    <meta property="og:image:secure_url" content="@yield('og_image_secure', asset('assets/images/og-image.jpg'))">
+    <meta property="og:image" content="@yield('og_image', \App\Support\LawFirm::versionedAsset('assets/images/og-image.jpg'))">
+    <meta property="og:image:secure_url" content="@yield('og_image_secure', \App\Support\LawFirm::versionedAsset('assets/images/og-image.jpg'))">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="@yield('og_image_type', 'image/jpeg')">
@@ -36,7 +36,7 @@
     <meta name="twitter:site" content="@holongsiregar">
     <meta name="twitter:title" content="@yield('og_title', trim($__env->yieldContent('title', 'Pengacara di Tangerang & Bogor | Holong Siregar & Co.')))">
     <meta name="twitter:description" content="@yield('meta_description', 'Kantor advokat & pengacara di Tangerang & Bogor.')">
-    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/og-image.jpg'))">
+    <meta name="twitter:image" content="@yield('og_image', \App\Support\LawFirm::versionedAsset('assets/images/og-image.jpg'))">
     <meta name="twitter:image:alt" content="@yield('og_image_alt', 'Holong Siregar & Co. Law Office - Pengacara di Tangerang & Bogor')">
 
     @stack('meta_extra')
