@@ -107,83 +107,109 @@
                 </div>
             </a>
 
-            {{-- Hamburger Toggler for Mobile --}}
-            <button class="navbar-toggler law-navbar-toggler"
+            {{-- Hamburger Toggler for Mobile (triggers offcanvas drawer from right) --}}
+            <button class="navbar-toggler law-navbar-toggler d-lg-none"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenuDrawer"
+                    aria-controls="mobileMenuDrawer"
                     aria-label="Buka navigasi menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            {{-- Navigation Items --}}
-            <div class="collapse navbar-collapse law-navbar-collapse" id="mainNavbar">
-                {{-- Mobile Menu Header --}}
-                <div class="d-lg-none mb-3 d-flex align-items-center justify-content-between pb-2 border-bottom">
-                    <span class="law-mobile-nav-badge mb-0">
-                        <i class="fa-solid fa-scale-balanced text-gold"></i>
-                        MENU NAVIGASI
-                    </span>
-                    <span class="small text-muted" style="font-size: 0.75rem;">
-                        Holong Siregar &amp; Co.
-                    </span>
-                </div>
-
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            {{-- Desktop Navigation (Clean & Horizontal on large screens) --}}
+            <div class="d-none d-lg-flex align-items-center ms-auto">
+                <ul class="navbar-nav align-items-center mb-0">
                     @foreach ($links as $link)
                         <li class="nav-item">
                             <a class="nav-link {{ $isActive($link['route']) ? 'active' : '' }}"
                                @if ($isActive($link['route'])) aria-current="page" @endif
                                href="{{ route($link['route']) }}">
-                                <div class="d-flex align-items-center gap-3">
-                                    <span class="law-nav-icon d-lg-none" aria-hidden="true">
-                                        <i class="{{ $link['icon'] }}"></i>
-                                    </span>
-                                    <div>
-                                        <span class="law-nav-label">{{ $link['label'] }}</span>
-                                        <small class="law-nav-sub d-block d-lg-none">{{ $link['sub'] }}</small>
-                                    </div>
-                                </div>
-                                <i class="fa-solid fa-chevron-right law-nav-chevron d-lg-none" aria-hidden="true"></i>
+                                {{ $link['label'] }}
                             </a>
                         </li>
                     @endforeach
-
-                    {{-- Desktop CTA Button --}}
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0 d-none d-lg-block">
+                    <li class="nav-item ms-3">
                         <a class="btn btn-gold law-btn-primary" href="{{ route('contact') }}">
                             <i class="fa-solid fa-comments me-1"></i> Konsultasi Sekarang
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </nav>
 
-                {{-- Mobile Actions & Quick Office Info --}}
-                <div class="law-mobile-nav-actions d-lg-none">
-                    <a class="btn btn-gold law-btn-primary w-100" href="{{ route('contact') }}">
+    {{-- Mobile Offcanvas Drawer (Slides from Right with Thin Overlay) --}}
+    <div class="offcanvas offcanvas-end law-mobile-drawer"
+         tabindex="-1"
+         id="mobileMenuDrawer"
+         aria-labelledby="mobileMenuDrawerLabel">
+
+        {{-- Drawer Header --}}
+        <div class="offcanvas-header law-drawer-header">
+            <div class="d-flex align-items-center gap-2" id="mobileMenuDrawerLabel">
+                <img src="{{ asset('assets/images/logo.png') }}"
+                     alt="Logo Holong Siregar &amp; Co."
+                     class="rounded-circle"
+                     width="38"
+                     height="38">
+                <div class="d-flex flex-column">
+                    <span class="law-drawer-brand">Holong Siregar <span class="text-gold">&amp; Co.</span></span>
+                    <span class="law-drawer-sub">LAW OFFICE</span>
+                </div>
+            </div>
+            <button type="button" class="law-drawer-close" data-bs-dismiss="offcanvas" aria-label="Tutup navigasi">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        {{-- Drawer Body --}}
+        <div class="offcanvas-body law-drawer-body">
+            <div class="law-drawer-section-label">NAVIGASI UTAMA</div>
+
+            <ul class="law-drawer-nav list-unstyled">
+                @foreach ($links as $link)
+                    <li>
+                        <a class="law-drawer-link {{ $isActive($link['route']) ? 'active' : '' }}"
+                           @if ($isActive($link['route'])) aria-current="page" @endif
+                           href="{{ route($link['route']) }}">
+                            <span class="law-drawer-link-icon">
+                                <i class="{{ $link['icon'] }}"></i>
+                            </span>
+                            <span class="law-drawer-link-text">{{ $link['label'] }}</span>
+                            @if ($isActive($link['route']))
+                                <span class="law-drawer-active-dot" aria-hidden="true"></span>
+                            @else
+                                <i class="fa-solid fa-chevron-right law-drawer-link-arrow" aria-hidden="true"></i>
+                            @endif
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+
+            {{-- Simple & Modern Action Buttons & Quick Info --}}
+            <div class="law-drawer-actions mt-auto pt-3">
+                <div class="law-drawer-section-label mb-2">KONSULTASI HUKUM</div>
+                <div class="d-flex flex-column gap-2 mb-3">
+                    <a href="{{ route('contact') }}" class="btn btn-gold law-btn-primary w-100">
                         <i class="fa-solid fa-calendar-check me-2"></i> Jadwalkan Konsultasi
                     </a>
-                    <a class="btn btn-outline-success w-100 fw-bold" href="{{ $whatsappUrl }}" target="_blank" rel="noopener">
+                    <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-outline-success w-100 fw-bold law-btn-wa-drawer">
                         <i class="fa-brands fa-whatsapp me-2 fs-5"></i> Chat via WhatsApp
                     </a>
+                </div>
 
-                    <div class="law-mobile-nav-footer mt-2">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span><strong>Kantor Tangerang:</strong> Villa Grand Tomang</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span><strong>Kantor Bogor:</strong> Aspol Panaragan Kidul</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="fa-regular fa-clock"></i>
-                            <span>Senin – Sabtu, 08:00 – 17:30 WIB</span>
-                        </div>
+                <div class="law-drawer-info">
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <i class="fa-solid fa-location-dot text-gold"></i>
+                        <span>Kota Tangerang &amp; Kota Bogor</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-regular fa-clock text-gold"></i>
+                        <span>Senin – Sabtu, 08:00 – 17:30 WIB</span>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 </header>

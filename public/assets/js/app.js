@@ -13,13 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
         handleScroll();
     }
 
-    // 2. Auto-collapse mobile navbar on link click
-    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link:not(.dropdown-toggle), .navbar-collapse .btn');
+    // 2. Auto-close mobile drawer menu & navbar on link click
+    const mobileDrawer = document.getElementById('mobileMenuDrawer');
+    if (mobileDrawer) {
+        const drawerLinks = mobileDrawer.querySelectorAll('.law-drawer-link, .law-drawer-actions a');
+        drawerLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (typeof bootstrap !== 'undefined' && bootstrap.Offcanvas) {
+                    const bsOffcanvas = bootstrap.Offcanvas.getInstance(mobileDrawer);
+                    if (bsOffcanvas) {
+                        bsOffcanvas.hide();
+                    }
+                }
+            });
+        });
+    }
+
     const navbarCollapse = document.querySelector('.navbar-collapse');
     if (navbarCollapse) {
+        const navLinks = navbarCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle), .btn');
         navLinks.forEach(function (link) {
             link.addEventListener('click', function () {
-                if (navbarCollapse.classList.contains('show')) {
+                if (navbarCollapse.classList.contains('show') && typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
                     const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
                     if (bsCollapse) {
                         bsCollapse.hide();
