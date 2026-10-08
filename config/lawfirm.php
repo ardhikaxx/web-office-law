@@ -55,6 +55,7 @@ return [
         'hours' => 'Senin – Sabtu, 08:00 – 17:30 WIB',
         'instagram' => 'https://www.instagram.com/pengacarahs',
         'maps_embed' => null,
+        'google_site_verification' => env('GOOGLE_SITE_VERIFICATION', ''),
     ],
 
     'services' => [
@@ -491,7 +492,7 @@ return [
             'keywords' => ['biaya pengacara tangerang', 'honorarium advokat tangerang', 'tarif lawyer tangerang', 'biaya sidang pengadilan tangerang'],
             'body' => '
                 <p class="lead">Pertanyaan yang paling sering diajukan masyarakat saat menghadapi persoalan hukum adalah: <em>"Berapa sebenarnya biaya sewa atau jasa pengacara?"</em> Di wilayah Kota Tangerang, BSD, Tangsel, dan Bogor, skema biaya pengacara diatur secara profesional dan proporsional berdasarkan kesepakatan kedua belah pihak.</p>
-                
+
                 <h2>Dasar Penentuan Honorarium Advokat</h2>
                 <p>Berdasarkan Pasal 21 Undang-Undang No. 18 Tahun 2003 tentang Advokat, advokat berhak menerima honorarium atas jasa hukum yang telah diberikan kepada kliennya. Besaran honorarium tidak dipatok angka tunggal oleh negara, melainkan ditentukan atas kesepakatan wajar antara advokat dan klien dengan mempertimbangkan:</p>
                 <ul>
@@ -503,7 +504,7 @@ return [
 
                 <h2>4 Komponen Utama Skema Biaya Advokat</h2>
                 <p>Dalam praktik kantor hukum profesional seperti <a href="/tentang-kami">Holong Siregar & Co.</a>, rincian biaya selalu dituangkan secara transparan dalam Surat Perjanjian Jasa Hukum (SPJH) yang meliputi:</p>
-                
+
                 <h3>1. Operational Fee (Biaya Operasional)</h3>
                 <p>Biaya yang timbul untuk keperluan teknis jalannya perkara, seperti transportasi advokat, pendaftaran perkara di e-Court Mahkamah Agung, biaya panggilan sidang (relaas), materai, penggandaan berkas bukti, dan akomodasi bila diperlukan pemeriksaan setempat (descente).</p>
 

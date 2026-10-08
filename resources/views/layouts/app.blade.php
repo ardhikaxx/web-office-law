@@ -14,6 +14,11 @@
     <meta name="googlebot" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
     <meta name="bingbot" content="@yield('meta_robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1')">
 
+    {{-- Google Search Console verification (diisi via GOOGLE_SITE_VERIFICATION, opsional jika verifikasi DNS TXT sudah dipakai) --}}
+    @if (config('lawfirm.site.google_site_verification'))
+        <meta name="google-site-verification" content="{{ config('lawfirm.site.google_site_verification') }}">
+    @endif
+
     <link rel="canonical" href="@yield('canonical', url()->current())">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
