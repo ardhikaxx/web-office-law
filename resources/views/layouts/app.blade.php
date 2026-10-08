@@ -236,7 +236,7 @@
     {{-- Font Awesome 6 --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer">
     {{-- Custom Design System --}}
-    <link href="{{ asset('assets/css/style.css') }}?v={{ filemtime(public_path('assets/css/style.css')) }}" rel="stylesheet">
+    <link href="{{ \App\Support\LawFirm::versionedAsset('assets/css/style.css') }}" rel="stylesheet">
 
     @stack('styles')
 </head>
@@ -257,7 +257,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     {{-- SweetAlert2 & App JS (deferred to optimize Core Web Vitals) --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="{{ asset('assets/js/app.js') }}?v={{ filemtime(public_path('assets/js/app.js')) }}" defer></script>
+    <script src="{{ \App\Support\LawFirm::versionedAsset('assets/js/app.js') }}" defer></script>
 
     @if (session('consultation_success'))
         <script>

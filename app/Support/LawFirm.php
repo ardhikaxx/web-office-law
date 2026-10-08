@@ -90,15 +90,83 @@ class LawFirm
         return 'https://wa.me/'.$number.'?text='.urlencode($text);
     }
 
+    public static function publicCandidates(): array
+    {
+        $candidates = [];
+
+        try {
+            $candidates[] = public_path();
+        } catch (\Throwable) {
+            // abaikan, lanjut ke kandidat lain
+        }
+
+        // Pola shared-hosting: code di /home/user/office-law,
+        // docroot di /home/user/public_html
+        $candidates[] = dirname(base_path()).'/public_html';
+        $candidates[] = base_path('../public_html');
+        $candidates[] = base_path('public');
+
+        return array_values(array_unique(array_filter($candidates, fn ($p) => is_string($p) && $p !== '')));
+    }
+
+    public static function publicAssetExists(string $relative): bool
+    {
+        $relative = ltrim($relative, '/');
+
+        foreach (self::publicCandidates() as $base) {
+            if (@file_exists($base.'/'.$relative)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static function assetVersion(string $relative): string
+    {
+        $relative = ltrim($relative, '/');
+
+        foreach (self::publicCandidates() as $base) {
+            $full = $base.'/'.$relative;
+            if (@is_file($full)) {
+                $mtime = @filemtime($full);
+
+                if ($mtime !== false) {
+                    return (string) $mtime;
+                }
+            }
+        }
+
+        return '1';
+    }
+
+    public static function versionedAsset(string $relative): string
+    {
+        $relative = ltrim($relative, '/');
+
+        return asset($relative).'?v='.self::assetVersion($relative);
+    }
+
     public static function assetOrFallback(?string $path, string $fallback = 'images/placeholder.svg'): string
     {
         if ($path) {
             $webpPath = preg_replace('/\.(jpe?g|png)$/i', '.webp', $path);
-            if ($webpPath !== $path && file_exists(public_path('assets/'.$webpPath))) {
+            if ($webpPath !== $path && self::publicAssetExists('assets/'.$webpPath)) {
                 return asset('assets/'.$webpPath);
             }
 
-            if (file_exists(public_path('assets/'.$path))) {
+            if (self::publicAssetExists('assets/'.$path)) {
+                return asset('assets/'.$path);
+            }
+
+            // Hosting split-folder (code di office-law, docroot di public_html):
+            // public_path() menunjuk ke office-law/public, padahal file diserve
+            // dari public_html. Kalau file tidak ketemu di public_path tapi path
+            // diminta tidak kosong, tetap kembalikan URL asset agar browser bisa
+            // memuat dari public_html. Fallback hanya untuk path kosong.
+            // Kembalikan URL optimistis agar tidak selalu jatuh ke placeholder
+            // saat file sebenarnya ada di public_html.
+            if (! str_contains($path, '..')) {
                 return asset('assets/'.$path);
             }
         }
