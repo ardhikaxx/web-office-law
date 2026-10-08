@@ -215,8 +215,8 @@
                         </li>
                     </ul>
 
-                    <div class="mt-4 pt-2">
-                        <a href="{{ route('about') }}" class="btn btn-navy law-btn-navy me-3">
+                    <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-3 mt-4 pt-2">
+                        <a href="{{ route('about') }}" class="btn btn-navy law-btn-navy">
                             <span>Kenali Kami Lebih Dekat</span>
                             <i class="fa-solid fa-arrow-right ms-2"></i>
                         </a>
