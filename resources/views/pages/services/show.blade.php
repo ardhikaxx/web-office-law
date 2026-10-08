@@ -19,7 +19,7 @@
                 ['label' => 'Layanan Hukum', 'url' => route('services.index')],
                 ['label' => $service['title']],
             ]" />
-            <span class="law-section-eyebrow eyebrow text-gold-light">LAYANAN HUKUM — TANGERANG &amp; BOGOR</span>
+            <span class="law-section-eyebrow eyebrow text-gold-light">LAYANAN HUKUM — SELURUH WILAYAH INDONESIA</span>
             <h1 class="law-heading">{{ $service['title'] }}</h1>
             <p>{{ $service['short_description'] }}</p>
         </div>
@@ -36,7 +36,7 @@
                         </div>
                         <div>
                             <h2 class="h3 law-heading mb-1">Ruang Lingkup &amp; Penanganan</h2>
-                            <span class="text-gold-dark fw-bold small">BIDANG PRAKTIK PROFESIONAL DI TANGERANG &amp; BOGOR</span>
+                            <span class="text-gold-dark fw-bold small">BIDANG PRAKTIK PROFESIONAL PADA SELURUH WILAYAH INDONESIA</span>
                         </div>
                     </div>
 
@@ -93,10 +93,15 @@
                         @if (!empty($service['jurisdiction']))
                             <div class="p-3 bg-light rounded-3 mt-4 border">
                                 <div class="d-flex align-items-start gap-2">
-                                    <i class="fa-solid fa-location-dot text-gold mt-1 flex-shrink-0"></i>
+                                    <i class="fa-solid fa-earth-asia text-gold mt-1 flex-shrink-0"></i>
                                     <div>
-                                        <strong class="text-navy d-block small">Wilayah Yurisdiksi &amp; Penanganan Utama:</strong>
-                                        <p class="text-muted small mb-0">{{ $service['jurisdiction'] }}</p>
+                                        <strong class="text-navy d-block small">Basis Kantor &amp; Cakupan Wilayah Penanganan:</strong>
+                                        <p class="text-muted small mb-1">
+                                            <strong>Basis Kantor Operasional:</strong> Kota Tangerang &amp; Kota Bogor.
+                                        </p>
+                                        <p class="text-muted small mb-0">
+                                            <strong>Wilayah Penanganan Perkara:</strong> Tidak terbatas di Tangerang dan Bogor — penanganan hukum dan pendampingan perkara kami terbuka <strong>pada seluruh wilayah Indonesia</strong> ({{ $service['jurisdiction'] }}).
+                                        </p>
                                     </div>
                                 </div>
                             </div>

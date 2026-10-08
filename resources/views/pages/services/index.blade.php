@@ -14,12 +14,13 @@
             ]" />
             <span class="law-section-eyebrow eyebrow text-gold-light">LAYANAN HUKUM</span>
             <h1 class="law-heading">Ruang Lingkup Layanan Kami</h1>
-            <p>Katalog pendampingan hukum komprehensif bagi perorangan maupun entitas bisnis — dirancang dengan kepastian hukum dan ruang lingkup yang jelas.</p>
+            <p>Katalog pendampingan hukum komprehensif bagi perorangan maupun entitas bisnis pada seluruh wilayah Indonesia — dirancang dengan kepastian hukum dan ruang lingkup yang jelas.</p>
         </div>
     </section>
 
     <section class="law-section section">
         <div class="container">
+
             @if (count($services))
                 <div class="row g-4">
                     @foreach ($services as $service)

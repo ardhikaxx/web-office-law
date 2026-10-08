@@ -25,7 +25,7 @@
                             <span class="d-block text-gold law-hero-subtitle">Solusi Hukum yang tegas, terukur &amp; terpercaya</span>
                         </h1>
                         <p class="law-hero-text hero-text">
-                            Law Office Holong Siregar &amp; Co adalah kantor hukum dan advokat pengacara yang telah berpengalaman.
+                            Law Office Holong Siregar &amp; Co adalah kantor hukum dan advokat pengacara yang berbasis di Tangerang &amp; Bogor dengan jangkauan penanganan perkara pada seluruh wilayah Indonesia.
                             Kami memberikan pendampingan hukum profesional melalui analisis cermat, strategi relevan,
                             komunikasi terbuka, serta integritas penuh.
                         </p>
@@ -120,7 +120,7 @@
             <x-section-heading
                 eyebrow="RUANG LINGKUP PRAKTIK"
                 title="Layanan hukum untuk berbagai kebutuhan"
-                description="Setiap layanan disusun untuk membantu klien memahami pilihan dan menentukan langkah hukum yang tepat sesuai konteks kebutuhannya."
+                description="Setiap layanan disusun untuk membantu klien memahami pilihan dan menentukan langkah hukum yang tepat pada seluruh wilayah Indonesia."
                 align="start"
                 :divider="false" />
 
@@ -368,9 +368,9 @@
     <section class="law-section law-section-soft section" id="wilayah-hukum">
         <div class="container">
             <x-section-heading
-                eyebrow="CAKUPAN WILAYAH PRAKTIK"
-                title="Kantor Pengacara di Tangerang &amp; Bogor"
-                description="Holong Siregar &amp; Co. Law Office hadir dengan dua basis operasional untuk mendampingi persoalan hukum perorangan, bisnis, dan korporasi di wilayah Tangerang Raya, Bogor, dan Jabodetabek." />
+                eyebrow="BASIS KANTOR &amp; CAKUPAN PENANGANAN"
+                title="Berbasis di Tangerang &amp; Bogor, Menjangkau Seluruh Indonesia"
+                description="Holong Siregar &amp; Co. Law Office hadir dengan basis kantor operasional di Tangerang dan Bogor. Wilayah penanganan perkara dan pendampingan hukum kami tidak terbatas pada dua wilayah tersebut, melainkan siap menangani kebutuhan klien di seluruh penjuru Indonesia." />
 
             <div class="row g-4">
                 {{-- Card Tangerang --}}
@@ -477,6 +477,30 @@
                             <a href="{{ route('contact') }}" class="btn btn-outline-navy law-btn-outline btn-sm">
                                 Detail Kantor Bogor
                             </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Banner Jangkauan Penanganan Seluruh Indonesia --}}
+                <div class="col-12">
+                    <div class="p-4 p-md-4 rounded-3 text-white border shadow-sm" style="background: linear-gradient(135deg, #071424 0%, #0d284a 100%); border-color: rgba(197, 155, 39, 0.3) !important;">
+                        <div class="row align-items-center g-3">
+                            <div class="col-auto">
+                                <div class="law-strip-icon mb-0 text-gold" style="width: 56px; height: 56px; font-size: 1.5rem; background: rgba(197, 155, 39, 0.12); border: 1px solid rgba(197, 155, 39, 0.35);">
+                                    <i class="fa-solid fa-earth-asia"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h4 class="h5 text-white mb-1">Penanganan Perkara Tidak Terbatas Wilayah — Siap Melayani Seluruh Indonesia</h4>
+                                <p class="small mb-0" style="color: #cbd5e1;">
+                                    Meskipun basis kantor kami berlokasi di Tangerang dan Bogor, tim advokat kami berlisensi resmi untuk beracara di hadapan Kepolisian, Kejaksaan, Pengadilan Negeri, dan Pengadilan Agama pada seluruh wilayah Republik Indonesia, baik secara langsung di lokasi maupun daring.
+                                </p>
+                            </div>
+                            <div class="col-lg-auto">
+                                <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener" class="btn btn-gold btn-sm text-nowrap">
+                                    <i class="fa-brands fa-whatsapp me-1"></i> Konsultasi Seluruh Indonesia
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
