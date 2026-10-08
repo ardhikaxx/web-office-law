@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 6000);
     });
 
-    // 5. Floating WhatsApp Tooltip 5-Second Interval Cycle
+    // 5. Floating WhatsApp Tooltip 10-Second Interval Cycle
     const waTooltip = document.getElementById('waTooltip');
     const waContainer = document.getElementById('waFloatContainer');
     const waClose = document.getElementById('waTooltipClose');
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Muncul pertama kali setelah 1.5 detik
         setTimeout(showTip, 1500);
 
-        // Siklus muncul setiap 5 detik
+        // Siklus muncul setiap 10 detik
         setInterval(function () {
             if (isDismissed || isHovered) return;
             if (isVisible) {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 showTip();
             }
-        }, 5000);
+        }, 10000);
 
         // Tetap tampil saat kursor diarahkan ke tooltip atau tombol WA
         const waFloatBtn = waContainer ? waContainer.querySelector('.wa-float') : null;
