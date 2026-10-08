@@ -18,6 +18,22 @@
       <stop offset="0%" stop-color="#1f446c"/>
       <stop offset="100%" stop-color="#0f243a"/>
     </linearGradient>
+    <linearGradient id="woodMedium" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a230e"/>
+      <stop offset="50%" stop-color="#8e3d19"/>
+      <stop offset="100%" stop-color="#5a230e"/>
+    </linearGradient>
+    <linearGradient id="woodHead" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8e3d19"/>
+      <stop offset="40%" stop-color="#a84c22"/>
+      <stop offset="70%" stop-color="#6a2c12"/>
+      <stop offset="100%" stop-color="#3b1708"/>
+    </linearGradient>
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a84c22"/>
+      <stop offset="50%" stop-color="#7a3416"/>
+      <stop offset="100%" stop-color="#3b1708"/>
+    </linearGradient>
   </defs>
 
   <!-- Background Wall -->
@@ -110,11 +126,59 @@
   <rect x="195" y="505" width="110" height="6" fill="#c59b27" rx="2"/>
   <rect x="195" y="518" width="80" height="4" fill="#64748b" rx="2"/>
   
-  <!-- Wooden Gavel -->
-  <g transform="translate(420, 485) rotate(-15)">
-    <rect x="0" y="0" width="55" height="22" rx="4" fill="#8c4826" stroke="#c59b27" stroke-width="1.5"/>
-    <rect x="23" y="18" width="8" height="65" rx="3" fill="#a85930"/>
-    <ellipse cx="18" cy="80" rx="35" ry="10" fill="#633219" stroke="#c59b27" stroke-width="1"/>
+  <!-- Authentic Judge Gavel & Sound Block -->
+  <!-- 1. Sound Block (Tatakan Palu) sitting flat on desk -->
+  <g id="soundBlock">
+    <!-- Soft Contact Shadow on Desk -->
+    <ellipse cx="415" cy="532" rx="46" ry="14" fill="#05101a" opacity="0.6"/>
+    <!-- Lower Base Ring -->
+    <path d="M 373 526 A 42 13 0 0 0 457 526 L 457 520 A 42 13 0 0 1 373 520 Z" fill="#361406"/>
+    <ellipse cx="415" cy="520" rx="42" ry="13" fill="#4a1c09" stroke="url(#goldGradient)" stroke-width="1.5"/>
+    <!-- Upper Pedestal Ring -->
+    <path d="M 380 520 A 35 11 0 0 0 450 520 L 450 513 A 35 11 0 0 1 380 513 Z" fill="#5e240c"/>
+    <ellipse cx="415" cy="513" rx="35" ry="11" fill="url(#woodMedium)" stroke="url(#goldGradient)" stroke-width="1.2"/>
+    <!-- Inset Wood Grain Ring & Strike Point -->
+    <ellipse cx="415" cy="513" rx="25" ry="8" fill="none" stroke="#e0be6c" stroke-width="0.8" opacity="0.5"/>
+    <ellipse cx="415" cy="513" rx="14" ry="4.5" fill="#361406" opacity="0.35"/>
+  </g>
+
+  <!-- 2. Judicial Wooden Gavel (Palu Sidang) resting elegantly -->
+  <g id="judicialGavel" transform="translate(460, 508) rotate(16)">
+    <!-- Drop Shadow on Desk -->
+    <ellipse cx="50" cy="14" rx="55" ry="8" fill="#05101a" opacity="0.45"/>
+    
+    <!-- Handle (Gagang Palu) extending towards foreground -->
+    <g id="gavelHandle">
+      <!-- Brass Stem Fitting -->
+      <rect x="11" y="-3" width="6" height="6" rx="1" fill="url(#goldGradient)"/>
+      <!-- Tapered Turned Wooden Stem -->
+      <path d="M 17 -2.8 Q 45 -3.8 68 -3 L 68 3 Q 45 3.8 17 2.8 Z" fill="url(#handleGrad)"/>
+      <!-- Gold Turned Accent Ring -->
+      <rect x="67" y="-4" width="3.5" height="8" rx="1" fill="url(#goldGradient)"/>
+      <!-- Ergonomic Grip -->
+      <path d="M 70.5 -3.5 Q 85 -4.8 98 -3.2 L 98 3.2 Q 85 4.8 70.5 3.5 Z" fill="url(#woodMedium)"/>
+      <!-- Pommel Neck -->
+      <rect x="98" y="-2" width="3" height="4" fill="url(#goldGradient)"/>
+      <!-- Rounded Pommel Knob -->
+      <circle cx="103" cy="0" r="5" fill="url(#woodHead)" stroke="url(#goldGradient)" stroke-width="1"/>
+    </g>
+
+    <!-- Gavel Head (Kepala Palu Silindris) -->
+    <g id="gavelHead">
+      <!-- Main Cylinder Barrel -->
+      <rect x="-12" y="-21" width="24" height="42" rx="3" fill="url(#woodHead)"/>
+      <!-- Left & Right Highlights -->
+      <rect x="-4" y="-20" width="4" height="40" fill="#f5dfa3" opacity="0.2"/>
+      <!-- Center Gold/Brass Inlay Band -->
+      <rect x="-13" y="-6" width="26" height="12" rx="1.5" fill="url(#goldGradient)" stroke="#916d12" stroke-width="0.5"/>
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#ffffff" stroke-width="0.7" opacity="0.6"/>
+      <!-- Top Striking Cap & Gold Ring -->
+      <rect x="-12.5" y="-18" width="25" height="2.5" fill="url(#goldGradient)"/>
+      <ellipse cx="0" cy="-21" rx="12" ry="3.5" fill="#a84c22" stroke="url(#goldGradient)" stroke-width="1"/>
+      <!-- Bottom Striking Cap & Gold Ring -->
+      <rect x="-12.5" y="15.5" width="25" height="2.5" fill="url(#goldGradient)"/>
+      <ellipse cx="0" cy="21" rx="12" ry="3.5" fill="#4a1c09" stroke="url(#goldGradient)" stroke-width="1"/>
+    </g>
   </g>
 
   <!-- Polished Floor Reflection Base -->
