@@ -6,11 +6,14 @@
 <section class="law-cta-band cta-band position-relative overflow-hidden">
     {{-- Artistic Justice Symbol Watermark for High Legal Aesthetic --}}
     <div class="law-cta-watermark" aria-hidden="true">
-        <img src="{{ asset('assets/images/simbol-justice.png') }}"
-             alt="Simbol Keadilan - Holong Siregar &amp; Co."
-             width="1855"
-             height="2048"
-             loading="lazy">
+        <picture>
+            <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+            <img src="{{ asset('assets/images/simbol-justice.webp') }}"
+                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                 width="800"
+                 height="883"
+                 loading="lazy">
+        </picture>
     </div>
 
     <div class="container position-relative" style="z-index: 2;">

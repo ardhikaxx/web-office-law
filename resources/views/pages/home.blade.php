@@ -50,7 +50,7 @@
                     <div class="law-hero-statue-glow"></div>
                     <picture>
                         <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
-                        <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                        <img src="{{ asset('assets/images/simbol-justice.webp') }}"
                              alt="Simbol Keadilan - Holong Siregar &amp; Co. Law Office"
                              class="law-hero-statue"
                              width="800"
@@ -172,11 +172,14 @@
                     </div>
                     <div class="law-quote-box quote-box mt-4 position-relative overflow-hidden">
                         <div class="law-quote-watermark" aria-hidden="true">
-                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
-                                 width="1855"
-                                 height="2048"
-                                 loading="lazy">
+                            <picture>
+                                <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+                                <img src="{{ asset('assets/images/simbol-justice.webp') }}"
+                                     alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                                     width="800"
+                                     height="883"
+                                     loading="lazy">
+                            </picture>
                         </div>
                         <div class="position-relative" style="z-index: 2;">
                             <div class="small fw-bold text-gold-dark text-uppercase mb-1">
@@ -330,11 +333,14 @@
                     <div class="law-testimonial-box position-relative overflow-hidden flex-grow-1">
                         {{-- Subtle Justice Symbol Watermark --}}
                         <div class="law-testimonial-watermark" aria-hidden="true">
-                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
-                                 width="1855"
-                                 height="2048"
-                                 loading="lazy">
+                            <picture>
+                                <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+                                <img src="{{ asset('assets/images/simbol-justice.webp') }}"
+                                     alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                                     width="800"
+                                     height="883"
+                                     loading="lazy">
+                            </picture>
                         </div>
                         <div class="position-relative" style="z-index: 2;">
                             <div class="law-quote-icon">
@@ -483,11 +489,14 @@
     <section class="law-consultation-section position-relative overflow-hidden" id="consultation-section">
         {{-- Artistic Justice Symbol Ambient Watermark --}}
         <div class="law-consultation-watermark" aria-hidden="true">
-            <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
-                 width="1855"
-                 height="2048"
-                 loading="lazy">
+            <picture>
+                <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+                <img src="{{ asset('assets/images/simbol-justice.webp') }}"
+                     alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                     width="800"
+                     height="883"
+                     loading="lazy">
+            </picture>
         </div>
 
         <div class="container position-relative" style="z-index: 2;">

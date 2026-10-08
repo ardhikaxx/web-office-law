@@ -40,9 +40,9 @@
     @stack('meta_extra')
 
     {{-- Browser Favicon --}}
+    <link rel="icon" type="image/webp" href="{{ asset('assets/images/favicon.webp') }}">
     <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon-round.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon-round.webp') }}">
 
     {{-- Schema.org Structured Data (JSON-LD) for Google Rich Snippets & Local Search --}}
     <script type="application/ld+json">

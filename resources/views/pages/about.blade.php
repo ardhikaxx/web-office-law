@@ -63,11 +63,14 @@
                     </div>
                     <div class="law-quote-box quote-box position-relative overflow-hidden">
                         <div class="law-quote-watermark" aria-hidden="true">
-                            <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
-                                 width="1855"
-                                 height="2048"
-                                 loading="lazy">
+                            <picture>
+                                <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+                                <img src="{{ asset('assets/images/simbol-justice.webp') }}"
+                                     alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                                     width="800"
+                                     height="883"
+                                     loading="lazy">
+                            </picture>
                         </div>
                         <div class="position-relative" style="z-index: 2;">
                             “Kami memegang teguh ketelitian, kerahasiaan, dan kejujuran dalam berkomunikasi — agar setiap langkah hukum yang diambil benar-benar dipahami dan memberikan ketenangan bagi klien.”
@@ -91,12 +94,15 @@
                 <div class="col-lg-4">
                     <div class="law-emblem-card text-white p-4 h-100 rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="law-emblem-glow" aria-hidden="true"></div>
-                        <img src="{{ asset('assets/images/simbol-justice.png') }}"
-                             alt="Simbol Keadilan - Holong Siregar &amp; Co."
-                             class="law-emblem-img mb-3"
-                             width="1855"
-                             height="2048"
-                             loading="lazy">
+                        <picture>
+                            <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
+                            <img src="{{ asset('assets/images/simbol-justice.webp') }}"
+                                 alt="Simbol Keadilan - Holong Siregar &amp; Co."
+                                 class="law-emblem-img mb-3"
+                                 width="800"
+                                 height="883"
+                                 loading="lazy">
+                        </picture>
                         <span class="badge bg-gold text-navy fw-bold text-uppercase px-3 py-1 mb-2" style="letter-spacing: 0.15em;">
                             Officium Nobile
                         </span>

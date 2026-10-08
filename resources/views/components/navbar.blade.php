@@ -109,7 +109,7 @@
             <a class="navbar-brand law-brand brand" href="{{ route('home') }}" aria-label="Holong Siregar &amp; Co. Law Office">
                 <picture>
                     <source srcset="{{ asset('assets/images/logo.webp') }}" type="image/webp">
-                    <img src="{{ asset('assets/images/logo.png') }}"
+                    <img src="{{ asset('assets/images/logo.webp') }}"
                          alt="Logo Holong Siregar &amp; Co."
                          class="law-brand-symbol rounded-circle rounded-full"
                          width="48"
@@ -167,7 +167,7 @@
             <div class="d-flex align-items-center gap-2" id="mobileMenuDrawerLabel">
                 <picture>
                     <source srcset="{{ asset('assets/images/logo.webp') }}" type="image/webp">
-                    <img src="{{ asset('assets/images/logo.png') }}"
+                    <img src="{{ asset('assets/images/logo.webp') }}"
                          alt="Logo Holong Siregar &amp; Co."
                          class="rounded-circle"
                          width="38"

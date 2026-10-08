@@ -42,7 +42,7 @@ test('unknown slugs return 404 with law firm branding', function () {
 test('home page renders official justice symbol asset in hero', function () {
     $response = $this->get('/');
     $response->assertOk();
-    $response->assertSee('simbol-justice.png');
+    $response->assertSee('simbol-justice.webp');
     $response->assertSee('Holong Siregar');
     $response->assertDontSee('Dedicated to Justice');
 });
@@ -50,8 +50,8 @@ test('home page renders official justice symbol asset in hero', function () {
 test('browser tab favicon, navbar, and footer render logo asset', function () {
     $response = $this->get('/');
     $response->assertOk();
-    $response->assertSee('assets/images/logo.png');
-    $response->assertSee('rel="icon" type="image/png"', false);
+    $response->assertSee('assets/images/logo.webp');
+    $response->assertSee('rel="icon" type="image/webp"', false);
     $response->assertSee('rounded-circle');
     $response->assertSee('rounded-full');
 });

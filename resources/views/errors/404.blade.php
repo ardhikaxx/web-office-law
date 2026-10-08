@@ -9,7 +9,7 @@
         <div class="container" style="max-width: 680px;">
                 <picture>
                     <source srcset="{{ asset('assets/images/simbol-justice.webp') }}" type="image/webp">
-                    <img src="{{ asset('assets/images/simbol-justice.png') }}"
+                    <img src="{{ asset('assets/images/simbol-justice.webp') }}"
                          alt="Simbol Keadilan - Holong Siregar &amp; Co."
                          style="max-height: 140px; width: auto; filter: drop-shadow(0 12px 24px rgba(12, 31, 56, 0.2));"
                          loading="lazy">
